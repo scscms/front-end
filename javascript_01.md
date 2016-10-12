@@ -43,7 +43,7 @@ var result = variable instanceof constructor;
 
 Ã¿¸öº¯Êý¶¼ÓÐ×Ô¼ºµÄÖ´ÐÐ»·¾³¡£µ±Ö´ÐÐÁ÷½øÈëÒ»¸öº¯ÊýÊ±£¬º¯ÊýµÄ»·¾³¾Í»á±»ÍÆÈëÒ»¸ö»·¾³Õ»ÖÐ¡£¶øÔÚº¯ÊýÖ´ÐÐÖ®ºó£¬Õ»½«Æä»·¾³µ¯³ö£¬°Ñ¿ØÖÆÈ¨½»¸øÖ®Ç°µÄÖ´ÐÐ»·¾³¡£ECMAScript³ÌÐòÖÐµÄÖ´ÐÐÁ÷ÕýÊÇÓÉÕâ¸ö·½±ãµÄ»úÖÆ¿ØÖÆ×Å¡£
 
-### 4.2.1 ÑÓ³¤×÷ÓÃÓòÁ´
+#### 4.2.1 ÑÓ³¤×÷ÓÃÓòÁ´
 
 ËäÈ»Ö´ÐÐ»·¾³µÄÀàÐÍ×Ü¹²Ö»ÓÐÁ½ÖÖ¡ª¡ªÈ«¾ÖºÍ¾Ö²¿£¨º¯Êý£©£¬µ«»¹ÊÇÓÐÆäËû°ì·¨À´ÑÓ³¤×÷ÓÃÓòÁ´¡£ÕâÃ´ËµÊÇÒòÎªÓÐÐ©Óï¾ä¿ÉÒÔÔÚ×÷ÓÃÓòÁ´µÄÇ°¶ËÁÙÊ±Ôö¼ÓÒ»¸ö±äÁ¿¶ÔÏó£¬¸Ã±äÁ¿¶ÔÏó»áÔÚ´úÂëÖ´ÐÐºó±»ÒÆ³ý¡£ÔÚÁ½ÖÖÇé¿öÏÂ»á·¢ËÍÕâÖÖÏÖÏó¡£¾ßÌåÀ´Ëµ£¬¾ÍÊÇµ±Ö´ÐÐÁ÷½øÈëÏÂÁÐÈÎºÎÒ»¸öÓï¾äÊ±£¬×÷ÓÃÓòÁ´¾Í»áµÃµ½¼Ó³¤£º
 
@@ -52,7 +52,7 @@ var result = variable instanceof constructor;
 
 ÕâÁ½¸öÓï¾ä¶¼»áÔÚ×÷ÓÃÓòÁ´µÄÇ°¶ËÌí¼ÓÒ»¸ö±äÁ¿¶ÔÏó¡£¶ÔwithÓï¾äÀ´Ëµ£¬»á½«Ö¸¶¨µÄ¶ÔÏóÌí¼Óµ½×÷ÓÃÓòÁ´ÖÐ¡£¶ÔcatchÓï¾äÀ´Ëµ£¬»á´´½¨Ò»¸öÐÂµÄ±äÁ¿¶ÔÏó£¬ÆäÖÐ°üº¬µÄÊÇ±»Å×³öµÄ´íÎó¶ÔÏóµÄÉùÃ÷¡£
 
-### 4.2.2 Ã»ÓÐ¿é¼¶×÷ÓÃÓò
+#### 4.2.2 Ã»ÓÐ¿é¼¶×÷ÓÃÓò
 
 JavaScriptÃ»ÓÐ¿é¼¶×÷ÓÃÓò¾­³£»áµ¼ÖÂÀí½âÉÏµÄÀ§»ó¡£
 
@@ -129,31 +129,35 @@ ECMAScriptÍ¨¹ýRegExpÀàÐÍÀ´Ö§³ÖÕýÔò±í´ïÊ½¡£Ê¹ÓÃÏÂÃæÀàËÆperlµÄÓï·¨£¬¾Í¿ÉÒÔ´´½¨Ò»¸ö
 - £¨1£©g£º±íÊ¾È«¾Ö£¨global£©Ä£Ê½£¬¼´Ä£Ê½½«±»Ó¦ÓÃÓëËùÓÐ×Ö·û´®£¬¶ø·Ç·¢ÏÖµÚÒ»¸öÆ¥ÅäÏîÊ±Á¢¼´Í£Ö¹¡£
 - £¨2£©i£º±íÊ¾²»Çø·Ö´óÐ¡Ð´£¨case-insensitive£©Ä£Ê½£¬¼´ÔÚÈ·¶¨Æ¥ÅäÏîÊ±ºöÂÔÄ£Ê½Óë×Ö·û´®µÄ´óÐ¡Ð´¡£
 - £¨3£©m£º±íÊ¾¶àÐÐ£¨multiline£©Ä£Ê½£¬¼´ÔÚµ½´ïÒ»ÐÐÎÄ±¾Ä©Î²Ê±»¹»á¼ÌÐø²éÕÒÏÂÒ»ÐÐÖÐÊÇ·ñ´æÔÚÓëÄ£Ê½Æ¥ÅäµÄÏî¡£
+- £¨4£©u£º±íÊ¾UnicodeÄ£Ê½£¬ÓÃÀ´ÕýÈ·´¦Àí´óÓÚ\uFFFFµÄUnicode×Ö·û¡£ES6ÐÂÔö¡£
+- £¨5£©y£º½Ð×ö¡°Õ³Á¬¡±£¨sticky£©ÐÞÊÎ·û¡£ES6ÐÂÔö¡£
 
 ### 5.5 FunctionÀàÐÍ
 
 Ã¿¸öº¯Êý¶¼ÊÇFunctionÀàÐÍµÄÊµÀý£¬¶øÇÒ¶¼ÓëÆäËûÒýÓÃÀàÐÍÒ»Ñù¾ßÓÐÊôÐÔºÍ·½·¨¡£ÓÉÓÚº¯ÊýÊÇ¶ÔÏó£¬Òò´Ëº¯ÊýÃûÊµ¼ÊÉÏÒ²ÊÇÒ»¸öÖ¸Ïòº¯Êý¶ÔÏóµÄÖ¸Õë£¬²»»áÓëÄ³¸öº¯Êý°ó¶¨¡£
 
-### 5.5.1 Ã»ÓÐÖØÔØ£¨ÉîÈëÀí½â£©
+#### 5.5.1 Ã»ÓÐÖØÔØ£¨ÉîÈëÀí½â£©
 
 ½«º¯ÊýÃûÏëÏóÎªÖ¸Õë£¬Ò²ÓÐÖúÓÚÀí½âÎªÊ²Ã´ECMAScriptÖÐÃ»ÓÐº¯ÊýÖØÔØµÄ¸ÅÄî¡£
-### 5.5.2 º¯ÊýÉùÃ÷Óëº¯Êý±í´ïÊ½
+¼òµ¥½²¾ÍÊÇº¯ÊýÃûÒ²ÓëÆäËûÒýÓÃ¶ÔÏóÒ»ÑùÖ»ÊÇÒýÓÃµØÖ·£¬µ±¶à¸öÃû³ÆÏàÍ¬µÄº¯ÊýÍ¬Ê±ÉùÃ÷Ê±£¬×îºóÒ»¸ö»á¸²¸ÇÖ®Ç°ËùÓÐ¡£
+
+#### 5.5.2 º¯ÊýÉùÃ÷Óëº¯Êý±í´ïÊ½
 
 Êµ¼ÊÉÏ£¬½âÎöÆ÷ÔÚÏòÖ´ÐÐ»·¾³ÖÐ¼ÓÔØÊý¾ÝÊ±£¬¶Ôº¯ÊýÉùÃ÷ºÍº¯Êý±í´ïÊ½²¢·ÇÒ»ÊÓÍ¬ÈÊ¡£½âÎöÆ÷»áÂÊÏÈ¶ÁÈ¡º¯ÊýÉùÃ÷£¬²¢Ê¹ÆäÔÚÖ´ÐÐÈÎºÎ´úÂëÖ®Ç°¿ÉÓÃ£¨¿ÉÒÔ·ÃÎÊ£©£»ÖÁÓÚº¯Êý±í´ïÊ½£¬Ôò±ØÐëµÈµ½½âÎöÆ÷Ö´ÐÐµ½ËüËùÔÚµÄ´úÂëÐÐ£¬²Å»áÕæÕý±»½âÎöÖ´ÐÐ¡£
 
-### 5.5.3 ×÷ÎªÖµµÄº¯Êý
+#### 5.5.3 ×÷ÎªÖµµÄº¯Êý
 
 ÒòÎªECMAScriptÖÐµÄº¯ÊýÃû±¾Éí¾ÍÊÇ±äÁ¿£¬ËùÒÔº¯ÊýÒ²¿ÉÒÔ×÷ÎªÖµÀ´Ê¹ÓÃ¡£Ò²¾ÍÊÇËµ£¬²»½ö¿ÉÒÔÏë´«µÝ²ÎÊýÒ»Ñù°ÑÒ»¸öº¯Êý´«µÝ¸øÁíÒ»¸öº¯Êý£¬¶øÇÒ¿ÉÒÔ½øÒ»¸öº¯Êý×÷ÎªÁíÒ»¸öº¯ÊýµÄ½á¹û·µ»Ø¡£
 
-### 5.5.4 º¯ÊýÄÚ²¿ÊôÐÔ
+#### 5.5.4 º¯ÊýÄÚ²¿ÊôÐÔ
 
 ÔÚº¯ÊýÄÚ²¿£¬ÓÐÁ½¸öÌØÊâµÄ¶ÔÏó£ºargumentsºÍthis¡£ÆäÖÐ£¬argumentsÊÇÒ»¸öÀàÊý×é¶ÔÏó£¬°üº¬×Å´«Èëº¯ÊýÖÐµÄËùÓÐ²ÎÊý¡£ËäÈ»argumentsµÄÖ÷ÒªÓÃÍ¾ÊÇÊÇ±£´æº¯Êý²ÎÊý£¬µ«Õâ¸ö¶ÔÏó»¹ÓÐÒ»¸öÃû½ÐcalleeµÄÊôÐÔ£¬¸ÃÊôÐÔÊÇÒ»¸öÖ¸Õë£¬Ö¸ÏòÓµÓÐÕâ¸öarguments¶ÔÏóµÄº¯Êý¡£
 
 º¯ÊýÄÚ²¿µÄÁíÒ»¸öÌØÊâ¶ÔÏóÊÇthis£¬ÆäÐÐÎªÓëJavaºÍC#ÖÐµÄthis´óÖÂÀàËÆ¡£»»¾ä»°Ëµ£¬thisÒýÓÃµÄÊÇº¯Êý¾ÝÒÔÖ´ÐÐµÄ»·¾³¶ÔÏó¡ª¡ª»òÕßÒ²¿ÉÒÔËµÊÇthisÖµ£¨µ±ÔÚÍøÒ³µÄÈ«¾Ö×÷ÓÃÓòÖÐµ÷ÓÃº¯ÊýÊ±£¬this¶ÔÏóÒýÓÃµÄ¾ÍÊÇwindow£©¡£
 
-### 5.5.5 º¯ÊýÊôÐÔºÍ·½·¨
+#### 5.5.5 º¯ÊýÊôÐÔºÍ·½·¨
 
-ECMAScriptÖÐµÄº¯ÊýÊÇ¶ÔÏó£¬Òò´Ëº¯ÊýÒ²ÓÐÊôÐÔºÍ·½·¨¡£Ã¿¸öº¯Êý¶¼°üº¬Á½¸öÊôÐÔ£ºlengthºÍprototype£¬ÆäÖÐ£¬lengthÊôÐÔ±íÊ¾º¯ÊýÏ£Íû½ÓÊÕµ½¶öÃüÃû²ÎÊýµÄ¸öÊý¡£
+ECMAScriptÖÐµÄº¯ÊýÊÇ¶ÔÏó£¬Òò´Ëº¯ÊýÒ²ÓÐÊôÐÔºÍ·½·¨¡£Ã¿¸öº¯Êý¶¼°üº¬Á½¸öÊôÐÔ£ºlengthºÍprototype£¬ÆäÖÐ£¬lengthÊôÐÔ±íÊ¾º¯ÊýÏ£Íû½ÓÊÕµ½º¯ÃüÃû²ÎÊýµÄ¸öÊý¡££¨ÔÚES6ÖÐÊ¹ÓÃÁËrest²ÎÊý£¬º¯ÊýµÄlength¾ÍµÈÓÚ0£©
 
 ¶ÔÓÚECMAScriptÖÐµÄÒýÓÃÀàÐÍ¶øÑÔ£¬prototypeÊÇ±£´æËüÃÇËùÓÐÊµÀý·½·¨µÄÕæÕýËùÔÚ¡£»»¾ä»°Ëµ£¬ÖîÈçtoString()ºÍvalueOf()µÈ·½·¨Êµ¼ÊÉÏ¶¼±£´æÔÚprototypeÃûÏÂ£¬Ö»²»¹ýÊÇÍ¨¹ý¸÷×Ô¶ÔÏóµÄÊµÀý·ÃÎÊ°ÕÁË¡£ÔÚ´´½¨×Ô¶¨ÒåÒýÓÃÀàÐÍÒÔ¼°ÊµÏÖ¼Ì³ÐÊ±£¬prototypeÊôÐÔµÄ×÷ÓÃÊÇ¼«ÎªÖØÒªµÄ¡£ÔÚECMAScript5ÖÐ£¬prototypeÊôÐÔÊÇ²»¿ÉÃ¶¾ÙµÄ£¬Òò´ËÊ¹ÓÃfor-inÎÞ·¨·¢ÏÖ¡£
 
@@ -163,7 +167,7 @@ call()·½·¨Óëapply()·½·¨µÄ×÷ÓÃÏàÍ¬£¬ËüÃÇµÄÇø±ð½öÔÚÓÚ½ÓÊÜ²ÎÊýµÄ·½Ê½²»Í¬¡£¶ÔÓÚcall(
 
 ÊÂÊµÉÏ£¬´«µÝ²ÎÊý²¢·Çapply()ºÍcall()ÕæÕýµÄÓÃÎäÖ®µØ£»ËüÃÇÕæÕýÇ¿´óµÄµØ·½ÊÇÄÜ¹»À©³äº¯ÊýÀµÒÔÔËÐÐµÄ×÷ÓÃÓò¡£
 
-Ã¿¸öº¯Êý¼Ì³ÐµÄtoLocalStirng()ºÍtoString()·½·¨Ê¼ÖÕ¶¼·µ»Øº¯ÊýµÄ´úÂë¡£ÁíÒ»¸ö¼Ì³ÐµÄvalueOf()·½·¨Í¬Ô´Ò²Ö»·µ»Øº¯Êý´úÂë¡£
+Ã¿¸öº¯Êý¼Ì³ÐµÄtoLocalStirng()ºÍtoString()·½·¨Ê¼ÖÕ¶¼·µ»Øº¯ÊýµÄ´úÂë¡£ÁíÒ»¸ö¼Ì³ÐµÄvalueOf()·½·¨Í¬ÑùÒ²Ö»·µ»Øº¯Êý´úÂë¡£
 
 ### 5.6 »ù±¾°ü×°ÀàÐÍ
 
@@ -177,7 +181,7 @@ Object¹¹Ôìº¯ÊýÒ²»áÏñ¹¤³Ì·½·¨Ò»Ñù£¬¸ù¾Ý´«ÈëÖµµÄÀàÐÍ·µ»ØÏàÓ¦»ù±¾°ü×°ÀàÐÍµÄÊµÀý¡£
 
 ECMA-262¶ÔÄÚÖÃ¶ÔÏóµÄ¶¨ÒåÊÇ£º¡°ÓÉECMAScriptÊµÏÖÌá¹©µÄ¡¢²»ÒÀÀµÓÚËÞÖ÷»·¾³µÄ¶ÔÏó£¬ÕâÐ©¶ÔÏóÔÚECMAScript³ÌÐòÖ´ÐÐÖ®Ç°¾Í´æÔÚÁË¡£¡±
 
-### 5.7.1 Global¶ÔÏó
+#### 5.7.1 Global¶ÔÏó
 
 ECMAScriptÖÐµÄGlobal¶ÔÏóÔÚÄ³ÖÖÒâÒåÉÏÊÇ×÷ÎªÒ»¸öÖÕ¼«µÄ¡°¶µµ×¶ù¶ÔÏó¡±À´¶¨ÒåµÄ£¬»»¾ä»°Ëµ£¬²»ÊôÓÚÈÎºÎÆäËû¶ÔÏóµÄÊôÐÔºÍº¯Êý£¬¶¼ÊÇGlobal¶ÔÏóµÄÊôÐÔ¡£
 
@@ -187,9 +191,11 @@ URI·½·¨encodeURI()¡¢encodeURIComponent()¡¢decodeURI()ºÍdecodeURIComponent()ÓÃÓÚÌ
 
 ÑÏ¸ñÄ£Ê½ÏÂ£¬ÔÚÍâ²¿·ÃÎÊ²»µ½eval()ÖÐ´´½¨µÄÈÎºÎ±äÁ¿»òº¯Êý¡£
 
-### 5.7.2 Math³£ÓÃ¶ÔÏó
+#### 5.7.2 Math³£ÓÃ¶ÔÏó
 
 * £¨1£©Math.ceil()Ö´ÐÐÏòÉÏÉáÈë£¬¼´Ëü×ÜÊÇ½«ÊýÖµÏòÉÏÉáÈëÎª×î½Ó½üµÄÕûÊý¡£
 * £¨2£©Math.floor()Ö´ÐÐÏòÏÂÉáÈë£¬¼´Ëü×ÜÊÇ½«ÊýÖµÏòÏÂÉáÈëÎª×î½Ó½üµÄÕûÊý¡£
 * £¨3£©Math.round()Ö´ÐÐ±ê×¼ÉáÈë£¬¼´Ëü×ÜÊÇ½«ÊýÖµËÄÉáÎåÈëÎª×î½Ó½üµÄÕûÊý¡£
 * £¨4£©Math.random()·½·¨·µ»Ø½éÓÚ0ºÍ1Ö®¼äÒ»¸öËæ»úÊý£¬²»°üÀ¨0ºÍ1¡£
+
+[¼ÌÐøÏÂÒ»Æª](javascript_02.md)
