@@ -97,7 +97,7 @@ Attr¶ÔÏóÓÐ3¸öÊôÐÔ£ºname¡¢valueºÍspecified¡£ÆäÖÐ£¬nameÊÇÌØÐÔÃû³Æ£¨ÓënodeNameµÄÖµÏ
 ¸ú²Ù×÷HTMLÔªËØÒ»Ñù£¬´´½¨¶¯Ì¬½Å±¾Ò²ÓÐÁ½ÖÖ·½Ê½£º²åÈëÍâ²¿ÎÄ¼þºÍÖ±½Ó²åÈëJavaScript´úÂë¡£
 #### 10.2.2 ¶¯Ì¬ÑùÊ½
 
-ÄÜ¹»°ÑCSSÑùÊ½°üº¬µ½HTMLÒ³ÃæÖÐµÄÔªËØÓÐÁ½¸ö¡£ÆäÖÐ£¬<link>ÔªËØÓÃÓÚ°üº¬À´×ÔÍâ²¿µÄÎÄ¼þ£¬¶ø<style>ÔªËØÓÃÓÚÖ¸¶¨Ç¶ÈëµÄÑùÊ½¡£Óë¶¯Ì¬½Å±¾ÀàËÆ£¬ËùÎ½µÄ¶¯Ì¬ÑùÊ½ÊÇÖ¸ÔÚÒ³Ãæ¸Õ¼ÓÔØÊ±²»´æÔÚµÄÑùÊ½£»¶¯Ì¬ÑùÊ½ÊÇÔÚÒ³Ãæ¼ÓÔØÍê³Éºó¶¯Ì¬Ìí¼Óµ½Ò³ÃæÖÐµÄ¡£
+ÄÜ¹»°ÑCSSÑùÊ½°üº¬µ½HTMLÒ³ÃæÖÐµÄÔªËØÓÐÁ½¸ö¡£ÆäÖÐ£¬\<link\>ÔªËØÓÃÓÚ°üº¬À´×ÔÍâ²¿µÄÎÄ¼þ£¬¶ø\<style\>ÔªËØÓÃÓÚÖ¸¶¨Ç¶ÈëµÄÑùÊ½¡£Óë¶¯Ì¬½Å±¾ÀàËÆ£¬ËùÎ½µÄ¶¯Ì¬ÑùÊ½ÊÇÖ¸ÔÚÒ³Ãæ¸Õ¼ÓÔØÊ±²»´æÔÚµÄÑùÊ½£»¶¯Ì¬ÑùÊ½ÊÇÔÚÒ³Ãæ¼ÓÔØÍê³Éºó¶¯Ì¬Ìí¼Óµ½Ò³ÃæÖÐµÄ¡£
 
 #### 10.2.3 ²Ù×÷±í¸ñ
 
@@ -172,7 +172,7 @@ DocumentµÄreadyStateÊôÐÔÓÐÁ½¸ö¿ÉÄÜµÄÖµ£º
 - 3.headÊôÐÔ
 #### 11.3.4 ×Ö·û¼¯ÊôÐÔ
 
-HTML5ÐÂÔöÁË¼¸¸öÓëÎÄµµ×Ö·û¼¯ÓÐ¹ØµÄÊôÐÔ¡£ÆäÖÐ£¬charsetÊôÐÔ±íÊ¾ÎÄµµÖÐÊµ¼ÊÊ¹ÓÃµÄ×Ö·û¼¯£¬Ò²¿ÉÒÔÓÃÀ´Ö¸¶¨ÐÂ×Ö·û¼¯¡£Ä¬ÈÏÇé¿öÏÂ£¬Õâ¸öÊôÐÔµÄÖµÎª¡°UTF-16¡±£¬µ«¿ÉÒÔÍ¨¹ý<meta>ÔªËØ¡¢ÏìÓ¦Í·²¿»òÖ±½ÓÉèÖÃcharsetÊôÐÔÐÞ¸ÄÕâ¸öÖµ¡£
+HTML5ÐÂÔöÁË¼¸¸öÓëÎÄµµ×Ö·û¼¯ÓÐ¹ØµÄÊôÐÔ¡£ÆäÖÐ£¬charsetÊôÐÔ±íÊ¾ÎÄµµÖÐÊµ¼ÊÊ¹ÓÃµÄ×Ö·û¼¯£¬Ò²¿ÉÒÔÓÃÀ´Ö¸¶¨ÐÂ×Ö·û¼¯¡£Ä¬ÈÏÇé¿öÏÂ£¬Õâ¸öÊôÐÔµÄÖµÎª¡°UTF-16¡±£¬µ«¿ÉÒÔÍ¨¹ý\<meta\>ÔªËØ¡¢ÏìÓ¦Í·²¿»òÖ±½ÓÉèÖÃcharsetÊôÐÔÐÞ¸ÄÕâ¸öÖµ¡£
 #### 11.3.5 ×Ô¶¨ÒåÊý¾ÝÊôÐÔ
 
 HTML5¹æ¶¨¿ÉÒÔÎªÔªËØÌí¼Ó·Ç±ê×¼µÄÊôÐÔ£¬µ«ÒªÌí¼ÓÇ°×ºdata-£¬Ä¿µÄÊÇÎªÔªËØÌá¹©ÓëäÖÈ¾ÎÞ¹ØµÄÐÅÏ¢£¬»òÕßÌá¹©ÓïÒåÐÅÏ¢¡£ÕâÐ©ÊôÐÔ¿ÉÒÔÈÎÒâÌí¼Ó¡¢Ëæ±ãÃüÃû£¬Ö»ÒªÒÔdata-¿ªÍ·¼´¿É¡£
@@ -239,7 +239,7 @@ DOM1¼¶Ö÷Òª¶¨ÒåµÄÊÇHTMLºÍXMLÎÄµµµÄµ×²ã½á¹¹¡£DOM2ºÍDOM3¼¶ÔòÔÚÕâ¸ö½á¹¹µÄ»ù´¡ÉÏÒýÈëÁ
 ### 12.1 DOM±ä»¯
 #### 12.1.1 Õë¶ÔXMLÃüÃû¿Õ¼äµÄ±ä»¯
 
-ÃüÃû¿Õ¼äÒªÊ¹ÓÃxmlnsÌØÐÔÀ´Ö¸¶¨¡£XHTMLµÄÃüÃû¿Õ¼äÊÇhttp://www.w3.org/1999/xhtml£¬ÔÚÈÎºÎ¸ñÊ½Á¼ºÃµÄXHTMLÒ³ÃæÖÐ£¬¶¼Ó¦¸Ã½«Æä°üº¬ÔÚ<html>ÔªËØÖÐ¡£
+ÃüÃû¿Õ¼äÒªÊ¹ÓÃxmlnsÌØÐÔÀ´Ö¸¶¨¡£XHTMLµÄÃüÃû¿Õ¼äÊÇhttp://www.w3.org/1999/xhtml£¬ÔÚÈÎºÎ¸ñÊ½Á¼ºÃµÄXHTMLÒ³ÃæÖÐ£¬¶¼Ó¦¸Ã½«Æä°üº¬ÔÚ\<html\>ÔªËØÖÐ¡£
 
 - 1.NodeÀàÐÍµÄ±ä»¯
 
@@ -278,7 +278,7 @@ NodeÀàÐÍÖÐÎ¨Ò»ÓëÃüÃû¿Õ¼äÎÞ¹ØµÄ±ä»¯£¬¾ÍÊÇÌí¼ÓÁËisSupported()·½·¨¡£ÓëDOM1¼¶Îªdocum
 ¿ò¼ÜºÍÄÚÇ¶¿ò¼Ü·Ö±ðÓÃHTMLFrameElementºÍHTMLFrameElement±íÊ¾£¬ËüÃÇÔÚDOM2¼¶ÖÐ¶¼ÓÐÒ»¸öÐÂÊôÐÔ£¬Ãû½ÐcontentDocument¡£Õâ¸öÊôÐÔ°üº¬Ò»¸öÖ¸Õë£¬Ö¸Ïò±íÊ¾¿ò¼ÜÄÚÈÝµÄÎÄµµ¶ÔÏó¡£
 ### 12.2 ÑùÊ½
 
-ÔÚHTMLÖÐ¶¨ÒåÑùÊ½µÄ·½Ê½ÓÐ3ÖÐ£ºÍ¨¹ý<link/>ÔªËØ°üº¬Íâ²¿ÑùÊ½±íÎÄ¼þ¡¢Ê¹ÓÃ<style/>ÔªËØ¶¨ÒåÇ¶ÈëÊ½ÑùÊ½£¬ÒÔ¼°Ê¹ÓÃstyleÌØÐÔ¶¨ÒåÕë¶ÔÌØ¶¨ÔªËØµÄÑùÊ½¡£
+ÔÚHTMLÖÐ¶¨ÒåÑùÊ½µÄ·½Ê½ÓÐ3ÖÐ£ºÍ¨¹ý\<link/\>ÔªËØ°üº¬Íâ²¿ÑùÊ½±íÎÄ¼þ¡¢Ê¹ÓÃ\<style/\>ÔªËØ¶¨ÒåÇ¶ÈëÊ½ÑùÊ½£¬ÒÔ¼°Ê¹ÓÃstyleÌØÐÔ¶¨ÒåÕë¶ÔÌØ¶¨ÔªËØµÄÑùÊ½¡£
 #### 12.2.1 ·ÃÎÊÔªËØµÄÑùÊ½
 
 ÈÎºÎÖ§³ÖstyleÌØÐÔµÄHTMLÔªËØÔÚJavaScriptÖÐ¶¼ÓÐÒ»¸ö¶ÔÓ¦µÄstyleÊôÐÔ¡£Õâ¸östyle¶ÔÏóÊÇCSSStyleDeclarationµÄÊµÀý£¬°üº¬ÕâÍ¨¹ýHTMLµÄstyleÌØÐÔÖ¸¶¨µÄÑùÊ½ÐÅÏ¢£¬µ«²»°üÀ¨ÓëÍâ²¿ÑùÊ½±í»òÇ¶ÈëÊ½ÑùÊ½±í¾­²ãµþ¶øÀ´µÄÑùÊ½¡£ÔÚstyleÌØÐÔÖÐÖ¸¶¨µÄÈÎºÎCSSÊôÐÔ¶¼½«±íÏÖÎªstyleµÄÏàÓ¦ÊôÐÔ¡£¶ÔÓÚÊ¹ÓÃ¶Ì»®Ïß£¨·Ö¸ô²»Í¬µÄ´Ê»ã£¬ÀýÈçbackground-image£©µÄCSSÊôÐÔÃû£¬±ØÐë½«Æä×ª»»³ÉÍÕ·å´óÐ¡Ð´ÐÎÊ½£¬²ÅÄÜÍ¨¹ýJavaScriptÀ´·ÃÎÊ¡£
@@ -296,7 +296,7 @@ NodeÀàÐÍÖÐÎ¨Ò»ÓëÃüÃû¿Õ¼äÎÞ¹ØµÄ±ä»¯£¬¾ÍÊÇÌí¼ÓÁËisSupported()·½·¨¡£ÓëDOM1¼¶Îªdocum
 ËäÈ»style¶ÔÏóÄÜ¹»Ìá¹©Ö§³ÖstyleÌØÐÔµÄÈÎºÎÔªËØµÄÑùÊ½ÐÅÏ¢£¬µ«Ëü²»°üº¬ÄÇÐ©´ÓÆäËûÑùÊ½±í²ãµþ¶øÀ´²¢Ó°Ïìµ½µ±Ç°ÔªËØµÄÑùÊ½ÐÅÏ¢¡£
 #### 12.2.2 ²Ù×÷ÑùÊ½±í
 
-CSSStyleSheetÀàÐÍ±íÊ¾µÄÊÇÑùÊ½±í£¬°üÀ¨Í¨¹ý<link>ÔªËØ°üº¬µÄÑùÊ½±íºÍÔÚ<style>ÔªËØÖÐ¶¨ÒåµÄÑùÊ½±í¡£ÕâÁ½¸öÔªËØ±¾Éí·Û±ÊÊÇÓÉHTMLLineElementºÍHTMLStyleElementÀàÐÍ±íÊ¾µÄ¡£
+CSSStyleSheetÀàÐÍ±íÊ¾µÄÊÇÑùÊ½±í£¬°üÀ¨Í¨¹ý\<link\>ÔªËØ°üº¬µÄÑùÊ½±íºÍÔÚ\<style\>ÔªËØÖÐ¶¨ÒåµÄÑùÊ½±í¡£ÕâÁ½¸öÔªËØ±¾Éí·Û±ÊÊÇÓÉHTMLLineElementºÍHTMLStyleElementÀàÐÍ±íÊ¾µÄ¡£
 
 - 1.CSS¹æÔò
 
@@ -374,7 +374,7 @@ TreeWalkerÊÇNodeIteratorµÄÒ»¸ö¸ü¸ß¼¶µÄ°æ±¾¡£³ýÁË°üÀ¨nextNode()ºÍpreviousNode()ÔÚ
 DOM2¼¶ÔÚDocumentÀàÐÍÖÐ¶¨ÒåÁËcreateRange()·½·¨¡£ÔÚ¼æÈÝDOMµÄä¯ÀÀÆ÷ÖÐ£¬Õâ¸ö·½·¨ÊôÓÚdocument¶ÔÏó¡£Ê¹ÓÃhasFeature()»òÕßÖ±½Ó¼ì²â¸Ã·½·¨£¬¶¼¿ÉÒÔÈ·¶¨ä¯ÀÀÆ÷ÊÇ·ñÖ§³Ö·¶Î§¡£
 #### 12.4.2 IE8¼°¸üÔç°æ±¾ÖÐµÄ·¶Î§
 
-ËäÈ»IE9Ö§³ÖDOM·¶Î§£¬µ«IE8¼°Ö®Ç°°æ±¾²»Ö§³ÖDOM·¶Î§¡£²»¹ý£¬IE8¼°ÔçÆÚ°æ±¾Ö§³ÖÒ»ÖÖÀàËÆµÄ¸ÅÄî£¬¼´ÎÄ±¾·¶Î§£¨text range£©¡£ÎÄ±¾·¶Î§ÊÇIE×¨ÓÐµÄÌØÐÔ£¬ÆäËûä¯ÀÀÆ÷¶¼²»Ö§³Ö¡£¹ËÃûË¼Òå£¬ÎÄ±¾·¶Î§´¦ÀíµÄÖ÷ÒªÊÇÎÄ±¾£¨²»Ò»¶¨ÊÇDOM½Úµã£©¡£Í¨¹ý<body>¡¢<button>¡¢<input>¡¢ºÍ<textarea>µÈÕâ¼¸¸öÔªËØ£¬¿ÉÒÔµ÷ÓÃcreateTextRange()·½·¨À´´´½¨ÎÄ±¾·¶Î§¡£
+ËäÈ»IE9Ö§³ÖDOM·¶Î§£¬µ«IE8¼°Ö®Ç°°æ±¾²»Ö§³ÖDOM·¶Î§¡£²»¹ý£¬IE8¼°ÔçÆÚ°æ±¾Ö§³ÖÒ»ÖÖÀàËÆµÄ¸ÅÄî£¬¼´ÎÄ±¾·¶Î§£¨text range£©¡£ÎÄ±¾·¶Î§ÊÇIE×¨ÓÐµÄÌØÐÔ£¬ÆäËûä¯ÀÀÆ÷¶¼²»Ö§³Ö¡£¹ËÃûË¼Òå£¬ÎÄ±¾·¶Î§´¦ÀíµÄÖ÷ÒªÊÇÎÄ±¾£¨²»Ò»¶¨ÊÇDOM½Úµã£©¡£Í¨¹ý\<body\>¡¢\<button\>¡¢\<input\>¡¢ºÍ\<textarea\>µÈÕâ¼¸¸öÔªËØ£¬¿ÉÒÔµ÷ÓÃcreateTextRange()·½·¨À´´´½¨ÎÄ±¾·¶Î§¡£
 
 [·µ»ØÉÏÒ»Æª](javascript_02.md)
 [¼ÌÐøÏÂÒ»Æª](javascript_04.md)
