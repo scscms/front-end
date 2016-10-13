@@ -56,15 +56,15 @@ DOM1级定义了一个Node接口，该接口将由DOM中的所有节点类型实现。这个Node接口在JavaS
 
 JavaScript通过Document类型表示文档。在浏览器中，document对象是HTMLDocument（继承自Document）的一个实例，表示整个HTML页面。
 
-- 1)document对象有一个body属性，直接指向\<body>元素。
-- 2)document.title包含<title>元素中的文本。
+- 1)document对象有一个body属性，直接指向\<body\>元素。
+- 2)document.title包含\<title\>元素中的文本。
 - 3)document.URL包含页面完整的URL（即地址栏中显示的URL）
 - 4)document.domain属性中只包含页面的域名。
 - 5)document.referrer保存这链接到当前页面的那个页面的URL
-- 6)document.anchors包含文档中所有带name属性的\<a>元素
-- 7)document.applets包含文档中所有的\<applet>元素
-- 8)document.forms包含文档中所有的\<form>元素
-- 9)document.images包含文档中所有的\<img>元素
+- 6)document.anchors包含文档中所有带name属性的\<a\>元素
+- 7)document.applets包含文档中所有的\<applet\>元素
+- 8)document.forms包含文档中所有的\<form\>元素
+- 9)document.images包含文档中所有的\<img\>元素
 - 10)document.links包含文档中所有带href特性的\<a>元素
 
 #### 10.1.3 Element类型
