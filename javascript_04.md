@@ -128,7 +128,7 @@ UIÊÂ¼þÖ¸µÄÊÇÄÇÐ©²»Ò»¶¨ÓëÓëÓÃ»§²Ù×÷ÓÐ¹ØµÄÊÂ¼þ¡£ÕâÐ©ÊÂ¼þÔÚDOM¹æ·¶³öÏÖÖ®Ç°£¬¶¼ÊÇÒÔÕ
 
 ÓëÍ¼Ïñ²»Í¬£¬Ö»ÓÐÔÚÉèÖÃÁË\<script\>ÔªËØµÄsrcÊôÐÔ²¢½«¸ÃÔªËØÌí¼Óµ½ÎÄµµºó£¬²Å»á¿ªÊ¼ÏÂÔØJavaScriptÎÄ¼þ¡£
 
-Óë<script>½ÚµãÀàËÆ£¬ÔÚÎ´Ö¸¶¨hrefÊôÐÔ²¢½«\<link\>ÔªËØÌí¼Óµ½ÎÄµµÖ®Ç°Ò²²»»á¿ªÊ¼ÏÂÔØÑùÊ½±í¡£
+Óë\<script\>½ÚµãÀàËÆ£¬ÔÚÎ´Ö¸¶¨hrefÊôÐÔ²¢½«\<link\>ÔªËØÌí¼Óµ½ÎÄµµÖ®Ç°Ò²²»»á¿ªÊ¼ÏÂÔØÑùÊ½±í¡£
 
 ¹ØÓÚºÎÊ±»á´¥·¢resizeÊÂ¼þ£¬²»Í¬ä¯ÀÀÆ÷ÓÐ²»Í¬µÄ»úÖÆ¡£IE¡¢Safari¡¢ChromeºÍOpra»áÔÚä¯ÀÀÆ÷´°¿Ú±ä»¯ÁË1ÏñËØÊ±¾Í´¥·¢resizeÊÂ¼þ£¬È»ºóËæ×Å±ä»¯²»¶ÏÖØ¸´´¥·¢¡£FirefoxÔòÖ»»áÔÚÓÃ»§Í£Ö¹µ÷Õûä¯ÀÀÆ÷´óÐ¡Ê±²Å»á´¥·¢resizeÊÂ¼þ¡£
 #### 13.4.2 ½¹µãÊÂ¼þ

@@ -49,7 +49,9 @@ HTML5规范规定dataTransfer对象还应该包含下列方法和属性：
 - （2）clearData(format)：清除以特定格式保存的数据。
 - （3）setDragImage(element,x,y)：指定一幅图像，当拖动发生时，显示在光标下方。
 - （4）types：当前保存的数据类型。
+
 ### 16.3 媒体元素
+
 #### 16.3.1 属性
 
 \<video>和\<audio>元素都提供了完善的JavaScript接口。
