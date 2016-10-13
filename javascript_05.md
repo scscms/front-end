@@ -4,7 +4,7 @@
 
 ### 14.1 表单的基础知识
 
-在HTML中，表单是由<form>元素来表示的，而在JavaScript中，表单对应的则是HTMLFormElement类型。HTMLFormElement继承了HTMLElement，因而与其他HTML元素具有相同的默认属性。不过，HTMLFormElement也有它自己下列独有的属性和方法。
+在HTML中，表单是由\<form\>元素来表示的，而在JavaScript中，表单对应的则是HTMLFormElement类型。HTMLFormElement继承了HTMLElement，因而与其他HTML元素具有相同的默认属性。不过，HTMLFormElement也有它自己下列独有的属性和方法。
 
 - （1）acceptCharset：服务器能够处理的字符集；等价于HTML中的accept-charset特性。
 - （2）action：接收请求的URL；等价于HTML中的action属性。
@@ -71,6 +71,7 @@ HTML5为表单字段新增了一个`autofocus`属性。在支持这个属性的浏览器中，只要设置这个
 #### 14.2.1 选择文本
 
 两种文本框都支持select()方法，用于选择文本框中的所有文本。
+
 #### 14.2.2 过滤输入
 
 1.屏蔽字符
@@ -155,11 +156,13 @@ DOM的appendChild()方法及insertBefore()方法。
 ### 14.5 富文本编辑
 
 富文本编辑，又称为WYSIWYG（What You See Is What You Get，所见即所得）。
+
 #### 14.5.1 使用contenteditable属性
 
 可以把contenteditable属性应用给页面中的任何元素，然后用户立即就可以编辑该元素。
 
 contenteditable属性有三个可能的值：“true”表示打开、“false”表示关闭，“inserit”表示从父元素那里继承。
+
 #### 14.5.2 操作富文本
 
 与富文本编辑器交互的主要方式，就是使用document.execCommand()。这个方法可以对文档执行预定义的命令，而且可以应用大多数格式。可以为document.execCommand()方法传递三个参数：要执行的命令名称、表示浏览器是否应该为当前命令提供用户界面的一个布尔值和执行该命令必须的一个值（如果不需要，则为null）。为了确保跨浏览器的兼容性，第二个参数应该始终设置为fasle，因为Firefox会在该参数为true时抛出错误。
@@ -200,12 +203,15 @@ Selection对象的方法：
 使用toDataURL()方法，可以导出在\<canvas\>元素上绘制的图像。这个方法接受一个参数，即图像的MIME类型格式，而且适合于创建图像的任何上下文。
 
 注意：如果绘制到画布上的图像源自不同的域，toDataURL()方法会抛出错误。
+
 ### 15.2 2D上下文
 
 2D上下文的两种基本绘图操作是填充和描边。填充，就是用指定的样式（颜色、渐变或图像）填充图形；描边，说是只在图形的边缘画线。
+
 ### 15.3 WebGL
 
 WebGL是针对Canvas的3D上下文。与其他Web技术不同，WebGL并不是W3C制定的标准，而是由Khronos Group制定的。
+
 #### 15.3.1 类型化数组
 
 类型化数组也是数组，只不过其元素被设置为特定类型的值。
@@ -251,7 +257,7 @@ WebGL是针对Canvas的3D上下文。与其他Web技术不同，WebGL并不是W3C制定的标准，而是由
 
 ##### 3.准备绘图
 
-在实际操作WebGL上下文之前，一般都要使用某种实色清除<canvas>，为绘图做好准备。为此，首先必须使用clearColor()方法来指定要使用的颜色值，这个方法接收4个参数：红、绿、蓝和透明度。每个参数必须是一个0到1之间的数值，表示每种分量在最终颜色中的强度。
+在实际操作WebGL上下文之前，一般都要使用某种实色清除\<canvas\>，为绘图做好准备。为此，首先必须使用clearColor()方法来指定要使用的颜色值，这个方法接收4个参数：红、绿、蓝和透明度。每个参数必须是一个0到1之间的数值，表示每种分量在最终颜色中的强度。
 
 ##### 4.视口与坐标
 
