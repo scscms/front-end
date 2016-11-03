@@ -1,29 +1,29 @@
-Ãâ·ÑµÄ±à³ÌÖĞÎÄÊé¼®Ë÷Òı
+å…è´¹çš„ç¼–ç¨‹ä¸­æ–‡ä¹¦ç±ç´¢å¼•
 ============================
-## Ä¿Â¼
+## ç›®å½•
 
-* [ÓïÑÔÎŞ¹ØÀà](#ÓïÑÔÎŞ¹ØÀà)
-  * [²Ù×÷ÏµÍ³](#²Ù×÷ÏµÍ³)
-  * [ÖÇÄÜÏµÍ³](#ÖÇÄÜÏµÍ³)
-  * [·Ö²¼Ê½ÏµÍ³](#·Ö²¼Ê½ÏµÍ³)
-  * [±àÒëÔ­Àí](#±àÒëÔ­Àí)
-  * [º¯ÊıÊ½¸ÅÄî](#º¯ÊıÊ½¸ÅÄî)
-  * [¼ÆËã»úÍ¼ĞÎÑ§](#¼ÆËã»úÍ¼ĞÎÑ§)
-  * [WEB·şÎñÆ÷](#web·şÎñÆ÷)
-  * [°æ±¾¿ØÖÆ](#°æ±¾¿ØÖÆ)
-  * [±à¼­Æ÷](#±à¼­Æ÷)
+* [è¯­è¨€æ— å…³ç±»](#è¯­è¨€æ— å…³ç±»)
+  * [æ“ä½œç³»ç»Ÿ](#æ“ä½œç³»ç»Ÿ)
+  * [æ™ºèƒ½ç³»ç»Ÿ](#æ™ºèƒ½ç³»ç»Ÿ)
+  * [åˆ†å¸ƒå¼ç³»ç»Ÿ](#åˆ†å¸ƒå¼ç³»ç»Ÿ)
+  * [ç¼–è¯‘åŸç†](#ç¼–è¯‘åŸç†)
+  * [å‡½æ•°å¼æ¦‚å¿µ](#å‡½æ•°å¼æ¦‚å¿µ)
+  * [è®¡ç®—æœºå›¾å½¢å­¦](#è®¡ç®—æœºå›¾å½¢å­¦)
+  * [WEBæœåŠ¡å™¨](#webæœåŠ¡å™¨)
+  * [ç‰ˆæœ¬æ§åˆ¶](#ç‰ˆæœ¬æ§åˆ¶)
+  * [ç¼–è¾‘å™¨](#ç¼–è¾‘å™¨)
   * [NoSQL](#nosql)
   * [PostgreSQL](#postgresql)
   * [MySQL](#mysql)
-  * [¹ÜÀíºÍ¼à¿Ø](#¹ÜÀíºÍ¼à¿Ø)
-  * [ÏîÄ¿Ïà¹Ø](#ÏîÄ¿Ïà¹Ø)
-  * [Éè¼ÆÄ£Ê½](#Éè¼ÆÄ£Ê½)
+  * [ç®¡ç†å’Œç›‘æ§](#ç®¡ç†å’Œç›‘æ§)
+  * [é¡¹ç›®ç›¸å…³](#é¡¹ç›®ç›¸å…³)
+  * [è®¾è®¡æ¨¡å¼](#è®¾è®¡æ¨¡å¼)
   * [Web](#web)
-  * [´óÊı¾İ](#´óÊı¾İ)
-  * [±à³ÌÒÕÊõ](#±à³ÌÒÕÊõ)
-  * [ÆäËü](#ÆäËü)
+  * [å¤§æ•°æ®](#å¤§æ•°æ®)
+  * [ç¼–ç¨‹è‰ºæœ¯](#ç¼–ç¨‹è‰ºæœ¯)
+  * [å…¶å®ƒ](#å…¶å®ƒ)
 
-* [ÓïÑÔÏà¹ØÀà](#ÓïÑÔÏà¹ØÀà)
+* [è¯­è¨€ç›¸å…³ç±»](#è¯­è¨€ç›¸å…³ç±»)
   * [Android](#android)
   * [APP](#app)
   * [AWK](#awk)
@@ -56,458 +56,458 @@
   * [Shell](#shell)
   * [Swift](#swift)
 
-* [¶ÁÊé±Ê¼Ç¼°ÆäËü](#¶ÁÊé±Ê¼Ç¼°ÆäËü)
-* [²âÊÔÏà¹Ø](#²âÊÔÏà¹Ø)
+* [è¯»ä¹¦ç¬”è®°åŠå…¶å®ƒ](#è¯»ä¹¦ç¬”è®°åŠå…¶å®ƒ)
+* [æµ‹è¯•ç›¸å…³](#æµ‹è¯•ç›¸å…³)
 
-## ÓïÑÔÎŞ¹ØÀà
+## è¯­è¨€æ— å…³ç±»
 
-### ²Ù×÷ÏµÍ³
+### æ“ä½œç³»ç»Ÿ
 
-* [¿ªÔ´ÊÀ½çÂÃĞĞÊÖ²á](http://i.linuxtoy.org/docs/guide/index.html)
-* [Äñ¸çµÄLinuxË½·¿²Ë](http://vbird.dic.ksu.edu.tw/)
-* [The Linux Command Line](http://billie66.github.io/TLCL/index.html) (ÖĞÓ¢ÎÄ°æ)
-* [Linux Éè±¸Çı¶¯](http://oss.org.cn/kernel-book/ldd3/index.html) (µÚÈı°æ)
-* [ÉîÈë·ÖÎöLinuxÄÚºËÔ´Âë](http://www.kerneltravel.net/kernel-book/%E6%B7%B1%E5%85%A5%E5%88%86%E6%9E%90Linux%E5%86%85%E6%A0%B8%E6%BA%90%E7%A0%81.html)
+* [å¼€æºä¸–ç•Œæ—…è¡Œæ‰‹å†Œ](http://i.linuxtoy.org/docs/guide/index.html)
+* [é¸Ÿå“¥çš„Linuxç§æˆ¿èœ](http://vbird.dic.ksu.edu.tw/)
+* [The Linux Command Line](http://billie66.github.io/TLCL/index.html) (ä¸­è‹±æ–‡ç‰ˆ)
+* [Linux è®¾å¤‡é©±åŠ¨](http://oss.org.cn/kernel-book/ldd3/index.html) (ç¬¬ä¸‰ç‰ˆ)
+* [æ·±å…¥åˆ†æLinuxå†…æ ¸æºç ](http://www.kerneltravel.net/kernel-book/%E6%B7%B1%E5%85%A5%E5%88%86%E6%9E%90Linux%E5%86%85%E6%A0%B8%E6%BA%90%E7%A0%81.html)
 * [UNIX TOOLBOX](http://cb.vu/unixtoolbox_zh_CN.xhtml)
-* [DockerÖĞÎÄÖ¸ÄÏ](https://github.com/widuu/chinese_docker)
-* [Docker ¡ª¡ª ´ÓÈëÃÅµ½Êµ¼ù](https://github.com/yeasy/docker_practice)
-* [DockerÈëÃÅÊµÕ½](http://yuedu.baidu.com/ebook/d817967416fc700abb68fca1)
+* [Dockerä¸­æ–‡æŒ‡å—](https://github.com/widuu/chinese_docker)
+* [Docker â€”â€” ä»å…¥é—¨åˆ°å®è·µ](https://github.com/yeasy/docker_practice)
+* [Dockerå…¥é—¨å®æˆ˜](http://yuedu.baidu.com/ebook/d817967416fc700abb68fca1)
 * [Docker Cheat Sheet](https://github.com/wsargent/docker-cheat-sheet/tree/master/zh-cn#docker-cheat-sheet)
-* [FreeRADIUSĞÂÊÖÈëÃÅ](http://freeradius.akagi201.org)
-* [Mac ¿ª·¢ÅäÖÃÊÖ²á](https://aaaaaashu.gitbooks.io/mac-dev-setup/content/)
-* [FreeBSD Ê¹ÓÃÊÖ²á](https://www.freebsd.org/doc/zh_CN/books/handbook/index.html)
-* [Linux ÃüÁîĞĞ(ÖĞÎÄ°æ)](http://billie66.github.io/TLCL/book/)
-* [Linux ¹¹½¨Ö¸ÄÏ](http://works.jinbuguo.com/lfs/lfs62/index.html)
-* [Linux¹¤¾ß¿ìËÙ½Ì³Ì](https://github.com/me115/linuxtools_rst)
-* [Linux Documentation (ÖĞÎÄ°æ)](https://www.gitbook.com/book/tinylab/linux-doc/details)
-* [Ç¶ÈëÊ½ Linux ÖªÊ¶¿â (eLinux.org ÖĞÎÄ°æ)](https://www.gitbook.com/book/tinylab/elinux/details)
-* [Àí½âLinux½ø³Ì](https://github.com/tobegit3hub/understand_linux_process)
-* [ÃüÁîĞĞµÄÒÕÊõ](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md)
-* [SystemTapĞÂÊÖÖ¸ÄÏ](https://spacewander.gitbooks.io/systemtapbeginnersguide_zh/content/index.html)
-* [²Ù×÷ÏµÍ³Ë¼¿¼](https://github.com/wizardforcel/think-os-zh)
+* [FreeRADIUSæ–°æ‰‹å…¥é—¨](http://freeradius.akagi201.org)
+* [Mac å¼€å‘é…ç½®æ‰‹å†Œ](https://aaaaaashu.gitbooks.io/mac-dev-setup/content/)
+* [FreeBSD ä½¿ç”¨æ‰‹å†Œ](https://www.freebsd.org/doc/zh_CN/books/handbook/index.html)
+* [Linux å‘½ä»¤è¡Œ(ä¸­æ–‡ç‰ˆ)](http://billie66.github.io/TLCL/book/)
+* [Linux æ„å»ºæŒ‡å—](http://works.jinbuguo.com/lfs/lfs62/index.html)
+* [Linuxå·¥å…·å¿«é€Ÿæ•™ç¨‹](https://github.com/me115/linuxtools_rst)
+* [Linux Documentation (ä¸­æ–‡ç‰ˆ)](https://www.gitbook.com/book/tinylab/linux-doc/details)
+* [åµŒå…¥å¼ Linux çŸ¥è¯†åº“ (eLinux.org ä¸­æ–‡ç‰ˆ)](https://www.gitbook.com/book/tinylab/elinux/details)
+* [ç†è§£Linuxè¿›ç¨‹](https://github.com/tobegit3hub/understand_linux_process)
+* [å‘½ä»¤è¡Œçš„è‰ºæœ¯](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md)
+* [SystemTapæ–°æ‰‹æŒ‡å—](https://spacewander.gitbooks.io/systemtapbeginnersguide_zh/content/index.html)
+* [æ“ä½œç³»ç»Ÿæ€è€ƒ](https://github.com/wizardforcel/think-os-zh)
 
-#### ÖÇÄÜÏµÍ³
-* [Ò»²½²½´î½¨ÎïÁªÍøÏµÍ³](https://github.com/phodal/designiot)
+#### æ™ºèƒ½ç³»ç»Ÿ
+* [ä¸€æ­¥æ­¥æ­å»ºç‰©è”ç½‘ç³»ç»Ÿ](https://github.com/phodal/designiot)
 
-### ·Ö²¼Ê½ÏµÍ³
-* [×ßÏò·Ö²¼Ê½](http://dcaoyuan.github.io/papers/pdfs/Scalability.pdf)
+### åˆ†å¸ƒå¼ç³»ç»Ÿ
+* [èµ°å‘åˆ†å¸ƒå¼](http://dcaoyuan.github.io/papers/pdfs/Scalability.pdf)
 
-### ±àÒëÔ­Àí
-* [¡¶¼ÆËã»ú³ÌĞòµÄ½á¹¹ºÍ½âÊÍ¡·¹«¿ª¿Î ·­ÒëÏîÄ¿](https://github.com/DeathKing/Learning-SICP)
+### ç¼–è¯‘åŸç†
+* [ã€Šè®¡ç®—æœºç¨‹åºçš„ç»“æ„å’Œè§£é‡Šã€‹å…¬å¼€è¯¾ ç¿»è¯‘é¡¹ç›®](https://github.com/DeathKing/Learning-SICP)
 
-### º¯ÊıÊ½¸ÅÄî
-* [Éµ¹Ïº¯Êı±à³Ì](https://github.com/justinyhuang/Functional-Programming-For-The-Rest-of-Us-Cn)
+### å‡½æ•°å¼æ¦‚å¿µ
+* [å‚»ç“œå‡½æ•°ç¼–ç¨‹](https://github.com/justinyhuang/Functional-Programming-For-The-Rest-of-Us-Cn)
 
-### ¼ÆËã»úÍ¼ĞÎÑ§
-* [OpenGL ½Ì³Ì](https://github.com/zilongshanren/opengl-tutorials)
-* [WebGL×ÔÑ§Íø](http://html5.iii.org.tw/course/webgl/)
+### è®¡ç®—æœºå›¾å½¢å­¦
+* [OpenGL æ•™ç¨‹](https://github.com/zilongshanren/opengl-tutorials)
+* [WebGLè‡ªå­¦ç½‘](http://html5.iii.org.tw/course/webgl/)
 
-### WEB·şÎñÆ÷
+### WEBæœåŠ¡å™¨
 
-* [Nginx¿ª·¢´ÓÈëÃÅµ½¾«Í¨](http://tengine.taobao.org/book/index.html) (ÌÔ±¦ÍÅ¶Ó³öÆ·)
-* [Nginx½Ì³Ì´ÓÈëÃÅµ½¾«Í¨](http://www.ttlsa.com/nginx/nginx-stu-pdf/)(PDF°æ±¾£¬ÔËÎ¬Éú´æÊ±¼ä³öÆ·)
-* [OpenResty×î¼ÑÊµ¼ù](https://www.gitbook.com/book/moonbingbing/openresty-best-practices/details)
-* [Apache ÖĞÎÄÊÖ²á](http://works.jinbuguo.com/apache/menu22/index.html)
+* [Nginxå¼€å‘ä»å…¥é—¨åˆ°ç²¾é€š](http://tengine.taobao.org/book/index.html) (æ·˜å®å›¢é˜Ÿå‡ºå“)
+* [Nginxæ•™ç¨‹ä»å…¥é—¨åˆ°ç²¾é€š](http://www.ttlsa.com/nginx/nginx-stu-pdf/)(PDFç‰ˆæœ¬ï¼Œè¿ç»´ç”Ÿå­˜æ—¶é—´å‡ºå“)
+* [OpenRestyæœ€ä½³å®è·µ](https://www.gitbook.com/book/moonbingbing/openresty-best-practices/details)
+* [Apache ä¸­æ–‡æ‰‹å†Œ](http://works.jinbuguo.com/apache/menu22/index.html)
 
-### °æ±¾¿ØÖÆ
+### ç‰ˆæœ¬æ§åˆ¶
 
-* [Git½Ì³Ì](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000) £¨±¾ÎÄÓÉ [ÁÎÑ©·å](http://www.liaoxuefeng.com) ´´×÷£¬Èç¹û¾õµÃ±¾½Ì³Ì¶ÔÄúÓĞ°ïÖú£¬¿ÉÒÔÈ¥ [iTunes](https://itunes.apple.com/cn/app/git-jiao-cheng/id876420437) ¹ºÂò£©
-* [git - ¼òÒ×Ö¸ÄÏ](http://rogerdudler.github.io/git-guide/index.zh.html)
-* [ºï×Ó¶¼ÄÜ¶®µÄGITÈëÃÅ](http://backlogtool.com/git-guide/cn/)
-* [Git ²Î¿¼ÊÖ²á](http://gitref.justjavac.com)
+* [Gitæ•™ç¨‹](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000) ï¼ˆæœ¬æ–‡ç”± [å»–é›ªå³°](http://www.liaoxuefeng.com) åˆ›ä½œï¼Œå¦‚æœè§‰å¾—æœ¬æ•™ç¨‹å¯¹æ‚¨æœ‰å¸®åŠ©ï¼Œå¯ä»¥å» [iTunes](https://itunes.apple.com/cn/app/git-jiao-cheng/id876420437) è´­ä¹°ï¼‰
+* [git - ç®€æ˜“æŒ‡å—](http://rogerdudler.github.io/git-guide/index.zh.html)
+* [çŒ´å­éƒ½èƒ½æ‡‚çš„GITå…¥é—¨](http://backlogtool.com/git-guide/cn/)
+* [Git å‚è€ƒæ‰‹å†Œ](http://gitref.justjavac.com)
 * [Pro Git](http://git-scm.com/book/zh/v2)
-* [Pro Git ÖĞÎÄ°æ](https://www.gitbook.com/book/0532/progit/details) (ÕûÀíÔÚgitbookÉÏ)
+* [Pro Git ä¸­æ–‡ç‰ˆ](https://www.gitbook.com/book/0532/progit/details) (æ•´ç†åœ¨gitbookä¸Š)
 * [Git Magic](http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/)
 * [GotGitHub](http://www.worldhello.net/gotgithub/index.html)
-* [GitÈ¨ÍşÖ¸ÄÏ](http://www.worldhello.net/gotgit/)
-* [Git Community Book ÖĞÎÄ°æ](http://gitbook.liuhui998.com/index.html)
-* [Mercurial Ê¹ÓÃ½Ì³Ì](https://www.mercurial-scm.org/wiki/ChineseTutorial)
-* [HgInit (ÖĞÎÄ°æ)](http://bucunzai.net/hginit/)
-* [³Á½şÊ½Ñ§ Git](http://igit.linuxtoy.org)
-* [Git-Cheat-Sheet](https://github.com/flyhigher139/Git-Cheat-Sheet) £¨¸ĞĞ» @flyhigher139 ·­ÒëÁËÖĞÎÄ°æ£©
-* [GitHubÃØ¼®](https://snowdream86.gitbooks.io/github-cheat-sheet/content/zh/index.html)
-* [GitHub°ïÖúÎÄµµ](https://github.com/waylau/github-help)
-* [git-flow ±¸ÍüÇåµ¥](http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html)
-* [svn ÊÖ²á](http://svnbook.red-bean.com/nightly/zh/index.html)
-* [GitHubÂşÓÎÖ¸ÄÏ](https://github.com/phodal/github-roam)
+* [Gitæƒå¨æŒ‡å—](http://www.worldhello.net/gotgit/)
+* [Git Community Book ä¸­æ–‡ç‰ˆ](http://gitbook.liuhui998.com/index.html)
+* [Mercurial ä½¿ç”¨æ•™ç¨‹](https://www.mercurial-scm.org/wiki/ChineseTutorial)
+* [HgInit (ä¸­æ–‡ç‰ˆ)](http://bucunzai.net/hginit/)
+* [æ²‰æµ¸å¼å­¦ Git](http://igit.linuxtoy.org)
+* [Git-Cheat-Sheet](https://github.com/flyhigher139/Git-Cheat-Sheet) ï¼ˆæ„Ÿè°¢ @flyhigher139 ç¿»è¯‘äº†ä¸­æ–‡ç‰ˆï¼‰
+* [GitHubç§˜ç±](https://snowdream86.gitbooks.io/github-cheat-sheet/content/zh/index.html)
+* [GitHubå¸®åŠ©æ–‡æ¡£](https://github.com/waylau/github-help)
+* [git-flow å¤‡å¿˜æ¸…å•](http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html)
+* [svn æ‰‹å†Œ](http://svnbook.red-bean.com/nightly/zh/index.html)
+* [GitHubæ¼«æ¸¸æŒ‡å—](https://github.com/phodal/github-roam)
 
-### ±à¼­Æ÷
+### ç¼–è¾‘å™¨
 
-* [exvim--vim ¸ÄÁ¼³ÉIDEÏîÄ¿](http://exvim.github.io/docs-zh/intro/)
-* [±¿·½·¨Ñ§Vimscript ÖĞÒë±¾](http://learnvimscriptthehardway.onefloweroneworld.com/)
-* [VimÖĞÎÄÎÄµµ](https://github.com/vimcn/vimcdoc)
-* [ËùĞè¼´Ëù»ñ£ºÏñ IDE Ò»ÑùÊ¹ÓÃ vim](https://github.com/yangyangwithgnu/use_vim_as_ide)
-* [Atom·ÉĞĞÊÖ²áÖĞÎÄ°æ](https://github.com/wizardforcel/atom-flight-manual-zh-cn)
-* [Markdown¡¤¼òµ¥µÄÊÀ½ç](https://github.com/wizardforcel/markdown-simple-world)
-* [Ò»Äê³ÉÎª Emacs ¸ßÊÖ](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org)
-* [Emacs Éú´æÖ¸ÄÏ](http://lifegoo.pluskid.org/upload/blog/152/Survive.in.Emacs.pdf)
-* [Atom¹Ù·½ÊÖ²á](https://atom-china.org/t/atom/62)
+* [exvim--vim æ”¹è‰¯æˆIDEé¡¹ç›®](http://exvim.github.io/docs-zh/intro/)
+* [ç¬¨æ–¹æ³•å­¦Vimscript ä¸­è¯‘æœ¬](http://learnvimscriptthehardway.onefloweroneworld.com/)
+* [Vimä¸­æ–‡æ–‡æ¡£](https://github.com/vimcn/vimcdoc)
+* [æ‰€éœ€å³æ‰€è·ï¼šåƒ IDE ä¸€æ ·ä½¿ç”¨ vim](https://github.com/yangyangwithgnu/use_vim_as_ide)
+* [Atomé£è¡Œæ‰‹å†Œä¸­æ–‡ç‰ˆ](https://github.com/wizardforcel/atom-flight-manual-zh-cn)
+* [MarkdownÂ·ç®€å•çš„ä¸–ç•Œ](https://github.com/wizardforcel/markdown-simple-world)
+* [ä¸€å¹´æˆä¸º Emacs é«˜æ‰‹](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org)
+* [Emacs ç”Ÿå­˜æŒ‡å—](http://lifegoo.pluskid.org/upload/blog/152/Survive.in.Emacs.pdf)
+* [Atomå®˜æ–¹æ‰‹å†Œ](https://atom-china.org/t/atom/62)
 
 ### NoSQL
 
-* [NoSQLÊı¾İ¿â±ÊÌ¸](http://old.sebug.net/paper/databases/nosql/Nosql.html)
-* [Redis Éè¼ÆÓëÊµÏÖ](http://redisbook.com/)
-* [Redis ÃüÁî²Î¿¼](http://redisdoc.com/)
-* [´øÓĞÏêÏ¸×¢ÊÍµÄ Redis 3.0 ´úÂë](https://github.com/huangz1990/redis-3.0-annotated)
-* [´øÓĞÏêÏ¸×¢ÊÍµÄ Redis 2.6 ´úÂë](https://github.com/huangz1990/annotated_redis_source)
+* [NoSQLæ•°æ®åº“ç¬”è°ˆ](http://old.sebug.net/paper/databases/nosql/Nosql.html)
+* [Redis è®¾è®¡ä¸å®ç°](http://redisbook.com/)
+* [Redis å‘½ä»¤å‚è€ƒ](http://redisdoc.com/)
+* [å¸¦æœ‰è¯¦ç»†æ³¨é‡Šçš„ Redis 3.0 ä»£ç ](https://github.com/huangz1990/redis-3.0-annotated)
+* [å¸¦æœ‰è¯¦ç»†æ³¨é‡Šçš„ Redis 2.6 ä»£ç ](https://github.com/huangz1990/annotated_redis_source)
 * [The Little MongoDB Book](https://github.com/justinyhuang/the-little-mongodb-book-cn/blob/master/mongodb.md)
 * [The Little Redis Book](https://github.com/JasonLai256/the-little-redis-book/blob/master/cn/redis.md)
-* [Neo4j ¼òÌåÖĞÎÄÊÖ²á v1.8](http://docs.neo4j.org.cn/)
-* [Neo4j .rb ÖĞÎÄÙYÔ´](http://neo4j.tw/)
-* [Disque Ê¹ÓÃ½Ì³Ì](http://disquebook.com)
-* [Apache Spark Éè¼ÆÓëÊµÏÖ](https://github.com/JerryLead/SparkInternals/tree/master/markdown)
+* [Neo4j ç®€ä½“ä¸­æ–‡æ‰‹å†Œ v1.8](http://docs.neo4j.org.cn/)
+* [Neo4j .rb ä¸­æ–‡è³‡æº](http://neo4j.tw/)
+* [Disque ä½¿ç”¨æ•™ç¨‹](http://disquebook.com)
+* [Apache Spark è®¾è®¡ä¸å®ç°](https://github.com/JerryLead/SparkInternals/tree/master/markdown)
 
 ### PostgreSQL
 
-* [PostgreSQL 8.2.3 ÖĞÎÄÎÄµµ](http://works.jinbuguo.com/postgresql/menu823/index.html)
-* [PostgreSQL 9.3.1 ÖĞÎÄÎÄµµ](http://www.postgres.cn/docs/9.3/index.html)
-* [PostgreSQL 9.5.3 ÖĞÎÄÎÄµµ](http://www.postgres.cn/docs/9.5/index.html)
+* [PostgreSQL 8.2.3 ä¸­æ–‡æ–‡æ¡£](http://works.jinbuguo.com/postgresql/menu823/index.html)
+* [PostgreSQL 9.3.1 ä¸­æ–‡æ–‡æ¡£](http://www.postgres.cn/docs/9.3/index.html)
+* [PostgreSQL 9.5.3 ä¸­æ–‡æ–‡æ¡£](http://www.postgres.cn/docs/9.5/index.html)
 
 ### MySQL
 
-* [MySQLË÷Òı±³ºóµÄÊı¾İ½á¹¹¼°Ëã·¨Ô­Àí](http://blog.codinglabs.org/articles/theory-of-mysql-index.html)
-* [21·ÖÖÓMySQLÈëÃÅ½Ì³Ì](http://www.cnblogs.com/mr-wid/archive/2013/05/09/3068229.html)
+* [MySQLç´¢å¼•èƒŒåçš„æ•°æ®ç»“æ„åŠç®—æ³•åŸç†](http://blog.codinglabs.org/articles/theory-of-mysql-index.html)
+* [21åˆ†é’ŸMySQLå…¥é—¨æ•™ç¨‹](http://www.cnblogs.com/mr-wid/archive/2013/05/09/3068229.html)
 
-### ¹ÜÀíºÍ¼à¿Ø
+### ç®¡ç†å’Œç›‘æ§
 
-* [ELKstack ÖĞÎÄÖ¸ÄÏ](http://kibana.logstash.es)
-* [Mastering Elasticsearch(ÖĞÎÄ°æ)](http://udn.yyuap.com/doc/mastering-elasticsearch/)
-* [ElasticSearch È¨ÍşÖ¸ÄÏ](https://www.gitbook.com/book/fuxiaopang/learnelasticsearch/details)
-* [Elasticsearch È¨ÍşÖ¸ÄÏ£¨ÖĞÎÄ°æ£©](http://es.xiaoleilu.com)
-* [Logstash ×î¼ÑÊµ¼ù](https://github.com/chenryn/logstash-best-practice-cn)
-* [Puppet 2.7 Cookbook ÖĞÎÄ°æ](http://bbs.konotes.org/workdoc/puppet-27/)
+* [ELKstack ä¸­æ–‡æŒ‡å—](http://kibana.logstash.es)
+* [Mastering Elasticsearch(ä¸­æ–‡ç‰ˆ)](http://udn.yyuap.com/doc/mastering-elasticsearch/)
+* [ElasticSearch æƒå¨æŒ‡å—](https://www.gitbook.com/book/fuxiaopang/learnelasticsearch/details)
+* [Elasticsearch æƒå¨æŒ‡å—ï¼ˆä¸­æ–‡ç‰ˆï¼‰](http://es.xiaoleilu.com)
+* [Logstash æœ€ä½³å®è·µ](https://github.com/chenryn/logstash-best-practice-cn)
+* [Puppet 2.7 Cookbook ä¸­æ–‡ç‰ˆ](http://bbs.konotes.org/workdoc/puppet-27/)
 
-### ÏîÄ¿Ïà¹Ø
+### é¡¹ç›®ç›¸å…³
 
-* [³ÖĞø¼¯³É£¨µÚ¶ş°æ£©](http://article.yeeyan.org/view/2251/94882) (ÒëÑÔÍø)
-* [ÈÃ¿ª·¢×Ô¶¯»¯ÏµÁĞ×¨À¸](http://www.ibm.com/developerworks/cn/java/j-ap/)
-* [×·Çó´úÂëÖÊÁ¿](http://www.ibm.com/developerworks/cn/java/j-cq/)
-* [selenium ÖĞÎÄÎÄµµ](https://github.com/fool2fish/selenium-doc)
-* [Selenium Webdriver ¼òÒ×½Ì³Ì](http://it-ebooks.flygon.net/selenium-simple-tutorial/)
-* [JoelÌ¸Èí¼ş](http://local.joelonsoftware.com/wiki/Chinese_\(Simplified\))
-* [¼s¶úÕ„Ü›ów(Joel on Software)](http://local.joelonsoftware.com/wiki/%E9%A6%96%E9%A0%81)
-* [Gradle 2 ÓÃ»§Ö¸ÄÏ](https://github.com/waylau/Gradle-2-User-Guide)
-* [Gradle ÖĞÎÄÊ¹ÓÃÎÄµµ](http://yuedu.baidu.com/ebook/f23af265998fcc22bcd10da2)
-* [±àÂë¹æ·¶](https://github.com/ecomfe/spec)
-* [¿ªÔ´Èí¼ş¼Ü¹¹](http://www.ituring.com.cn/book/1143)
-* [GNU make Ö¸ÄÏ](http://docs.huihoo.com/gnu/linux/gmake.html)
-* [GNU make ÖĞÎÄÊÖ²á](http://www.yayu.org/book/gnu_make/)
+* [æŒç»­é›†æˆï¼ˆç¬¬äºŒç‰ˆï¼‰](http://article.yeeyan.org/view/2251/94882) (è¯‘è¨€ç½‘)
+* [è®©å¼€å‘è‡ªåŠ¨åŒ–ç³»åˆ—ä¸“æ ](http://www.ibm.com/developerworks/cn/java/j-ap/)
+* [è¿½æ±‚ä»£ç è´¨é‡](http://www.ibm.com/developerworks/cn/java/j-cq/)
+* [selenium ä¸­æ–‡æ–‡æ¡£](https://github.com/fool2fish/selenium-doc)
+* [Selenium Webdriver ç®€æ˜“æ•™ç¨‹](http://it-ebooks.flygon.net/selenium-simple-tutorial/)
+* [Joelè°ˆè½¯ä»¶](http://local.joelonsoftware.com/wiki/Chinese_\(Simplified\))
+* [ç´„è€³è«‡è»Ÿé«”(Joel on Software)](http://local.joelonsoftware.com/wiki/%E9%A6%96%E9%A0%81)
+* [Gradle 2 ç”¨æˆ·æŒ‡å—](https://github.com/waylau/Gradle-2-User-Guide)
+* [Gradle ä¸­æ–‡ä½¿ç”¨æ–‡æ¡£](http://yuedu.baidu.com/ebook/f23af265998fcc22bcd10da2)
+* [ç¼–ç è§„èŒƒ](https://github.com/ecomfe/spec)
+* [å¼€æºè½¯ä»¶æ¶æ„](http://www.ituring.com.cn/book/1143)
+* [GNU make æŒ‡å—](http://docs.huihoo.com/gnu/linux/gmake.html)
+* [GNU make ä¸­æ–‡æ‰‹å†Œ](http://www.yayu.org/book/gnu_make/)
 * [The Twelve-Factor App](http://12factor.net/zh_cn/)
 
-### Éè¼ÆÄ£Ê½
+### è®¾è®¡æ¨¡å¼
 
-* [Í¼ËµÉè¼ÆÄ£Ê½](https://github.com/me115/design_patterns)
-* [Ê·ÉÏ×îÈ«Éè¼ÆÄ£Ê½µ¼Ñ§Ä¿Â¼](http://blog.csdn.net/lovelion/article/details/17517213)
-* [design pattern °ü½Ì²»°ü»á](https://github.com/AlfredTheBest/Design-Pattern)
-* [Éè¼ÆÄ£Ê½ Java °æ](https://quanke.gitbooks.io/design-pattern-java/content/)
+* [å›¾è¯´è®¾è®¡æ¨¡å¼](https://github.com/me115/design_patterns)
+* [å²ä¸Šæœ€å…¨è®¾è®¡æ¨¡å¼å¯¼å­¦ç›®å½•](http://blog.csdn.net/lovelion/article/details/17517213)
+* [design pattern åŒ…æ•™ä¸åŒ…ä¼š](https://github.com/AlfredTheBest/Design-Pattern)
+* [è®¾è®¡æ¨¡å¼ Java ç‰ˆ](https://quanke.gitbooks.io/design-pattern-java/content/)
 
 ### Web
 
-* [¹ØÓÚä¯ÀÀÆ÷ºÍÍøÂçµÄ 20 ÏîĞëÖª](http://www.20thingsilearned.com/zh-CN/home)
-* [ä¯ÀÀÆ÷¿ª·¢¹¤¾ßµÄÃØÃÜ](http://jinlong.github.io/2013/08/29/devtoolsecrets/)
-* [Chrome ¿ª·¢Õß¹¤¾ßÖĞÎÄÊÖ²á](https://github.com/CN-Chrome-DevTools/CN-Chrome-DevTools)
-* [ChromeÀ©Õ¹¿ª·¢ÎÄµµ](http://open.chrome.360.cn/extension_dev/overview.html)
-* [GruntÖĞÎÄÎÄµµ](http://www.gruntjs.net/)
-* [gulpÖĞÎÄÎÄµµ](http://www.gulpjs.com.cn/docs/)
-* [Gulp ÈëÃÅÖ¸ÄÏ](https://github.com/nimojs/gulp-book)
-* [ÒÆ¶¯WebÇ°¶ËÖªÊ¶¿â](https://github.com/AlloyTeam/Mars)
-* [ÕıÔò±í´ïÊ½30·ÖÖÓÈëÃÅ½Ì³Ì](http://deerchao.net/tutorials/regex/regex.htm)
-* [Ç°¶Ë¿ª·¢ÌåÏµ½¨ÉèÈÕ¼Ç](https://github.com/fouber/blog/issues/2)
-* [ÒÆ¶¯Ç°¶Ë¿ª·¢ÊÕ²Ø¼Ğ](https://github.com/hoosin/mobile-web-favorites)
-* [JSON·ç¸ñÖ¸ÄÏ](https://github.com/darcyliu/google-styleguide/blob/master/JSONStyleGuide.md)
-* [HTTP ½Ó¿ÚÉè¼ÆÖ¸±±](https://github.com/bolasblack/http-api-guide)
-* [Ç°¶Ë×ÊÔ´·ÖÏí£¨Ò»£©](https://github.com/hacke2/hacke2.github.io/issues/1)
-* [Ç°¶Ë×ÊÔ´·ÖÏí£¨¶ş£©](https://github.com/hacke2/hacke2.github.io/issues/3)
-* [Ç°¶Ë´úÂë¹æ·¶ ¼° ×î¼ÑÊµ¼ù](http://coderlmn.github.io/code-standards/)
-* [Ç°¶Ë¿ª·¢ÕßÊÖ²á](https://www.gitbook.com/book/dwqs/frontenddevhandbook/details)
-* [Ç°¶Ë¹¤³ÌÊ¦ÊÖ²á](https://www.gitbook.com/book/leohxj/front-end-database/details)
-* [w3school½Ì³ÌÕûÀí](https://github.com/wizardforcel/w3school)
-* [WiresharkÓÃ»§ÊÖ²á](http://man.lupaworld.com/content/network/wireshark/index.html)
-* [Ò»Õ¾Ê½Ñ§Ï°Wireshark](https://community.emc.com/thread/194901)
-* [HTTP ÏÂÎç²è](http://happypeter.github.io/tealeaf-http/)
-* [HTTP/2.0 ÖĞÎÄ·­Òë](http://yuedu.baidu.com/ebook/478d1a62376baf1ffc4fad99?pn=1)
-* [RFC 7540 - HTTP/2 ÖĞÎÄ·­Òë°æ](https://github.com/abbshr/rfc7540-translation-zh_cn)
-* [http2½²½â](https://www.gitbook.com/book/ye11ow/http2-explained/details)
+* [å…³äºæµè§ˆå™¨å’Œç½‘ç»œçš„ 20 é¡¹é¡»çŸ¥](http://www.20thingsilearned.com/zh-CN/home)
+* [æµè§ˆå™¨å¼€å‘å·¥å…·çš„ç§˜å¯†](http://jinlong.github.io/2013/08/29/devtoolsecrets/)
+* [Chrome å¼€å‘è€…å·¥å…·ä¸­æ–‡æ‰‹å†Œ](https://github.com/CN-Chrome-DevTools/CN-Chrome-DevTools)
+* [Chromeæ‰©å±•å¼€å‘æ–‡æ¡£](http://open.chrome.360.cn/extension_dev/overview.html)
+* [Gruntä¸­æ–‡æ–‡æ¡£](http://www.gruntjs.net/)
+* [gulpä¸­æ–‡æ–‡æ¡£](http://www.gulpjs.com.cn/docs/)
+* [Gulp å…¥é—¨æŒ‡å—](https://github.com/nimojs/gulp-book)
+* [ç§»åŠ¨Webå‰ç«¯çŸ¥è¯†åº“](https://github.com/AlloyTeam/Mars)
+* [æ­£åˆ™è¡¨è¾¾å¼30åˆ†é’Ÿå…¥é—¨æ•™ç¨‹](http://deerchao.net/tutorials/regex/regex.htm)
+* [å‰ç«¯å¼€å‘ä½“ç³»å»ºè®¾æ—¥è®°](https://github.com/fouber/blog/issues/2)
+* [ç§»åŠ¨å‰ç«¯å¼€å‘æ”¶è—å¤¹](https://github.com/hoosin/mobile-web-favorites)
+* [JSONé£æ ¼æŒ‡å—](https://github.com/darcyliu/google-styleguide/blob/master/JSONStyleGuide.md)
+* [HTTP æ¥å£è®¾è®¡æŒ‡åŒ—](https://github.com/bolasblack/http-api-guide)
+* [å‰ç«¯èµ„æºåˆ†äº«ï¼ˆä¸€ï¼‰](https://github.com/hacke2/hacke2.github.io/issues/1)
+* [å‰ç«¯èµ„æºåˆ†äº«ï¼ˆäºŒï¼‰](https://github.com/hacke2/hacke2.github.io/issues/3)
+* [å‰ç«¯ä»£ç è§„èŒƒ åŠ æœ€ä½³å®è·µ](http://coderlmn.github.io/code-standards/)
+* [å‰ç«¯å¼€å‘è€…æ‰‹å†Œ](https://www.gitbook.com/book/dwqs/frontenddevhandbook/details)
+* [å‰ç«¯å·¥ç¨‹å¸ˆæ‰‹å†Œ](https://www.gitbook.com/book/leohxj/front-end-database/details)
+* [w3schoolæ•™ç¨‹æ•´ç†](https://github.com/wizardforcel/w3school)
+* [Wiresharkç”¨æˆ·æ‰‹å†Œ](http://man.lupaworld.com/content/network/wireshark/index.html)
+* [ä¸€ç«™å¼å­¦ä¹ Wireshark](https://community.emc.com/thread/194901)
+* [HTTP ä¸‹åˆèŒ¶](http://happypeter.github.io/tealeaf-http/)
+* [HTTP/2.0 ä¸­æ–‡ç¿»è¯‘](http://yuedu.baidu.com/ebook/478d1a62376baf1ffc4fad99?pn=1)
+* [RFC 7540 - HTTP/2 ä¸­æ–‡ç¿»è¯‘ç‰ˆ](https://github.com/abbshr/rfc7540-translation-zh_cn)
+* [http2è®²è§£](https://www.gitbook.com/book/ye11ow/http2-explained/details)
 * [3 Web Designs in 3 Weeks](https://www.gitbook.com/book/juntao/3-web-designs-in-3-weeks/details)
-* [Õ¾µã¿É¿¿ĞÔ¹¤³Ì](https://github.com/hellorocky/Site-Reliability-Engineering)
+* [ç«™ç‚¹å¯é æ€§å·¥ç¨‹](https://github.com/hellorocky/Site-Reliability-Engineering)
 
-### ´óÊı¾İ
+### å¤§æ•°æ®
 
-* [´óÊı¾İ/Êı¾İÍÚ¾ò/ÍÆ¼öÏµÍ³/»úÆ÷Ñ§Ï°Ïà¹Ø×ÊÔ´](https://github.com/Flowerowl/Big-Data-Resources)
-* [ÃæÏò³ÌĞòÔ±µÄÊı¾İÍÚ¾òÖ¸ÄÏ](https://github.com/egrcc/guidetodatamining)
-* [´óĞÍ¼¯ÈºÉÏµÄ¿ìËÙºÍÍ¨ÓÃÊı¾İ´¦Àí¼Ü¹¹](https://code.csdn.net/CODE_Translation/spark_matei_phd)
-* [Êı¾İÍÚ¾òÖĞ¾­µäµÄËã·¨ÊµÏÖºÍÏêÏ¸µÄ×¢ÊÍ](https://github.com/linyiqun/DataMiningAlgorithm)
-* [Spark ±à³ÌÖ¸ÄÏ¼òÌåÖĞÎÄ°æ](https://aiyanbo.gitbooks.io/spark-programming-guide-zh-cn/content/)
+* [å¤§æ•°æ®/æ•°æ®æŒ–æ˜/æ¨èç³»ç»Ÿ/æœºå™¨å­¦ä¹ ç›¸å…³èµ„æº](https://github.com/Flowerowl/Big-Data-Resources)
+* [é¢å‘ç¨‹åºå‘˜çš„æ•°æ®æŒ–æ˜æŒ‡å—](https://github.com/egrcc/guidetodatamining)
+* [å¤§å‹é›†ç¾¤ä¸Šçš„å¿«é€Ÿå’Œé€šç”¨æ•°æ®å¤„ç†æ¶æ„](https://code.csdn.net/CODE_Translation/spark_matei_phd)
+* [æ•°æ®æŒ–æ˜ä¸­ç»å…¸çš„ç®—æ³•å®ç°å’Œè¯¦ç»†çš„æ³¨é‡Š](https://github.com/linyiqun/DataMiningAlgorithm)
+* [Spark ç¼–ç¨‹æŒ‡å—ç®€ä½“ä¸­æ–‡ç‰ˆ](https://aiyanbo.gitbooks.io/spark-programming-guide-zh-cn/content/)
 
-## ±à³ÌÒÕÊõ
+## ç¼–ç¨‹è‰ºæœ¯
 
-* [³ÌĞòÔ±±à³ÌÒÕÊõ](https://github.com/julycoding/The-Art-Of-Programming-by-July)
-* [Ã¿¸ö³ÌĞòÔ±¶¼Ó¦¸ÃÁË½âµÄÄÚ´æÖªÊ¶(Òë)](http://www.oschina.net/translate/what-every-programmer-should-know-about-memory-part1?print)¡¾µÚÒ»²¿·Ö¡¿
-* [È¡ÔÃµÄ¹¤Ğò£ºÈçºÎÀí½âÓÎÏ·](http://read.douban.com/ebook/4972883/) (¶¹°êÔÄ¶Á£¬Ãâ·ÑÊé¼®)
+* [ç¨‹åºå‘˜ç¼–ç¨‹è‰ºæœ¯](https://github.com/julycoding/The-Art-Of-Programming-by-July)
+* [æ¯ä¸ªç¨‹åºå‘˜éƒ½åº”è¯¥äº†è§£çš„å†…å­˜çŸ¥è¯†(è¯‘)](http://www.oschina.net/translate/what-every-programmer-should-know-about-memory-part1?print)ã€ç¬¬ä¸€éƒ¨åˆ†ã€‘
+* [å–æ‚¦çš„å·¥åºï¼šå¦‚ä½•ç†è§£æ¸¸æˆ](http://read.douban.com/ebook/4972883/) (è±†ç“£é˜…è¯»ï¼Œå…è´¹ä¹¦ç±)
 
-## ÆäËü
+## å…¶å®ƒ
 
-* [OpenWrtÖÇÄÜ¡¢×Ô¶¯¡¢Í¸Ã÷·­Ç½Â·ÓÉÆ÷½Ì³Ì](https://www.gitbook.com/book/softwaredownload/openwrt-fanqiang/details)
-* [SAN ¹ÜÀíÈëÃÅÏµÁĞ](https://community.emc.com/docs/DOC-16067)
-* [Sketch ÖĞÎÄÊÖ²á](http://sketchcn.com/sketch-chinese-user-manual.html#introduce)
-* [ÉîÈëÀí½â²¢ĞĞ±à³Ì](http://ifeve.com/perfbook/)
-* [³ÌĞòÔ±µÄ×ÔÎÒĞŞÑø](http://www.kancloud.cn/kancloud/a-programmer-prepares)
-* [Growth: È«Õ»Ôö³¤¹¤³ÌÊ¦Ö¸ÄÏ](https://github.com/phodal/growth-ebook)
+* [OpenWrtæ™ºèƒ½ã€è‡ªåŠ¨ã€é€æ˜ç¿»å¢™è·¯ç”±å™¨æ•™ç¨‹](https://www.gitbook.com/book/softwaredownload/openwrt-fanqiang/details)
+* [SAN ç®¡ç†å…¥é—¨ç³»åˆ—](https://community.emc.com/docs/DOC-16067)
+* [Sketch ä¸­æ–‡æ‰‹å†Œ](http://sketchcn.com/sketch-chinese-user-manual.html#introduce)
+* [æ·±å…¥ç†è§£å¹¶è¡Œç¼–ç¨‹](http://ifeve.com/perfbook/)
+* [ç¨‹åºå‘˜çš„è‡ªæˆ‘ä¿®å…»](http://www.kancloud.cn/kancloud/a-programmer-prepares)
+* [Growth: å…¨æ ˆå¢é•¿å·¥ç¨‹å¸ˆæŒ‡å—](https://github.com/phodal/growth-ebook)
 
-## ÓïÑÔÏà¹ØÀà
+## è¯­è¨€ç›¸å…³ç±»
 
 ### Android
 
-* [Android Design(ÖĞÎÄ°æ)](http://www.apkbus.com/design/index.html)
-* Google Material Design ÕıówÖĞÎÄ°æ ([Òë±¾Ò»](https://wcc723.gitbooks.io/google_design_translate/content/style-icons.html) [Òë±¾¶ş](https://github.com/1sters/material_design_zh))
-* [Material Design ÖĞÎÄ°æ](http://wiki.jikexueyuan.com/project/material-design/)
-* [Google Android¹Ù·½ÅàÑµ¿Î³ÌÖĞÎÄ°æ](http://hukai.me/android-training-course-in-chinese/index.html)
-* [AndroidÑ§Ï°Ö®Â·](http://www.stormzhang.com/android/2014/07/07/learn-android-from-rookie/)
-* [Android¿ª·¢¼¼ÊõÇ°Ïß(android-tech-frontier)](https://github.com/bboyfeiyu/android-tech-frontier)
-* [Point-of-Android](https://github.com/FX-Max/Point-of-Android) Android Ò»Ğ©ÖØÒªÖªÊ¶µã½âÎöÕûÀí
-* [Android6.0ĞÂÌØĞÔÏê½â](http://leanote.com/blog/post/561658f938f41126b2000298?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
+* [Android Design(ä¸­æ–‡ç‰ˆ)](http://www.apkbus.com/design/index.html)
+* Google Material Design æ­£é«”ä¸­æ–‡ç‰ˆ ([è¯‘æœ¬ä¸€](https://wcc723.gitbooks.io/google_design_translate/content/style-icons.html) [è¯‘æœ¬äºŒ](https://github.com/1sters/material_design_zh))
+* [Material Design ä¸­æ–‡ç‰ˆ](http://wiki.jikexueyuan.com/project/material-design/)
+* [Google Androidå®˜æ–¹åŸ¹è®­è¯¾ç¨‹ä¸­æ–‡ç‰ˆ](http://hukai.me/android-training-course-in-chinese/index.html)
+* [Androidå­¦ä¹ ä¹‹è·¯](http://www.stormzhang.com/android/2014/07/07/learn-android-from-rookie/)
+* [Androidå¼€å‘æŠ€æœ¯å‰çº¿(android-tech-frontier)](https://github.com/bboyfeiyu/android-tech-frontier)
+* [Point-of-Android](https://github.com/FX-Max/Point-of-Android) Android ä¸€äº›é‡è¦çŸ¥è¯†ç‚¹è§£ææ•´ç†
+* [Android6.0æ–°ç‰¹æ€§è¯¦è§£](http://leanote.com/blog/post/561658f938f41126b2000298?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
 
 ### APP
 
-* [Apache Cordova ¿ª·¢Ö¸ÄÏ](https://github.com/waylau/cordova-dev-guide)
+* [Apache Cordova å¼€å‘æŒ‡å—](https://github.com/waylau/cordova-dev-guide)
 
 ### AWK
 
-* [awk³ÌĞòÉè¼ÆÓïÑÔ](https://github.com/wuzhouhui/awk)
-* [awkÖĞÎÄÖ¸ÄÏ](http://awk.readthedocs.org/en/latest/index.html)
+* [awkç¨‹åºè®¾è®¡è¯­è¨€](https://github.com/wuzhouhui/awk)
+* [awkä¸­æ–‡æŒ‡å—](http://awk.readthedocs.org/en/latest/index.html)
 
 ### C/C++
 
-* [C/C++ ÖĞÎÄ²Î¿¼ÊÖ²á](http://zh.cppreference.com/) (»¶Ó­´ó¼Ò²ÎÓëÔÚÏß·­ÒëºÍĞ£¶Ô)
-* [C ÓïÑÔ±à³ÌÍ¸ÊÓ](https://www.gitbook.com/book/tinylab/cbook/details)
-* [C++ ²¢·¢±à³ÌÖ¸ÄÏ](https://github.com/forhappy/Cplusplus-Concurrency-In-Practice)
-* [Linux C±à³ÌÒ»Õ¾Ê½Ñ§Ï°](http://akaedu.github.io/book/) (ËÎ¾¢É¼, ±±¾©ÑÇÇ¶½ÌÓıÑĞ¾¿ÖĞĞÄ)
-* [CGDBÖĞÎÄÊÖ²á](https://github.com/leeyiw/cgdb-manual-in-chinese)
-* [100¸ögdbĞ¡¼¼ÇÉ](https://github.com/hellogcc/100-gdb-tips/blob/master/src/index.md)
-* [100¸ögccĞ¡¼¼ÇÉ](https://github.com/hellogcc/100-gcc-tips/blob/master/src/index.md)
-* [ZMQ Ö¸ÄÏ](https://github.com/anjuke/zguide-cn)
-* [How to Think Like a Computer Scientist](http://www.ituring.com.cn/book/1203) (ÖĞÓ¢ÎÄ°æ)
-* [¸úÎÒÒ»ÆğĞ´Makefile(PDF)](http://scc.qibebt.cas.cn/docs/linux/base/%B8%FA%CE%D2%D2%BB%C6%F0%D0%B4Makefile-%B3%C2%F0%A9.pdf)
-* [GNU makeÖĞÎÄÊÖ²á](http://www.yayu.org/book/gnu_make/)
-* [GNU make Ö¸ÄÏ](http://docs.huihoo.com/gnu/linux/gmake.html)
-* [Google C++ ·ç¸ñÖ¸ÄÏ](http://zh-google-styleguide.readthedocs.org/en/latest/google-cpp-styleguide/contents/)
+* [C/C++ ä¸­æ–‡å‚è€ƒæ‰‹å†Œ](http://zh.cppreference.com/) (æ¬¢è¿å¤§å®¶å‚ä¸åœ¨çº¿ç¿»è¯‘å’Œæ ¡å¯¹)
+* [C è¯­è¨€ç¼–ç¨‹é€è§†](https://www.gitbook.com/book/tinylab/cbook/details)
+* [C++ å¹¶å‘ç¼–ç¨‹æŒ‡å—](https://github.com/forhappy/Cplusplus-Concurrency-In-Practice)
+* [Linux Cç¼–ç¨‹ä¸€ç«™å¼å­¦ä¹ ](http://akaedu.github.io/book/) (å®‹åŠ²æ‰, åŒ—äº¬äºšåµŒæ•™è‚²ç ”ç©¶ä¸­å¿ƒ)
+* [CGDBä¸­æ–‡æ‰‹å†Œ](https://github.com/leeyiw/cgdb-manual-in-chinese)
+* [100ä¸ªgdbå°æŠ€å·§](https://github.com/hellogcc/100-gdb-tips/blob/master/src/index.md)
+* [100ä¸ªgccå°æŠ€å·§](https://github.com/hellogcc/100-gcc-tips/blob/master/src/index.md)
+* [ZMQ æŒ‡å—](https://github.com/anjuke/zguide-cn)
+* [How to Think Like a Computer Scientist](http://www.ituring.com.cn/book/1203) (ä¸­è‹±æ–‡ç‰ˆ)
+* [è·Ÿæˆ‘ä¸€èµ·å†™Makefile(PDF)](http://scc.qibebt.cas.cn/docs/linux/base/%B8%FA%CE%D2%D2%BB%C6%F0%D0%B4Makefile-%B3%C2%F0%A9.pdf)
+* [GNU makeä¸­æ–‡æ‰‹å†Œ](http://www.yayu.org/book/gnu_make/)
+* [GNU make æŒ‡å—](http://docs.huihoo.com/gnu/linux/gmake.html)
+* [Google C++ é£æ ¼æŒ‡å—](http://zh-google-styleguide.readthedocs.org/en/latest/google-cpp-styleguide/contents/)
 * [C/C++ Primer](https://github.com/andycai/cprimer) (by @andycai)
-* [¼òµ¥Ò×¶®µÄCÄ§·¨](http://www.nowamagic.net/librarys/books/contents/c)
-* [Cmake Êµ¼ù](http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf) (PDF°æ)
-* [C++ FAQ LITE(ÖĞÎÄ°æ)](http://www.sunistudio.com/cppfaq/)
+* [ç®€å•æ˜“æ‡‚çš„Cé­”æ³•](http://www.nowamagic.net/librarys/books/contents/c)
+* [Cmake å®è·µ](http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf) (PDFç‰ˆ)
+* [C++ FAQ LITE(ä¸­æ–‡ç‰ˆ)](http://www.sunistudio.com/cppfaq/)
 * [C++ Primer 5th Answers](https://github.com/Mooophy/Cpp-Primer)
-* [C++ ²¢·¢±à³Ì(»ùÓÚC++11)](https://www.gitbook.com/book/chenxiaowei/cpp_concurrency_in_action/details)
-* [QT ½Ì³Ì](http://www.kuqin.com/qtdocument/tutorial.html)
-* [DevBeanµÄ¡¶QtÑ§Ï°Ö®Â·2¡·(Qt5)](http://www.devbean.net/category/qt-study-road-2/)
-* [C++ Template ½ø½×Ö¸ÄÏ](https://github.com/wuye9036/CppTemplateTutorial)
-* [libuvÖĞÎÄ½Ì³Ì](https://github.com/luohaha/Chinese-uvbook)
-* [Boost ¿âÖĞÎÄ½Ì³Ì](http://zh.highscore.de/cpp/boost/)
-* [±¿°ì·¨Ñ§C](https://github.com/wizardforcel/lcthw-zh)
+* [C++ å¹¶å‘ç¼–ç¨‹(åŸºäºC++11)](https://www.gitbook.com/book/chenxiaowei/cpp_concurrency_in_action/details)
+* [QT æ•™ç¨‹](http://www.kuqin.com/qtdocument/tutorial.html)
+* [DevBeançš„ã€ŠQtå­¦ä¹ ä¹‹è·¯2ã€‹(Qt5)](http://www.devbean.net/category/qt-study-road-2/)
+* [C++ Template è¿›é˜¶æŒ‡å—](https://github.com/wuye9036/CppTemplateTutorial)
+* [libuvä¸­æ–‡æ•™ç¨‹](https://github.com/luohaha/Chinese-uvbook)
+* [Boost åº“ä¸­æ–‡æ•™ç¨‹](http://zh.highscore.de/cpp/boost/)
+* [ç¬¨åŠæ³•å­¦C](https://github.com/wizardforcel/lcthw-zh)
 
 ### C&#35;
 
-* [MSDN C# ÖĞÎÄÎÄµµ](https://msdn.microsoft.com/zh-cn/library/kx37x362.aspx)
-* [.NET Àà¿â²Î¿¼](https://msdn.microsoft.com/zh-cn/library/gg145045.aspx)
-* [ASP.NET MVC 5 ÈëÃÅÖ¸ÄÏ](http://www.cnblogs.com/powertoolsteam/p/aspnetmvc5-tutorials-grapecity.html)
-* [³¬È«ÃæµÄ .NET GDI+ Í¼ĞÎÍ¼Ïñ±à³Ì½Ì³Ì](http://www.cnblogs.com/LonelyShadow/p/4162318.html)
-* [.NET¿Ø¼ş¿ª·¢»ù´¡](https://github.com/JackWangCUMT/customcontrol)
-* [.NET¿ª·¢Òªµã¾«½²£¨³õ¸å£©](https://github.com/sherlockchou86/-free-ebook-.NET-)
+* [MSDN C# ä¸­æ–‡æ–‡æ¡£](https://msdn.microsoft.com/zh-cn/library/kx37x362.aspx)
+* [.NET ç±»åº“å‚è€ƒ](https://msdn.microsoft.com/zh-cn/library/gg145045.aspx)
+* [ASP.NET MVC 5 å…¥é—¨æŒ‡å—](http://www.cnblogs.com/powertoolsteam/p/aspnetmvc5-tutorials-grapecity.html)
+* [è¶…å…¨é¢çš„ .NET GDI+ å›¾å½¢å›¾åƒç¼–ç¨‹æ•™ç¨‹](http://www.cnblogs.com/LonelyShadow/p/4162318.html)
+* [.NETæ§ä»¶å¼€å‘åŸºç¡€](https://github.com/JackWangCUMT/customcontrol)
+* [.NETå¼€å‘è¦ç‚¹ç²¾è®²ï¼ˆåˆç¨¿ï¼‰](https://github.com/sherlockchou86/-free-ebook-.NET-)
 
 ### Clojure
 
-* [ClojureÈëÃÅ½Ì³Ì](http://xumingming.sinaapp.com/302/clojure-functional-programming-for-the-jvm-clojure-tutorial/)
+* [Clojureå…¥é—¨æ•™ç¨‹](http://xumingming.sinaapp.com/302/clojure-functional-programming-for-the-jvm-clojure-tutorial/)
 
 <h3 id="csshtml">CSS/HTML</h3>
 
-* [Ñ§Ï°CSS²¼¾Ö](http://zh.learnlayout.com/)
-* [Í¨ÓÃ CSS ±Ê¼Ç¡¢½¨ÒéÓëÖ¸µ¼](https://github.com/chadluo/CSS-Guidelines/blob/master/README.md)
-* [CSS²Î¿¼ÊÖ²á](http://css.doyoe.com/)
-* [Emmet ÎÄµµ](http://yanxyz.github.io/emmet-docs/)
-* [Ç°¶Ë´úÂë¹æ·¶](http://alloyteam.github.io/CodeGuide/) (ÌÚÑ¶ AlloyTeam ÍÅ¶Ó)
-* [HTMLºÍCSS±àÂë¹æ·¶](http://codeguide.bootcss.com/)
-* [Sass Guidelines ÖĞÎÄ](http://sass-guidelin.es/zh/)
-* [CSS3 Tutorial ¡¶CSS3 ½Ì³Ì¡·](https://github.com/waylau/css3-tutorial)
-* [MDN HTML ÖĞÎÄÎÄµµ](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
-* [MDN CSS ÖĞÎÄÎÄµµ](https://developer.mozilla.org/zh-CN/docs/Web/CSS)
+* [å­¦ä¹ CSSå¸ƒå±€](http://zh.learnlayout.com/)
+* [é€šç”¨ CSS ç¬”è®°ã€å»ºè®®ä¸æŒ‡å¯¼](https://github.com/chadluo/CSS-Guidelines/blob/master/README.md)
+* [CSSå‚è€ƒæ‰‹å†Œ](http://css.doyoe.com/)
+* [Emmet æ–‡æ¡£](http://yanxyz.github.io/emmet-docs/)
+* [å‰ç«¯ä»£ç è§„èŒƒ](http://alloyteam.github.io/CodeGuide/) (è…¾è®¯ AlloyTeam å›¢é˜Ÿ)
+* [HTMLå’ŒCSSç¼–ç è§„èŒƒ](http://codeguide.bootcss.com/)
+* [Sass Guidelines ä¸­æ–‡](http://sass-guidelin.es/zh/)
+* [CSS3 Tutorial ã€ŠCSS3 æ•™ç¨‹ã€‹](https://github.com/waylau/css3-tutorial)
+* [MDN HTML ä¸­æ–‡æ–‡æ¡£](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
+* [MDN CSS ä¸­æ–‡æ–‡æ¡£](https://developer.mozilla.org/zh-CN/docs/Web/CSS)
 
 ### Dart
 
-* [Dart ÓïÑÔµ¼ÀÀ](http://dart.lidian.info/wiki/Language_Tour)
+* [Dart è¯­è¨€å¯¼è§ˆ](http://dart.lidian.info/wiki/Language_Tour)
 
 ### Elixir
 
-* [Elixir±à³ÌÈëÃÅ](https://github.com/straightdave/programming_elixir)
+* [Elixirç¼–ç¨‹å…¥é—¨](https://github.com/straightdave/programming_elixir)
 
 ### Erlang
 
-* [21ÌìÑ§Í¨Erlang](http://xn--21erlang-p00o82pmp3o.github.io/)
+* [21å¤©å­¦é€šErlang](http://xn--21erlang-p00o82pmp3o.github.io/)
 
 ### Fortran
 
-* [Fortran77ºÍ90/95±à³ÌÈëÃÅ](http://micro.ustc.edu.cn/Fortran/ZJDing/)
+* [Fortran77å’Œ90/95ç¼–ç¨‹å…¥é—¨](http://micro.ustc.edu.cn/Fortran/ZJDing/)
 
 ### Go
 
-* [Go±à³Ì»ù´¡](https://github.com/Unknwon/go-fundamental-programming)
-* [GoÈëÃÅÖ¸ÄÏ](https://github.com/Unknwon/the-way-to-go_ZH_CN)
-* [Ñ§Ï°GoÓïÑÔ](http://mikespook.com/learning-go/)
-* [Go Web ±à³Ì](https://github.com/astaxie/build-web-application-with-golang) (´ËÊéÒÑ¾­³ö°æ£¬Ï£Íû¿ª·¢ÕßÃÇÈ¥¹ºÂò£¬Ö§³Ö×÷ÕßµÄ´´×÷)
-* [GoÊµÕ½¿ª·¢](https://github.com/astaxie/Go-in-Action) (µ±ÎÒÊÕÂ¼´ËÏîÄ¿Ê±£¬×÷ÕßÒÑ¾­Ğ´ÍêµÚÈıÕÂ£¬Èç¹û¶ÁÍêÇ°ÃæÕÂ½Ú¾õµÃÓĞ°ïÖú£¬¿ÉÒÔ¸ø×÷Õß[¾èÔù](https://me.alipay.com/astaxie)£¬ÒÔ¹ÄÀø×÷ÕßµÄ¼ÌĞø´´×÷)
-* [Network programming with Go ÖĞÎÄ·­Òë°æ±¾](https://github.com/astaxie/NPWG_zh)
+* [Goç¼–ç¨‹åŸºç¡€](https://github.com/Unknwon/go-fundamental-programming)
+* [Goå…¥é—¨æŒ‡å—](https://github.com/Unknwon/the-way-to-go_ZH_CN)
+* [å­¦ä¹ Goè¯­è¨€](http://mikespook.com/learning-go/)
+* [Go Web ç¼–ç¨‹](https://github.com/astaxie/build-web-application-with-golang) (æ­¤ä¹¦å·²ç»å‡ºç‰ˆï¼Œå¸Œæœ›å¼€å‘è€…ä»¬å»è´­ä¹°ï¼Œæ”¯æŒä½œè€…çš„åˆ›ä½œ)
+* [Goå®æˆ˜å¼€å‘](https://github.com/astaxie/Go-in-Action) (å½“æˆ‘æ”¶å½•æ­¤é¡¹ç›®æ—¶ï¼Œä½œè€…å·²ç»å†™å®Œç¬¬ä¸‰ç« ï¼Œå¦‚æœè¯»å®Œå‰é¢ç« èŠ‚è§‰å¾—æœ‰å¸®åŠ©ï¼Œå¯ä»¥ç»™ä½œè€…[æèµ ](https://me.alipay.com/astaxie)ï¼Œä»¥é¼“åŠ±ä½œè€…çš„ç»§ç»­åˆ›ä½œ)
+* [Network programming with Go ä¸­æ–‡ç¿»è¯‘ç‰ˆæœ¬](https://github.com/astaxie/NPWG_zh)
 * [Effective Go](http://www.hellogcc.org/effective_go.html)
-* [Go ÓïÑÔ±ê×¼¿â](https://github.com/polaris1119/The-Golang-Standard-Library-by-Example)
-* [Golang±ê×¼¿âÎÄµµ](http://godoc.ml/)
-* [Revel ¿ò¼ÜÊÖ²á](http://gorevel.cn/docs/manual/index.html)
-* [Java³ÌĞòÔ±µÄGolangÈëÃÅÖ¸ÄÏ](http://blog.csdn.net/dc_726/article/details/46565241)
-* [GoÃüÁî½Ì³Ì](https://github.com/hyper-carrot/go_command_tutorial)
-* [GoÓïÑÔ²©¿ÍÊµ¼ù](https://github.com/achun/Go-Blog-In-Action)
-* [Go ¹Ù·½ÎÄµµ·­Òë](https://github.com/golang-china/golangdoc.translations)
-* [ÉîÈë½âÎöGo](https://github.com/tiancaiamao/go-internals)
-* [GoÓïÑÔÊ¥¾­(ÖĞÎÄ°æ)](https://bitbucket.org/golang-china/gopl-zh/wiki/Home) ([GitBook](https://www.gitbook.com/book/wizardforcel/gopl-zh/details))
+* [Go è¯­è¨€æ ‡å‡†åº“](https://github.com/polaris1119/The-Golang-Standard-Library-by-Example)
+* [Golangæ ‡å‡†åº“æ–‡æ¡£](http://godoc.ml/)
+* [Revel æ¡†æ¶æ‰‹å†Œ](http://gorevel.cn/docs/manual/index.html)
+* [Javaç¨‹åºå‘˜çš„Golangå…¥é—¨æŒ‡å—](http://blog.csdn.net/dc_726/article/details/46565241)
+* [Goå‘½ä»¤æ•™ç¨‹](https://github.com/hyper-carrot/go_command_tutorial)
+* [Goè¯­è¨€åšå®¢å®è·µ](https://github.com/achun/Go-Blog-In-Action)
+* [Go å®˜æ–¹æ–‡æ¡£ç¿»è¯‘](https://github.com/golang-china/golangdoc.translations)
+* [æ·±å…¥è§£æGo](https://github.com/tiancaiamao/go-internals)
+* [Goè¯­è¨€åœ£ç»(ä¸­æ–‡ç‰ˆ)](https://bitbucket.org/golang-china/gopl-zh/wiki/Home) ([GitBook](https://www.gitbook.com/book/wizardforcel/gopl-zh/details))
 
 ### Groovy
 
-* [ÊµÕ½ Groovy ÏµÁĞ](http://www.ibm.com/developerworks/cn/java/j-pg/)
+* [å®æˆ˜ Groovy ç³»åˆ—](http://www.ibm.com/developerworks/cn/java/j-pg/)
 
 ### Haskell
 
-* [Real World Haskell ÖĞÎÄ°æ](http://rwh.readthedocs.org/en/latest/)
-* [HaskellÈ¤Ñ§Ö¸ÄÏ](http://fleurer-lee.com/lyah/)
+* [Real World Haskell ä¸­æ–‡ç‰ˆ](http://rwh.readthedocs.org/en/latest/)
+* [Haskellè¶£å­¦æŒ‡å—](http://fleurer-lee.com/lyah/)
 
 ### iOS
 
-* [iOS¿ª·¢60·ÖÖÓÈëÃÅ](https://github.com/qinjx/30min_guides/blob/master/ios.md)
-* [iOS7ÈË»ú½çÃæÖ¸ÄÏ](http://isux.tencent.com/ios-human-interface-guidelines-ui-design-basics-ios7.html)
-* [Google Objective-C Style Guide ÖĞÎÄ°æ](http://zh-google-styleguide.readthedocs.org/en/latest/google-objc-styleguide/)
-* [iPhone 6 ÆÁÄ»½ÒÃØ](http://wileam.com/iphone-6-screen-cn/)
-* [Apple Watch¿ª·¢³õÌ½](http://nilsun.github.io/apple-watch/)
-* [ÂíÉÏ×ÅÊÖ¿ª·¢ iOS Ó¦ÓÃ³ÌĞò](https://developer.apple.com/library/ios/referencelibrary/GettingStarted/RoadMapiOSCh/index.html)
-* [ÍøÒ×Ë¹Ì¹¸£´óÑ§¹«¿ª¿Î£ºiOS 7Ó¦ÓÃ¿ª·¢×ÖÄ»ÎÄ¼ş](https://github.com/jkyin/Subtitle)
+* [iOSå¼€å‘60åˆ†é’Ÿå…¥é—¨](https://github.com/qinjx/30min_guides/blob/master/ios.md)
+* [iOS7äººæœºç•Œé¢æŒ‡å—](http://isux.tencent.com/ios-human-interface-guidelines-ui-design-basics-ios7.html)
+* [Google Objective-C Style Guide ä¸­æ–‡ç‰ˆ](http://zh-google-styleguide.readthedocs.org/en/latest/google-objc-styleguide/)
+* [iPhone 6 å±å¹•æ­ç§˜](http://wileam.com/iphone-6-screen-cn/)
+* [Apple Watchå¼€å‘åˆæ¢](http://nilsun.github.io/apple-watch/)
+* [é©¬ä¸Šç€æ‰‹å¼€å‘ iOS åº”ç”¨ç¨‹åº](https://developer.apple.com/library/ios/referencelibrary/GettingStarted/RoadMapiOSCh/index.html)
+* [ç½‘æ˜“æ–¯å¦ç¦å¤§å­¦å…¬å¼€è¯¾ï¼šiOS 7åº”ç”¨å¼€å‘å­—å¹•æ–‡ä»¶](https://github.com/jkyin/Subtitle)
 
 ### Java
 
-* [Apache Shiro ÓÃ»§Ö¸ÄÏ](https://github.com/waylau/apache-shiro-1.2.x-reference)
-* [Jersey 2.x ÓÃ»§Ö¸ÄÏ](https://github.com/waylau/Jersey-2.x-User-Guide)
-* [Spring Framework 4.x²Î¿¼ÎÄµµ](https://github.com/waylau/spring-framework-4-reference)
-* [Spring Boot²Î¿¼Ö¸ÄÏ](https://github.com/qibaoguang/Spring-Boot-Reference-Guide) (·­ÒëÖĞ)
-* [MyBatisÖĞÎÄÎÄµµ](http://mybatis.org/mybatis-3/zh/index.html)
-* [MyBatis Generator ÖĞÎÄÎÄµµ](http://mbg.cndocs.tk/)
-* [ÓÃjersey¹¹½¨REST·şÎñ](https://github.com/waylau/RestDemo)
-* [Activiti 5.x ÓÃ»§Ö¸ÄÏ](https://github.com/waylau/activiti-5.x-user-guide)
-* [Google Java±à³Ì·ç¸ñÖ¸ÄÏ](http://www.hawstein.com/posts/google-java-style.html)
-* [Netty 4.x ÓÃ»§Ö¸ÄÏ](https://github.com/waylau/netty-4-user-guide)
-* [Netty ÊµÕ½(¾«Ëè)](https://github.com/waylau/essential-netty-in-action)
-* [REST ÊµÕ½](https://github.com/waylau/rest-in-action)
-* [Java ±àÂë¹æ·¶](https://github.com/waylau/java-code-conventions)
-* [Apache MINA 2 ÓÃ»§Ö¸ÄÏ](https://github.com/waylau/apache-mina-2.x-user-guide)
-* [H2 Database ½Ì³Ì](https://github.com/waylau/h2-database-doc)
-* [Java Servlet 3.1 ¹æ·¶](https://github.com/waylau/servlet-3.1-specification)
-* [JSSE ²Î¿¼Ö¸ÄÏ](https://github.com/waylau/jsse-reference-guide)
-* [Java¿ªÔ´ÊµÏÖ¼°×î¼ÑÊµ¼ù](https://github.com/biezhi/jb)
-* [Java ±à³ÌÒªµã](https://github.com/waylau/essential-java)
+* [Apache Shiro ç”¨æˆ·æŒ‡å—](https://github.com/waylau/apache-shiro-1.2.x-reference)
+* [Jersey 2.x ç”¨æˆ·æŒ‡å—](https://github.com/waylau/Jersey-2.x-User-Guide)
+* [Spring Framework 4.xå‚è€ƒæ–‡æ¡£](https://github.com/waylau/spring-framework-4-reference)
+* [Spring Bootå‚è€ƒæŒ‡å—](https://github.com/qibaoguang/Spring-Boot-Reference-Guide) (ç¿»è¯‘ä¸­)
+* [MyBatisä¸­æ–‡æ–‡æ¡£](http://mybatis.org/mybatis-3/zh/index.html)
+* [MyBatis Generator ä¸­æ–‡æ–‡æ¡£](http://mbg.cndocs.tk/)
+* [ç”¨jerseyæ„å»ºRESTæœåŠ¡](https://github.com/waylau/RestDemo)
+* [Activiti 5.x ç”¨æˆ·æŒ‡å—](https://github.com/waylau/activiti-5.x-user-guide)
+* [Google Javaç¼–ç¨‹é£æ ¼æŒ‡å—](http://www.hawstein.com/posts/google-java-style.html)
+* [Netty 4.x ç”¨æˆ·æŒ‡å—](https://github.com/waylau/netty-4-user-guide)
+* [Netty å®æˆ˜(ç²¾é«“)](https://github.com/waylau/essential-netty-in-action)
+* [REST å®æˆ˜](https://github.com/waylau/rest-in-action)
+* [Java ç¼–ç è§„èŒƒ](https://github.com/waylau/java-code-conventions)
+* [Apache MINA 2 ç”¨æˆ·æŒ‡å—](https://github.com/waylau/apache-mina-2.x-user-guide)
+* [H2 Database æ•™ç¨‹](https://github.com/waylau/h2-database-doc)
+* [Java Servlet 3.1 è§„èŒƒ](https://github.com/waylau/servlet-3.1-specification)
+* [JSSE å‚è€ƒæŒ‡å—](https://github.com/waylau/jsse-reference-guide)
+* [Javaå¼€æºå®ç°åŠæœ€ä½³å®è·µ](https://github.com/biezhi/jb)
+* [Java ç¼–ç¨‹è¦ç‚¹](https://github.com/waylau/essential-java)
 * [Think Java](http://www.ituring.com.cn/minibook/69)
-* [Java 8 ¼òÃ÷½Ì³Ì](https://github.com/wizardforcel/modern-java-zh)
+* [Java 8 ç®€æ˜æ•™ç¨‹](https://github.com/wizardforcel/modern-java-zh)
 
 ### JavaScript
 
-* [Google JavaScript ´úÂë·ç¸ñÖ¸ÄÏ](http://bq69.com/blog/articles/script/868/google-javascript-style-guide.html)
-* [Google JSON ·ç¸ñÖ¸ÄÏ](https://github.com/darcyliu/google-styleguide/blob/master/JSONStyleGuide.md)
-* [Airbnb JavaScript ¹æ·¶](https://github.com/adamlu/javascript-style-guide)
-* [JavaScript ±ê×¼²Î¿¼½Ì³Ì£¨alpha£©](http://javascript.ruanyifeng.com/)
-* [Javascript±à³ÌÖ¸ÄÏ](http://pij.robinqu.me/) ([Ô´Âë](https://github.com/RobinQu/Programing-In-Javascript))
-* [javascript µÄ 12 ¸ö¹Öñ±](https://github.com/justjavac/12-javascript-quirks)
-* [JavaScript ÃØÃÜ»¨Ô°](http://bonsaiden.github.io/JavaScript-Garden/zh/)
-* [JavaScriptºËĞÄ¸ÅÄî¼°Êµ¼ù](http://icodeit.org/jsccp/) (PDF) (´ËÊéÒÑÓÉÈËÃñÓÊµç³ö°æÉç³ö°æ·¢ĞĞ£¬µ«×÷ÕßÒÀÈ»Ãâ·ÑÌá¹©PDF°æ±¾£¬Ï£Íû¿ª·¢ÕßÃÇÈ¥¹ºÂò£¬Ö§³Ö×÷Õß)
-* [¡¶JavaScript Ä£Ê½¡·](https://github.com/jayli/javascript-patterns) ¡°JavaScript patterns¡±ÖĞÒë±¾
-* [ÃüÃûº¯Êı±í´ïÊ½Ì½ÃØ](http://justjavac.com/named-function-expressions-demystified.html)  (×¢:Ô­ÎÄÓÉ[ÎªÖ®Âş±Ê](http://www.cn-cuckoo.com)·­Òë£¬Ô­Ê¼µØÖ·ÎŞ·¨´ò¿ª£¬ËùÒÔ´Ë´¦µØÖ·ÎªÎÒ²©¿ÍÉÏµÄ±¸·İ)
-* [Ñ§ÓÃ JavaScript Éè¼ÆÄ£Ê½](http://www.oschina.net/translate/learning-javascript-design-patterns) (¿ªÔ´ÖĞ¹ú)
-* [ÉîÈëÀí½âJavaScriptÏµÁĞ](http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html)   
-* [ECMAScript 5.1 ÖĞÎÄ°æ](http://yanhaijing.com/es5)   
-* [ECMAScript 6 ÈëÃÅ](http://es6.ruanyifeng.com/) (×÷Õß£ºÈîÒ»·å)
-* [JavaScript PromiseÃÔÄãÊé](http://liubin.github.io/promises-book/)
-* [You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS) (ÉîÈëJavaScriptÓïÑÔºËĞÄ»úÖÆµÄÏµÁĞÍ¼Êé)
-* [JavaScript ½Ì³Ì](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000) ÁÎÑ©·å
-* [MDN JavaScript ÖĞÎÄÎÄµµ](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
+* [Google JavaScript ä»£ç é£æ ¼æŒ‡å—](http://bq69.com/blog/articles/script/868/google-javascript-style-guide.html)
+* [Google JSON é£æ ¼æŒ‡å—](https://github.com/darcyliu/google-styleguide/blob/master/JSONStyleGuide.md)
+* [Airbnb JavaScript è§„èŒƒ](https://github.com/adamlu/javascript-style-guide)
+* [JavaScript æ ‡å‡†å‚è€ƒæ•™ç¨‹ï¼ˆalphaï¼‰](http://javascript.ruanyifeng.com/)
+* [Javascriptç¼–ç¨‹æŒ‡å—](http://pij.robinqu.me/) ([æºç ](https://github.com/RobinQu/Programing-In-Javascript))
+* [javascript çš„ 12 ä¸ªæ€ªç™–](https://github.com/justjavac/12-javascript-quirks)
+* [JavaScript ç§˜å¯†èŠ±å›­](http://bonsaiden.github.io/JavaScript-Garden/zh/)
+* [JavaScriptæ ¸å¿ƒæ¦‚å¿µåŠå®è·µ](http://icodeit.org/jsccp/) (PDF) (æ­¤ä¹¦å·²ç”±äººæ°‘é‚®ç”µå‡ºç‰ˆç¤¾å‡ºç‰ˆå‘è¡Œï¼Œä½†ä½œè€…ä¾ç„¶å…è´¹æä¾›PDFç‰ˆæœ¬ï¼Œå¸Œæœ›å¼€å‘è€…ä»¬å»è´­ä¹°ï¼Œæ”¯æŒä½œè€…)
+* [ã€ŠJavaScript æ¨¡å¼ã€‹](https://github.com/jayli/javascript-patterns) â€œJavaScript patternsâ€ä¸­è¯‘æœ¬
+* [å‘½åå‡½æ•°è¡¨è¾¾å¼æ¢ç§˜](http://justjavac.com/named-function-expressions-demystified.html)  (æ³¨:åŸæ–‡ç”±[ä¸ºä¹‹æ¼«ç¬”](http://www.cn-cuckoo.com)ç¿»è¯‘ï¼ŒåŸå§‹åœ°å€æ— æ³•æ‰“å¼€ï¼Œæ‰€ä»¥æ­¤å¤„åœ°å€ä¸ºæˆ‘åšå®¢ä¸Šçš„å¤‡ä»½)
+* [å­¦ç”¨ JavaScript è®¾è®¡æ¨¡å¼](http://www.oschina.net/translate/learning-javascript-design-patterns) (å¼€æºä¸­å›½)
+* [æ·±å…¥ç†è§£JavaScriptç³»åˆ—](http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html)   
+* [ECMAScript 5.1 ä¸­æ–‡ç‰ˆ](http://yanhaijing.com/es5)   
+* [ECMAScript 6 å…¥é—¨](http://es6.ruanyifeng.com/) (ä½œè€…ï¼šé˜®ä¸€å³°)
+* [JavaScript Promiseè¿·ä½ ä¹¦](http://liubin.github.io/promises-book/)
+* [You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS) (æ·±å…¥JavaScriptè¯­è¨€æ ¸å¿ƒæœºåˆ¶çš„ç³»åˆ—å›¾ä¹¦)
+* [JavaScript æ•™ç¨‹](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000) å»–é›ªå³°
+* [MDN JavaScript ä¸­æ–‡æ–‡æ¡£](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
 * jQuery
-    * [jQuery ½â¹¹](http://www.cn-cuckoo.com/deconstructed/jquery.html)
-    * [¼òµ¥Ò×¶®µÄJQueryÄ§·¨](http://www.nowamagic.net/librarys/books/contents/jquery)
+    * [jQuery è§£æ„](http://www.cn-cuckoo.com/deconstructed/jquery.html)
+    * [ç®€å•æ˜“æ‡‚çš„JQueryé­”æ³•](http://www.nowamagic.net/librarys/books/contents/jquery)
     * [How to write jQuery plugin](http://i5ting.github.io/How-to-write-jQuery-plugin/build/jquery.plugin.html)
     * [You Don't Need jQuery](https://github.com/oneuijs/You-Dont-Need-jQuery/blob/master/README.zh-CN.md)
-    * [ÈçºÎÊµÏÖÒ»¸öÀàjQuery£¿](https://github.com/MeCKodo/forchange)
+    * [å¦‚ä½•å®ç°ä¸€ä¸ªç±»jQueryï¼Ÿ](https://github.com/MeCKodo/forchange)
 * Node.js
-    * [NodeÈëÃÅ](http://www.nodebeginner.org/index-zh-cn.html)
-    * [ÆßÌìÑ§»áNodeJS](http://nqdeng.github.io/7-days-nodejs/)
-    * [Nodejs Wiki Book](https://github.com/nodejs-tw/nodejs-wiki-book) (·±ÌåÖĞÎÄ)
-    * [express.js ÖĞÎÄÎÄµµ](http://expressjs.jser.us/)
-    * [koa ÖĞÎÄÎÄµµ](https://github.com/guo-yu/koa-guide)
-    * [Ò»ÆğÑ§koa](http://base-n.github.io/koa-generator-examples/)
-    * [Ê¹ÓÃ Express + MongoDB ´î½¨¶àÈË²©¿Í](https://github.com/nswbmw/N-blog)
-    * [Express¿ò¼Ü](http://javascript.ruanyifeng.com/nodejs/express.html)
-    * [Node.js °ü½Ì²»°ü»á](https://github.com/alsotang/node-lessons)
-    * [Learn You The Node.js For Much Win! (ÖĞÎÄ°æ)](https://www.npmjs.com/package/learnyounode-zh-cn)
-    * [Node debug Èı·¨ÈıÀı](http://i5ting.github.io/node-debug-tutorial/)
-    * [nodejsÖĞÎÄÎÄµµ](https://www.gitbook.com/book/0532/nodejs/details)
-    * [orm2 ÖĞÎÄÎÄµµ](https://github.com/wizardforcel/orm2-doc-zh-cn)
+    * [Nodeå…¥é—¨](http://www.nodebeginner.org/index-zh-cn.html)
+    * [ä¸ƒå¤©å­¦ä¼šNodeJS](http://nqdeng.github.io/7-days-nodejs/)
+    * [Nodejs Wiki Book](https://github.com/nodejs-tw/nodejs-wiki-book) (ç¹ä½“ä¸­æ–‡)
+    * [express.js ä¸­æ–‡æ–‡æ¡£](http://expressjs.jser.us/)
+    * [koa ä¸­æ–‡æ–‡æ¡£](https://github.com/guo-yu/koa-guide)
+    * [ä¸€èµ·å­¦koa](http://base-n.github.io/koa-generator-examples/)
+    * [ä½¿ç”¨ Express + MongoDB æ­å»ºå¤šäººåšå®¢](https://github.com/nswbmw/N-blog)
+    * [Expressæ¡†æ¶](http://javascript.ruanyifeng.com/nodejs/express.html)
+    * [Node.js åŒ…æ•™ä¸åŒ…ä¼š](https://github.com/alsotang/node-lessons)
+    * [Learn You The Node.js For Much Win! (ä¸­æ–‡ç‰ˆ)](https://www.npmjs.com/package/learnyounode-zh-cn)
+    * [Node debug ä¸‰æ³•ä¸‰ä¾‹](http://i5ting.github.io/node-debug-tutorial/)
+    * [nodejsä¸­æ–‡æ–‡æ¡£](https://www.gitbook.com/book/0532/nodejs/details)
+    * [orm2 ä¸­æ–‡æ–‡æ¡£](https://github.com/wizardforcel/orm2-doc-zh-cn)
 * underscore.js
-    * [Underscore.jsÖĞÎÄÎÄµµ](http://learningcn.com/underscore/)
+    * [Underscore.jsä¸­æ–‡æ–‡æ¡£](http://learningcn.com/underscore/)
 * backbone.js
-    * [backbone.jsÖĞÎÄÎÄµµ](http://www.css88.com/doc/backbone/)
-    * [backbone.jsÈëÃÅ½Ì³Ì](http://www.the5fire.com/backbone-js-tutorials-pdf-download.html) (PDF)
-    * [Backbone.jsÈëÃÅ½Ì³ÌµÚ¶ş°æ](https://github.com/the5fire/backbonejs-learning-note)
-    * [Developing Backbone.js Applications(ÖĞÎÄ°æ)](http://feliving.github.io/developing-backbone-applications/)
+    * [backbone.jsä¸­æ–‡æ–‡æ¡£](http://www.css88.com/doc/backbone/)
+    * [backbone.jså…¥é—¨æ•™ç¨‹](http://www.the5fire.com/backbone-js-tutorials-pdf-download.html) (PDF)
+    * [Backbone.jså…¥é—¨æ•™ç¨‹ç¬¬äºŒç‰ˆ](https://github.com/the5fire/backbonejs-learning-note)
+    * [Developing Backbone.js Applications(ä¸­æ–‡ç‰ˆ)](http://feliving.github.io/developing-backbone-applications/)
 * AngularJS
-    * [AngularJS×î¼ÑÊµ¼ùºÍ·ç¸ñÖ¸ÄÏ](https://github.com/mgechev/angularjs-style-guide/blob/master/README-zh-cn.md)
-    * [AngularJSÖĞÒë±¾](https://github.com/peiransun/angularjs-cn)
-    * [AngularJSÈëÃÅ½Ì³Ì](https://github.com/zensh/AngularjsTutorial_cn)
-    * [¹¹½¨×Ô¼ºµÄAngularJS](https://github.com/xufei/Make-Your-Own-AngularJS/blob/master/01.md)
-    * [ÔÚWindows»·¾³ÏÂÓÃYeoman¹¹½¨AngularJSÏîÄ¿](http://www.waylau.com/build-angularjs-app-with-yeoman-in-windows/)
+    * [AngularJSæœ€ä½³å®è·µå’Œé£æ ¼æŒ‡å—](https://github.com/mgechev/angularjs-style-guide/blob/master/README-zh-cn.md)
+    * [AngularJSä¸­è¯‘æœ¬](https://github.com/peiransun/angularjs-cn)
+    * [AngularJSå…¥é—¨æ•™ç¨‹](https://github.com/zensh/AngularjsTutorial_cn)
+    * [æ„å»ºè‡ªå·±çš„AngularJS](https://github.com/xufei/Make-Your-Own-AngularJS/blob/master/01.md)
+    * [åœ¨Windowsç¯å¢ƒä¸‹ç”¨Yeomanæ„å»ºAngularJSé¡¹ç›®](http://www.waylau.com/build-angularjs-app-with-yeoman-in-windows/)
 * Zepto.js
-    * [Zepto.js ÖĞÎÄÎÄµµ](http://mweb.baidu.com/zeptoapi/)
+    * [Zepto.js ä¸­æ–‡æ–‡æ¡£](http://mweb.baidu.com/zeptoapi/)
 * Sea.js
     * [Hello Sea.js](http://island205.com/HelloSea.js/)
 * React.js
-    * [React.js ÖĞÎÄÎÄµµ](http://reactjs.cn/)
+    * [React.js ä¸­æ–‡æ–‡æ¡£](http://reactjs.cn/)
     * [React webpack-cookbook](https://github.com/fakefish/react-webpack-cookbook)
-    * [React ÈëÃÅ½Ì³Ì](http://fraserxu.me/intro-to-react/)
-    * [React Native ÖĞÎÄÎÄµµ(º¬×îĞÂAndroidÄÚÈİ)](http://wiki.jikexueyuan.com/project/react-native/)
+    * [React å…¥é—¨æ•™ç¨‹](http://fraserxu.me/intro-to-react/)
+    * [React Native ä¸­æ–‡æ–‡æ¡£(å«æœ€æ–°Androidå†…å®¹)](http://wiki.jikexueyuan.com/project/react-native/)
     * [Learn React & Webpack by building the Hacker News front page](https://github.com/theJian/build-a-hn-front-page)
 * impress.js
-    * [impress.jsµÄÖĞÎÄ½Ì³Ì](https://github.com/kokdemo/impress.js-tutorial-in-Chinese)
+    * [impress.jsçš„ä¸­æ–‡æ•™ç¨‹](https://github.com/kokdemo/impress.js-tutorial-in-Chinese)
 * CoffeeScript
     * [CoffeeScript Cookbook](http://island205.com/coffeescript-cookbook.github.com/)
-    * [The Little Book on CoffeeScriptÖĞÎÄ°æ](http://island205.com/tlboc/)
-    * [CoffeeScript ±àÂë·ç¸ñÖ¸ÄÏ](https://github.com/geekplux/coffeescript-style-guide)
+    * [The Little Book on CoffeeScriptä¸­æ–‡ç‰ˆ](http://island205.com/tlboc/)
+    * [CoffeeScript ç¼–ç é£æ ¼æŒ‡å—](https://github.com/geekplux/coffeescript-style-guide)
 * TypeScipt
     * [TypeScript Handbook](https://zhongsp.gitbooks.io/typescript-handbook/content/)
 * ExtJS
-    * [Ext4.1.0 ÖĞÎÄÎÄµµ](http://extjs-doc-cn.github.io/ext4api/)
+    * [Ext4.1.0 ä¸­æ–‡æ–‡æ¡£](http://extjs-doc-cn.github.io/ext4api/)
 * Meteor
     * [Discover Meteor](http://zh.discovermeteor.com/)
-    * [Meteor ÖĞÎÄÎÄµµ](http://docs.meteorhub.org/#/basic/)
-    * [Angular-Meteor ÖĞÎÄ½Ì³Ì](http://angular.meteorhub.org/)
-* [ChromeÀ©Õ¹¼°Ó¦ÓÃ¿ª·¢](http://www.ituring.com.cn/minibook/950)
+    * [Meteor ä¸­æ–‡æ–‡æ¡£](http://docs.meteorhub.org/#/basic/)
+    * [Angular-Meteor ä¸­æ–‡æ•™ç¨‹](http://angular.meteorhub.org/)
+* [Chromeæ‰©å±•åŠåº”ç”¨å¼€å‘](http://www.ituring.com.cn/minibook/950)
 
 ### LaTeX
 
-* [Ò»·İÆäÊµºÜ¶ÌµÄ LaTeX ÈëÃÅÎÄµµ](http://liam0205.me/2014/09/08/latex-introduction/)
-* [Ò»·İ²»Ì«¼ò¶ÌµÄ LATEX 2¦Å ½éÉÜ](http://www.mohu.org/info/lshort-cn.pdf) £¨PDF°æ£©
+* [ä¸€ä»½å…¶å®å¾ˆçŸ­çš„ LaTeX å…¥é—¨æ–‡æ¡£](http://liam0205.me/2014/09/08/latex-introduction/)
+* [ä¸€ä»½ä¸å¤ªç®€çŸ­çš„ LATEX 2Îµ ä»‹ç»](http://www.mohu.org/info/lshort-cn.pdf) ï¼ˆPDFç‰ˆï¼‰
 
 ### LISP
 * Common Lisp
-    * [ANSI Common Lisp ÖĞÎÄ·­×g°æ](http://acl.readthedocs.org/en/latest/)
-    * [On Lisp ÖĞÎÄ·­Òë°æ±¾](http://www.ituring.com.cn/minibook/862)
+    * [ANSI Common Lisp ä¸­æ–‡ç¿»è­¯ç‰ˆ](http://acl.readthedocs.org/en/latest/)
+    * [On Lisp ä¸­æ–‡ç¿»è¯‘ç‰ˆæœ¬](http://www.ituring.com.cn/minibook/862)
 * Scheme
-    * [Yet Another Scheme Tutorial SchemeÈëÃÅ½Ì³Ì](http://deathking.github.io/yast-cn/)
-    * [SchemeÓïÑÔ¼òÃ÷½Ì³Ì](http://songjinghe.github.io/TYS-zh-translation/)
+    * [Yet Another Scheme Tutorial Schemeå…¥é—¨æ•™ç¨‹](http://deathking.github.io/yast-cn/)
+    * [Schemeè¯­è¨€ç®€æ˜æ•™ç¨‹](http://songjinghe.github.io/TYS-zh-translation/)
     * Racket
         * [Racket book](https://github.com/tyrchen/racket-book)
 
 ### Lua
 
-* [Lua±à³ÌÈëÃÅ](https://github.com/andycai/luaprimer)
-* [Lua 5.1 ²Î¿¼ÊÖ²á ÖĞÎÄ·­Òë](http://www.codingnow.com/2000/download/lua_manual.html)
-* [Lua 5.3 ²Î¿¼ÊÖ²á ÖĞÎÄ·­Òë](http://cloudwu.github.io/lua53doc/)
-* [LuaÔ´ÂëĞÀÉÍ](http://www.codingnow.com/temp/readinglua.pdf)
+* [Luaç¼–ç¨‹å…¥é—¨](https://github.com/andycai/luaprimer)
+* [Lua 5.1 å‚è€ƒæ‰‹å†Œ ä¸­æ–‡ç¿»è¯‘](http://www.codingnow.com/2000/download/lua_manual.html)
+* [Lua 5.3 å‚è€ƒæ‰‹å†Œ ä¸­æ–‡ç¿»è¯‘](http://cloudwu.github.io/lua53doc/)
+* [Luaæºç æ¬£èµ](http://www.codingnow.com/temp/readinglua.pdf)
 
 ### OCaml
 
@@ -515,186 +515,186 @@
 
 ### Perl
 
-* [Modern Perl ÖĞÎÄ°æ](https://github.com/horus/modern_perl_book)
-* [Perl ³ÌĞòÔ±Ó¦¸ÃÖªµÀµÄÊÂ](http://perl.linuxtoy.org/)
+* [Modern Perl ä¸­æ–‡ç‰ˆ](https://github.com/horus/modern_perl_book)
+* [Perl ç¨‹åºå‘˜åº”è¯¥çŸ¥é“çš„äº‹](http://perl.linuxtoy.org/)
 
 ### PHP
 
-* [PHP ¹Ù·½ÊÖ²á](http://php.net/manual/zh/)
-* [PHPµ÷ÊÔ¼¼ÊõÊÖ²á](http://www.laruence.com/2010/06/21/1608.html)(PDF)
-* PHPÖ®µÀ£ºphp-the-right-way ([@wulijun°æ](http://wulijun.github.io/php-the-right-way/) [PHPHub°æ](http://laravel-china.github.io/php-the-right-way/))
-* [PHP ×î¼ÑÊµ¼ù](https://github.com/justjavac/PHP-Best-Practices-zh_CN)
-* [PHP ¿ª·¢ÕßÊµ¼ù](https://ryancao.gitbooks.io/php-developer-prepares/content/)
-* [ÉîÈëÀí½âPHPÄÚºË](https://github.com/reeze/tipi)
-* [PHPÀ©Õ¹¿ª·¢¼°ÄÚºËÓ¦ÓÃ](http://www.walu.cc/phpbook/)
-* [Laravel5.1 ÖĞÎÄÎÄµµ](http://laravel-china.org/docs/5.1)
-* [Laravel 5.1 LTS ËÙ²é±í](https://cs.phphub.org/)
-* [Symfony2 Cookbook ÖĞÎÄ°æ](http://wiki.jikexueyuan.com/project/symfony-cookbook/)(°æ±¾ 2.7.0 LTS)
-* [Symfony2ÖĞÎÄÎÄµµ](http://symfony-docs-chs.readthedocs.org/en/latest/) (Î´ÒëÍê)
-* [YiiBook¼¸±¾Yii¿ò¼ÜµÄÔÚÏß½Ì³Ì](http://yiibook.com//doc)
-* [ÉîÈëÀí½â Yii 2.0](http://www.digpage.com/)
-* [Yii ¿ò¼ÜÖĞÎÄÎÄ™n](http://www.yiichina.com/)
-* [¼òµ¥Ò×¶®µÄPHPÄ§·¨](http://www.nowamagic.net/librarys/books/contents/php)
-* [swooleÎÄµµ¼°ÈëÃÅ½Ì³Ì](https://github.com/LinkedDestiny/swoole-doc)
-* [Composer ÖĞÎÄÍø](http://www.phpcomposer.com)
-* [Slim ÖĞÎÄÎÄµµ](http://ww1.minimee.org/php/slim)
-* [Lumen ÖĞÎÄÎÄµµ](http://lumen.laravel-china.org/)
-* [PHPUnit ÖĞÎÄÎÄµµ](https://phpunit.de/manual/current/zh_cn/installation.html)
+* [PHP å®˜æ–¹æ‰‹å†Œ](http://php.net/manual/zh/)
+* [PHPè°ƒè¯•æŠ€æœ¯æ‰‹å†Œ](http://www.laruence.com/2010/06/21/1608.html)(PDF)
+* PHPä¹‹é“ï¼šphp-the-right-way ([@wulijunç‰ˆ](http://wulijun.github.io/php-the-right-way/) [PHPHubç‰ˆ](http://laravel-china.github.io/php-the-right-way/))
+* [PHP æœ€ä½³å®è·µ](https://github.com/justjavac/PHP-Best-Practices-zh_CN)
+* [PHP å¼€å‘è€…å®è·µ](https://ryancao.gitbooks.io/php-developer-prepares/content/)
+* [æ·±å…¥ç†è§£PHPå†…æ ¸](https://github.com/reeze/tipi)
+* [PHPæ‰©å±•å¼€å‘åŠå†…æ ¸åº”ç”¨](http://www.walu.cc/phpbook/)
+* [Laravel5.1 ä¸­æ–‡æ–‡æ¡£](http://laravel-china.org/docs/5.1)
+* [Laravel 5.1 LTS é€ŸæŸ¥è¡¨](https://cs.phphub.org/)
+* [Symfony2 Cookbook ä¸­æ–‡ç‰ˆ](http://wiki.jikexueyuan.com/project/symfony-cookbook/)(ç‰ˆæœ¬ 2.7.0 LTS)
+* [Symfony2ä¸­æ–‡æ–‡æ¡£](http://symfony-docs-chs.readthedocs.org/en/latest/) (æœªè¯‘å®Œ)
+* [YiiBookå‡ æœ¬Yiiæ¡†æ¶çš„åœ¨çº¿æ•™ç¨‹](http://yiibook.com//doc)
+* [æ·±å…¥ç†è§£ Yii 2.0](http://www.digpage.com/)
+* [Yii æ¡†æ¶ä¸­æ–‡æ–‡æª”](http://www.yiichina.com/)
+* [ç®€å•æ˜“æ‡‚çš„PHPé­”æ³•](http://www.nowamagic.net/librarys/books/contents/php)
+* [swooleæ–‡æ¡£åŠå…¥é—¨æ•™ç¨‹](https://github.com/LinkedDestiny/swoole-doc)
+* [Composer ä¸­æ–‡ç½‘](http://www.phpcomposer.com)
+* [Slim ä¸­æ–‡æ–‡æ¡£](http://ww1.minimee.org/php/slim)
+* [Lumen ä¸­æ–‡æ–‡æ¡£](http://lumen.laravel-china.org/)
+* [PHPUnit ä¸­æ–‡æ–‡æ¡£](https://phpunit.de/manual/current/zh_cn/installation.html)
 
 ### Prolog
 
-* [±¿°ì·¨Ñ§Prolog](http://fengdidi.github.io/blog/2011/11/15/qian-yan/)
+* [ç¬¨åŠæ³•å­¦Prolog](http://fengdidi.github.io/blog/2011/11/15/qian-yan/)
 
 ### Python
 
-* [ÁÎÑ©·å Python 2.7 ÖĞÎÄ½Ì³Ì](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000)
-* [ÁÎÑ©·å Python 3 ÖĞÎÄ½Ì³Ì](http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
-* [¼òÃ÷Python½Ì³Ì](http://www.kuqin.com/abyteofpython_cn/)
-* [Áã»ù´¡Ñ§ Python µÚÒ»°æ](http://www.kancloud.cn/kancloud/python-basic)
-* [Áã»ù´¡Ñ§ Python µÚ¶ş°æ](http://www.kancloud.cn/kancloud/starter-learning-python)
-* [¿É°®µÄ Python](http://lovelypython.readthedocs.org/en/latest/)
-* [Python 2.7 ¹Ù·½½Ì³ÌÖĞÎÄ°æ](http://www.pythondoc.com/pythontutorial27/index.html)
-* [Python 3.3 ¹Ù·½½Ì³ÌÖĞÎÄ°æ](http://www.pythondoc.com/pythontutorial3/index.html)
-* [Python Cookbook ÖĞÎÄ°æ](http://www.kancloud.cn/thinkphp/python-cookbook)
-* [Python3 Cookbook ÖĞÎÄ°æ](https://github.com/yidao620c/python3-cookbook)
-* [ÉîÈë Python](http://www.kuqin.com/docs/diveintopythonzh-cn-5.4b/html/toc/)
-* [ÉîÈë Python 3](http://old.sebug.net/paper/books/dive-into-python3/)
-* [PEP8 Python´úÂë·ç¸ñ¹æ·¶](https://code.google.com/p/zhong-wiki/wiki/PEP8)
-* [Google Python ·ç¸ñÖ¸ÄÏ ÖĞÎÄ°æ](http://zh-google-styleguide.readthedocs.org/en/latest/google-python-styleguide/)
-* [PythonÈëÃÅ½Ì³Ì](http://liam0205.me/2013/11/02/Python-tutorial-zh_cn/) ([PDF](http://liam0205.me/attachment/Python/The_Python_Tutorial_zh-cn.pdf))
-* [±¿°ì·¨Ñ§ Python](http://old.sebug.net/paper/books/LearnPythonTheHardWay/) ([PDF](http://liam0205.me/attachment/Python/PyHardWay/Learn_Python_The_Hard_Way_zh-cn.pdf) [EPUB](https://www.gitbook.com/download/epub/book/wizardforcel/lpthw))
-* [Python×ÔÈ»ÓïÑÔ´¦ÀíÖĞÎÄ°æ](http://pan.baidu.com/s/1qW4pvnY) £¨¸ĞĞ»³ÂÌÎÍ¬Ñ§µÄ·­Òë£¬Ò²Ğ»Ğ» [@shwley](https://github.com/shwley) ÁªÏµÁË×÷Õß£©
-* [Python »æÍ¼¿â matplotlib ¹Ù·½Ö¸ÄÏÖĞÎÄ·­Òë](http://liam0205.me/2014/09/11/matplotlib-tutorial-zh-cn/)
-* [Scrapy 0.25 ÎÄµµ](http://scrapy-chs.readthedocs.org/zh_CN/latest/)
+* [å»–é›ªå³° Python 2.7 ä¸­æ–‡æ•™ç¨‹](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000)
+* [å»–é›ªå³° Python 3 ä¸­æ–‡æ•™ç¨‹](http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
+* [ç®€æ˜Pythonæ•™ç¨‹](http://www.kuqin.com/abyteofpython_cn/)
+* [é›¶åŸºç¡€å­¦ Python ç¬¬ä¸€ç‰ˆ](http://www.kancloud.cn/kancloud/python-basic)
+* [é›¶åŸºç¡€å­¦ Python ç¬¬äºŒç‰ˆ](http://www.kancloud.cn/kancloud/starter-learning-python)
+* [å¯çˆ±çš„ Python](http://lovelypython.readthedocs.org/en/latest/)
+* [Python 2.7 å®˜æ–¹æ•™ç¨‹ä¸­æ–‡ç‰ˆ](http://www.pythondoc.com/pythontutorial27/index.html)
+* [Python 3.3 å®˜æ–¹æ•™ç¨‹ä¸­æ–‡ç‰ˆ](http://www.pythondoc.com/pythontutorial3/index.html)
+* [Python Cookbook ä¸­æ–‡ç‰ˆ](http://www.kancloud.cn/thinkphp/python-cookbook)
+* [Python3 Cookbook ä¸­æ–‡ç‰ˆ](https://github.com/yidao620c/python3-cookbook)
+* [æ·±å…¥ Python](http://www.kuqin.com/docs/diveintopythonzh-cn-5.4b/html/toc/)
+* [æ·±å…¥ Python 3](http://old.sebug.net/paper/books/dive-into-python3/)
+* [PEP8 Pythonä»£ç é£æ ¼è§„èŒƒ](https://code.google.com/p/zhong-wiki/wiki/PEP8)
+* [Google Python é£æ ¼æŒ‡å— ä¸­æ–‡ç‰ˆ](http://zh-google-styleguide.readthedocs.org/en/latest/google-python-styleguide/)
+* [Pythonå…¥é—¨æ•™ç¨‹](http://liam0205.me/2013/11/02/Python-tutorial-zh_cn/) ([PDF](http://liam0205.me/attachment/Python/The_Python_Tutorial_zh-cn.pdf))
+* [ç¬¨åŠæ³•å­¦ Python](http://old.sebug.net/paper/books/LearnPythonTheHardWay/) ([PDF](http://liam0205.me/attachment/Python/PyHardWay/Learn_Python_The_Hard_Way_zh-cn.pdf) [EPUB](https://www.gitbook.com/download/epub/book/wizardforcel/lpthw))
+* [Pythonè‡ªç„¶è¯­è¨€å¤„ç†ä¸­æ–‡ç‰ˆ](http://pan.baidu.com/s/1qW4pvnY) ï¼ˆæ„Ÿè°¢é™ˆæ¶›åŒå­¦çš„ç¿»è¯‘ï¼Œä¹Ÿè°¢è°¢ [@shwley](https://github.com/shwley) è”ç³»äº†ä½œè€…ï¼‰
+* [Python ç»˜å›¾åº“ matplotlib å®˜æ–¹æŒ‡å—ä¸­æ–‡ç¿»è¯‘](http://liam0205.me/2014/09/11/matplotlib-tutorial-zh-cn/)
+* [Scrapy 0.25 æ–‡æ¡£](http://scrapy-chs.readthedocs.org/zh_CN/latest/)
 * [ThinkPython](https://github.com/carfly/thinkpython-cn)
 * [ThinkPython 2ed](https://github.com/bingjin/ThinkPython2-CN)
-* [Python¿ìËÙ½Ì³Ì](http://www.cnblogs.com/vamei/archive/2012/09/13/2682778.html)
-* [Python ÕıÔò±í´ïÊ½²Ù×÷Ö¸ÄÏ](http://wiki.ubuntu.org.cn/PythonÕıÔò±í´ïÊ½²Ù×÷Ö¸ÄÏ)
-* [python³õ¼¶½Ì³Ì£ºÈëÃÅÏê½â](http://www.crifan.com/files/doc/docbook/python_beginner_tutorial/release/html/python_beginner_tutorial.html)
-* [Twisted ÓëÒì²½±à³ÌÈëÃÅ](https://www.gitbook.com/book/likebeta/twisted-intro-cn/details)
-* [TextGrocery ÖĞÎÄ API](http://textgrocery.readthedocs.org/zh/latest/index.html) ( »ùÓÚsvmËã·¨µÄÒ»¸ö¶ÌÎÄ±¾·ÖÀà Python ¿â )
+* [Pythonå¿«é€Ÿæ•™ç¨‹](http://www.cnblogs.com/vamei/archive/2012/09/13/2682778.html)
+* [Python æ­£åˆ™è¡¨è¾¾å¼æ“ä½œæŒ‡å—](http://wiki.ubuntu.org.cn/Pythonæ­£åˆ™è¡¨è¾¾å¼æ“ä½œæŒ‡å—)
+* [pythonåˆçº§æ•™ç¨‹ï¼šå…¥é—¨è¯¦è§£](http://www.crifan.com/files/doc/docbook/python_beginner_tutorial/release/html/python_beginner_tutorial.html)
+* [Twisted ä¸å¼‚æ­¥ç¼–ç¨‹å…¥é—¨](https://www.gitbook.com/book/likebeta/twisted-intro-cn/details)
+* [TextGrocery ä¸­æ–‡ API](http://textgrocery.readthedocs.org/zh/latest/index.html) ( åŸºäºsvmç®—æ³•çš„ä¸€ä¸ªçŸ­æ–‡æœ¬åˆ†ç±» Python åº“ )
 * [Requests: HTTP for Humans](http://requests-docs-cn.readthedocs.org/zh_CN/latest/)
-* [Pillow ÖĞÎÄÎÄµµ](http://pillow-cn.readthedocs.org/en/latest/#)
-* [PyMOTW ÖĞÎÄ°æ](http://pymotwcn.readthedocs.org/en/latest/index.html)
-* [Python ¹Ù·½ÎÄµµÖĞÎÄ°æ](http://data.digitser.net/zh-CN/python_index.html)
-* [Fabric ÖĞÎÄÎÄµµ](http://fabric-chs.readthedocs.org)
-* [Beautiful Soup 4.2.0 ÖĞÎÄÎÄµµ](http://beautifulsoup.readthedocs.org/zh_CN/latest/)
-* [ÓÃPython×ö¿ÆÑ§¼ÆËã](http://old.sebug.net/paper/books/scipydoc)
-* [Sphinx ÖĞÎÄÎÄµµ](http://www.pythondoc.com/sphinx/index.html)
-* [¾«Í¨ Python Éè¼ÆÄ£Ê½](https://github.com/cundi/Mastering.Python.Design.Patterns)
-* [python °²È«±à³Ì½Ì³Ì](https://github.com/smartFlash/pySecurity)
-* [³ÌĞòÉè¼ÆË¼ÏëÓë·½·¨](https://www.gitbook.com/book/wizardforcel/sjtu-cs902-courseware/details)
-* [ÖªºõÖÜ¿¯¡¤±à³ÌĞ¡°×Ñ§Python](https://read.douban.com/ebook/16691849/)
-* [Scipy ½²Òå](https://github.com/cloga/scipy-lecture-notes_cn)
-* [Python Ñ§Ï°±Ê¼Ç »ù´¡Æª](http://www.kuqin.com/docs/pythonbasic.html)
-* [Python Ñ§Ï°±Ê¼Ç Ä£¿éÆª](http://www.kuqin.com/docs/pythonmodule.html)
-* [Python ±ê×¼¿â ÖĞÎÄ°æ](http://old.sebug.net/paper/books/python/%E3%80%8APython%E6%A0%87%E5%87%86%E5%BA%93%E3%80%8B%E4%B8%AD%E6%96%87%E7%89%88.pdf)
-* [Python½ø½×](https://www.gitbook.com/book/eastlakeside/interpy-zh/details)
-* [Python ºËĞÄ±à³Ì µÚ¶ş°æ](https://wizardforcel.gitbooks.io/core-python-2e/content/) CPyUGÒë
-* [Python×î¼ÑÊµ¼ùÖ¸ÄÏ](http://pythonguidecn.readthedocs.io/zh/latest/)
-* [Python ¾«Òª½Ì³Ì](https://www.gitbook.com/book/wizardforcel/python-essential-tutorial/details)
-* [Python Á¿»¯½»Ò×½Ì³Ì](https://www.gitbook.com/book/wizardforcel/python-quant-uqer/details)
+* [Pillow ä¸­æ–‡æ–‡æ¡£](http://pillow-cn.readthedocs.org/en/latest/#)
+* [PyMOTW ä¸­æ–‡ç‰ˆ](http://pymotwcn.readthedocs.org/en/latest/index.html)
+* [Python å®˜æ–¹æ–‡æ¡£ä¸­æ–‡ç‰ˆ](http://data.digitser.net/zh-CN/python_index.html)
+* [Fabric ä¸­æ–‡æ–‡æ¡£](http://fabric-chs.readthedocs.org)
+* [Beautiful Soup 4.2.0 ä¸­æ–‡æ–‡æ¡£](http://beautifulsoup.readthedocs.org/zh_CN/latest/)
+* [ç”¨Pythonåšç§‘å­¦è®¡ç®—](http://old.sebug.net/paper/books/scipydoc)
+* [Sphinx ä¸­æ–‡æ–‡æ¡£](http://www.pythondoc.com/sphinx/index.html)
+* [ç²¾é€š Python è®¾è®¡æ¨¡å¼](https://github.com/cundi/Mastering.Python.Design.Patterns)
+* [python å®‰å…¨ç¼–ç¨‹æ•™ç¨‹](https://github.com/smartFlash/pySecurity)
+* [ç¨‹åºè®¾è®¡æ€æƒ³ä¸æ–¹æ³•](https://www.gitbook.com/book/wizardforcel/sjtu-cs902-courseware/details)
+* [çŸ¥ä¹å‘¨åˆŠÂ·ç¼–ç¨‹å°ç™½å­¦Python](https://read.douban.com/ebook/16691849/)
+* [Scipy è®²ä¹‰](https://github.com/cloga/scipy-lecture-notes_cn)
+* [Python å­¦ä¹ ç¬”è®° åŸºç¡€ç¯‡](http://www.kuqin.com/docs/pythonbasic.html)
+* [Python å­¦ä¹ ç¬”è®° æ¨¡å—ç¯‡](http://www.kuqin.com/docs/pythonmodule.html)
+* [Python æ ‡å‡†åº“ ä¸­æ–‡ç‰ˆ](http://old.sebug.net/paper/books/python/%E3%80%8APython%E6%A0%87%E5%87%86%E5%BA%93%E3%80%8B%E4%B8%AD%E6%96%87%E7%89%88.pdf)
+* [Pythonè¿›é˜¶](https://www.gitbook.com/book/eastlakeside/interpy-zh/details)
+* [Python æ ¸å¿ƒç¼–ç¨‹ ç¬¬äºŒç‰ˆ](https://wizardforcel.gitbooks.io/core-python-2e/content/) CPyUGè¯‘
+* [Pythonæœ€ä½³å®è·µæŒ‡å—](http://pythonguidecn.readthedocs.io/zh/latest/)
+* [Python ç²¾è¦æ•™ç¨‹](https://www.gitbook.com/book/wizardforcel/python-essential-tutorial/details)
+* [Python é‡åŒ–äº¤æ˜“æ•™ç¨‹](https://www.gitbook.com/book/wizardforcel/python-quant-uqer/details)
 * Django
-    * [Django 1.5 ÎÄµµÖĞÎÄ°æ](http://django-chinese-docs.readthedocs.org/en/latest/) ÕıÔÚ·­ÒëÖĞ
-    * [Diango 1.7 ÎÄµµÖĞÎÄ°æ](http://django-1-7-doc.coding.io/)  ÕıÔÚ·­ÒëÖĞ£¬Ä¿Ç°Ö»·­ÒëÁËÄ¿Â¼
-    * [Django 1.8.2 ÎÄµµÖĞÎÄ°æ](http://python.usyiyi.cn/django/index.html)
-     ÕıÔÚ·­ÒëÖĞ
-    * [Django ×î¼ÑÊµ¼ù](https://github.com/yangyubo/zh-django-best-practices)
-    * [Django´î½¨¼òÒ×²©¿Í½Ì³Ì](https://www.gitbook.com/book/andrew-liu/django-blog/details)
-    * [The Django Book ÖĞÎÄ°æ](http://djangobook.py3k.cn/2.0/)
-    * [Django Éè¼ÆÄ£Ê½Óë×î¼ÑÊµ¼ù](https://github.com/cundi/Django-Design-Patterns-and-Best-Practices)
-    * [Django ÍøÕ¾¿ª·¢ Cookbook](https://github.com/cundi/Web.Development.with.Django.Cookbook)
-    * [Django Girls ŒWÁ•Ö¸ÄÏ](https://www.gitbook.com/book/djangogirlstaipei/django-girls-taipei-tutorial/details)
+    * [Django 1.5 æ–‡æ¡£ä¸­æ–‡ç‰ˆ](http://django-chinese-docs.readthedocs.org/en/latest/) æ­£åœ¨ç¿»è¯‘ä¸­
+    * [Diango 1.7 æ–‡æ¡£ä¸­æ–‡ç‰ˆ](http://django-1-7-doc.coding.io/)  æ­£åœ¨ç¿»è¯‘ä¸­ï¼Œç›®å‰åªç¿»è¯‘äº†ç›®å½•
+    * [Django 1.8.2 æ–‡æ¡£ä¸­æ–‡ç‰ˆ](http://python.usyiyi.cn/django/index.html)
+     æ­£åœ¨ç¿»è¯‘ä¸­
+    * [Django æœ€ä½³å®è·µ](https://github.com/yangyubo/zh-django-best-practices)
+    * [Djangoæ­å»ºç®€æ˜“åšå®¢æ•™ç¨‹](https://www.gitbook.com/book/andrew-liu/django-blog/details)
+    * [The Django Book ä¸­æ–‡ç‰ˆ](http://djangobook.py3k.cn/2.0/)
+    * [Django è®¾è®¡æ¨¡å¼ä¸æœ€ä½³å®è·µ](https://github.com/cundi/Django-Design-Patterns-and-Best-Practices)
+    * [Django ç½‘ç«™å¼€å‘ Cookbook](https://github.com/cundi/Web.Development.with.Django.Cookbook)
+    * [Django Girls å­¸ç¿’æŒ‡å—](https://www.gitbook.com/book/djangogirlstaipei/django-girls-taipei-tutorial/details)
 * Flask
-    * [Flask ÎÄµµÖĞÎÄ°æ](http://docs.jinkan.org/docs/flask/)
-    * [Jinja2 ÎÄµµÖĞÎÄ°æ](http://docs.jinkan.org/docs/jinja2/)
-    * [Werkzeug ÎÄµµÖĞÎÄ°æ](http://werkzeug-docs-cn.readthedocs.org/zh_CN/latest/)
-    * [FlaskÖ®ÂÃ](http://spacewander.github.io/explore-flask-zh/)
-    * [Flask À©Õ¹ÎÄµµ»ã×Ü](https://www.gitbook.com/book/wizardforcel/flask-extension-docs/details)
-    * [Flask ´óĞÍ½Ì³Ì](http://www.pythondoc.com/flask-mega-tutorial/index.html)
-    * [SQLAlchemy ÖĞÎÄÎÄµµ](https://github.com/sixu05202004/sqlalchemy-docs-cn)
+    * [Flask æ–‡æ¡£ä¸­æ–‡ç‰ˆ](http://docs.jinkan.org/docs/flask/)
+    * [Jinja2 æ–‡æ¡£ä¸­æ–‡ç‰ˆ](http://docs.jinkan.org/docs/jinja2/)
+    * [Werkzeug æ–‡æ¡£ä¸­æ–‡ç‰ˆ](http://werkzeug-docs-cn.readthedocs.org/zh_CN/latest/)
+    * [Flaskä¹‹æ—…](http://spacewander.github.io/explore-flask-zh/)
+    * [Flask æ‰©å±•æ–‡æ¡£æ±‡æ€»](https://www.gitbook.com/book/wizardforcel/flask-extension-docs/details)
+    * [Flask å¤§å‹æ•™ç¨‹](http://www.pythondoc.com/flask-mega-tutorial/index.html)
+    * [SQLAlchemy ä¸­æ–‡æ–‡æ¡£](https://github.com/sixu05202004/sqlalchemy-docs-cn)
 * web.py
-    * [web.py 0.3 ĞÂÊÖÖ¸ÄÏ](http://webpy.org/tutorial3.zh-cn)
-    * [Web.py Cookbook ¼òÌåÖĞÎÄ°æ](http://webpy.org/cookbook/index.zh-cn)
+    * [web.py 0.3 æ–°æ‰‹æŒ‡å—](http://webpy.org/tutorial3.zh-cn)
+    * [Web.py Cookbook ç®€ä½“ä¸­æ–‡ç‰ˆ](http://webpy.org/cookbook/index.zh-cn)
 * Tornado
-    * [Introduction to Tornado ÖĞÎÄ·­Òë](http://demo.pythoner.com/itt2zh/index.html)
-    * [TornadoÔ´Âë½âÎö](http://www.nowamagic.net/academy/detail/13321002)
-    * [Tornado 4.3 ÎÄµµÖĞÎÄ°æ](https://tornado-zh.readthedocs.org/zh/latest/)
+    * [Introduction to Tornado ä¸­æ–‡ç¿»è¯‘](http://demo.pythoner.com/itt2zh/index.html)
+    * [Tornadoæºç è§£æ](http://www.nowamagic.net/academy/detail/13321002)
+    * [Tornado 4.3 æ–‡æ¡£ä¸­æ–‡ç‰ˆ](https://tornado-zh.readthedocs.org/zh/latest/)
 
 ### R
 
-* [RÓïÑÔÈÌÕßÃØóÅ](https://github.com/yihui/r-ninja)
+* [Rè¯­è¨€å¿è€…ç§˜ç¬ˆ](https://github.com/yihui/r-ninja)
 
 ### Ruby
 
-* [Ruby ·ç¸ñÖ¸ÄÏ](https://github.com/JuanitoFatas/ruby-style-guide/blob/master/README-zhCN.md)
-* [Rails ·ç¸ñÖ¸ÄÏ](https://github.com/JuanitoFatas/rails-style-guide/blob/master/README-zhCN.md)
-* [±¿·½·¨ŒW Ruby](http://lrthw.github.io/)
-* [Ruby on Rails Ö¸ÄÏ](http://guides.ruby-china.org/)
-* [Ruby on Rails Œ‘ğÂ}½›](https://ihower.tw/rails4/index.html)
-* [Ruby on Rails Tutorial Ô­ÊéµÚ 3 °æ](http://railstutorial-china.org/) (±¾ÊéÍøÒ³°æÃâ·ÑÌá¹©£¬µç×Ó°æÒÔ PDF¡¢EPub ºÍ Mobi ¸ñÊ½Ìá¹©¹ºÂò£¬½öÊÛ 9.9 ÃÀÔª)
-* [Rails Êµ¼ù](http://rails-practice.com/content/index.html)
-* [Rails 5 ¿ª·¢½ø½×(Beta)](https://www.gitbook.com/book/kelby/rails-beginner-s-guide/details)
+* [Ruby é£æ ¼æŒ‡å—](https://github.com/JuanitoFatas/ruby-style-guide/blob/master/README-zhCN.md)
+* [Rails é£æ ¼æŒ‡å—](https://github.com/JuanitoFatas/rails-style-guide/blob/master/README-zhCN.md)
+* [ç¬¨æ–¹æ³•å­¸ Ruby](http://lrthw.github.io/)
+* [Ruby on Rails æŒ‡å—](http://guides.ruby-china.org/)
+* [Ruby on Rails å¯¦æˆ°è–ç¶“](https://ihower.tw/rails4/index.html)
+* [Ruby on Rails Tutorial åŸä¹¦ç¬¬ 3 ç‰ˆ](http://railstutorial-china.org/) (æœ¬ä¹¦ç½‘é¡µç‰ˆå…è´¹æä¾›ï¼Œç”µå­ç‰ˆä»¥ PDFã€EPub å’Œ Mobi æ ¼å¼æä¾›è´­ä¹°ï¼Œä»…å”® 9.9 ç¾å…ƒ)
+* [Rails å®è·µ](http://rails-practice.com/content/index.html)
+* [Rails 5 å¼€å‘è¿›é˜¶(Beta)](https://www.gitbook.com/book/kelby/rails-beginner-s-guide/details)
 * [Rails 102](https://www.gitbook.com/book/rocodev/rails-102/details)
-* [±àĞ´RubyµÄCÍØÕ¹](https://wusuopu.gitbooks.io/write-ruby-extension-with-c/content/)
-* [Ruby Ô´Âë½â¶Á](https://ruby-china.org/topics/22386)
-* [RubyÖĞµÄÔª±à³Ì](http://deathking.github.io/metaprogramming-in-ruby/)
+* [ç¼–å†™Rubyçš„Cæ‹“å±•](https://wusuopu.gitbooks.io/write-ruby-extension-with-c/content/)
+* [Ruby æºç è§£è¯»](https://ruby-china.org/topics/22386)
+* [Rubyä¸­çš„å…ƒç¼–ç¨‹](http://deathking.github.io/metaprogramming-in-ruby/)
 
 ### Rust
 
-* [rust book ÖĞÎÄ·­Òë](https://www.gitbook.com/book/kaisery/rust-book-chinese/details)
+* [rust book ä¸­æ–‡ç¿»è¯‘](https://www.gitbook.com/book/kaisery/rust-book-chinese/details)
 * [rust primer](https://github.com/rustcc/RustPrimer)
 
 ### Scala
 
-* [Scala¿ÎÌÃ](http://twitter.github.io/scala_school/zh_cn/index.html) (TwitterµÄScalaÖĞÎÄ½Ì³Ì)
-* [Effective Scala](http://twitter.github.io/effectivescala/index-cn.html)(TwitterµÄScala×î¼ÑÊµ¼ùµÄÖĞÎÄ·­Òë)
-* [ScalaÖ¸ÄÏ](http://zh.scala-tour.com/)
+* [Scalaè¯¾å ‚](http://twitter.github.io/scala_school/zh_cn/index.html) (Twitterçš„Scalaä¸­æ–‡æ•™ç¨‹)
+* [Effective Scala](http://twitter.github.io/effectivescala/index-cn.html)(Twitterçš„Scalaæœ€ä½³å®è·µçš„ä¸­æ–‡ç¿»è¯‘)
+* [ScalaæŒ‡å—](http://zh.scala-tour.com/)
 
 ### Shell
 
-* [Shell½Å±¾±à³Ì30·ÖÖÓÈëÃÅ](https://github.com/qinjx/30min_guides/blob/master/shell.md)
-* [Bash½Å±¾15·ÖÖÓ½ø½×½Ì³Ì](http://blog.sae.sina.com.cn/archives/3606)
-* [Linux¹¤¾ß¿ìËÙ½Ì³Ì](https://github.com/me115/linuxtools_rst)
-* [shellÊ®ÈıÎÊ](https://github.com/wzb56/13_questions_of_shell)
-* [Shell±à³Ì·¶Àı](https://www.gitbook.com/book/tinylab/shellbook/details)
+* [Shellè„šæœ¬ç¼–ç¨‹30åˆ†é’Ÿå…¥é—¨](https://github.com/qinjx/30min_guides/blob/master/shell.md)
+* [Bashè„šæœ¬15åˆ†é’Ÿè¿›é˜¶æ•™ç¨‹](http://blog.sae.sina.com.cn/archives/3606)
+* [Linuxå·¥å…·å¿«é€Ÿæ•™ç¨‹](https://github.com/me115/linuxtools_rst)
+* [shellåä¸‰é—®](https://github.com/wzb56/13_questions_of_shell)
+* [Shellç¼–ç¨‹èŒƒä¾‹](https://www.gitbook.com/book/tinylab/shellbook/details)
 
 ### Swift
 
-* [The Swift Programming Language ÖĞÎÄ°æ](http://numbbbbb.github.io/the-swift-programming-language-in-chinese/)
-* [Swift ÓïÑÔÖ¸ÄÏ](http://dev.swiftguide.cn)
-* [Stanford ¹«¿ª¿Î£¬Developing iOS 8 Apps with Swift ×ÖÄ»·­ÒëÎÄ¼ş](https://github.com/x140yu/Developing_iOS_8_Apps_With_Swift)   
+* [The Swift Programming Language ä¸­æ–‡ç‰ˆ](http://numbbbbb.github.io/the-swift-programming-language-in-chinese/)
+* [Swift è¯­è¨€æŒ‡å—](http://dev.swiftguide.cn)
+* [Stanford å…¬å¼€è¯¾ï¼ŒDeveloping iOS 8 Apps with Swift å­—å¹•ç¿»è¯‘æ–‡ä»¶](https://github.com/x140yu/Developing_iOS_8_Apps_With_Swift)   
 * [C4iOS - COSMOS](http://c4ios.swift.gg)   
 
-### ¶ÁÊé±Ê¼Ç¼°ÆäËü
+### è¯»ä¹¦ç¬”è®°åŠå…¶å®ƒ
 
-* [±àÒëÔ­Àí£¨×ÏÁúÊé£©ÖĞÎÄµÚ2°æÏ°Ìâ´ğ°¸](https://github.com/fool2fish/dragon-book-exercise-answers)
-* [°Ñ¡¶±à³ÌÖéçá¡·¶Á±¡](http://www.hawstein.com/posts/make-thiner-programming-pearls.html)
-* [Effective C++¶ÁÊé±Ê¼Ç](https://github.com/XiaolongJason/ReadingNote/blob/master/Effective%20C%2B%2B/Effective%20C%2B%2B.md)
-* [Golang Ñ§Ï°±Ê¼Ç¡¢Python Ñ§Ï°±Ê¼Ç¡¢C Ñ§Ï°±Ê¼Ç](https://github.com/qyuhen/book) (PDF)
-* [Jsoup Ñ§Ï°±Ê¼Ç](https://github.com/code4craft/jsoup-learning)
-* [Ñ§Ï°±Ê¼Ç: Vim¡¢Python¡¢memcached](https://github.com/lzjun567/note)
-* [Í¼Áé¿ª·ÅÊé·­Òë¼Æ»®--C++¡¢Python¡¢JavaµÈ](http://www.ituring.com.cn/activity/details/2004)
-* [µÙÄ·¡¤°ÂÀ³ÀûËæ±Ê](http://g.yeeyan.org/books/2095) £¨ÓÉÒëÑÔÍø·­Òë£¬µç×Ó°æÃâ·Ñ£©
-* [SICP ½âÌâ¼¯](http://sicp.readthedocs.org/en/latest/)
-* [¾«²Ê²©¿Í¼¯ºÏ](https://github.com/hacke2/hacke2.github.io/issues/2)
-* [ÖĞÎÄÎÄ°¸ÅÅ°æÖ¸±±](https://github.com/sparanoid/chinese-copywriting-guidelines)
-* [Standard C ÓïÑÔ±ê×¼º¯Êı¿âËÙ²é (Cheat Sheet)](http://ganquan.info/standard-c/)
+* [ç¼–è¯‘åŸç†ï¼ˆç´«é¾™ä¹¦ï¼‰ä¸­æ–‡ç¬¬2ç‰ˆä¹ é¢˜ç­”æ¡ˆ](https://github.com/fool2fish/dragon-book-exercise-answers)
+* [æŠŠã€Šç¼–ç¨‹ç ç‘ã€‹è¯»è–„](http://www.hawstein.com/posts/make-thiner-programming-pearls.html)
+* [Effective C++è¯»ä¹¦ç¬”è®°](https://github.com/XiaolongJason/ReadingNote/blob/master/Effective%20C%2B%2B/Effective%20C%2B%2B.md)
+* [Golang å­¦ä¹ ç¬”è®°ã€Python å­¦ä¹ ç¬”è®°ã€C å­¦ä¹ ç¬”è®°](https://github.com/qyuhen/book) (PDF)
+* [Jsoup å­¦ä¹ ç¬”è®°](https://github.com/code4craft/jsoup-learning)
+* [å­¦ä¹ ç¬”è®°: Vimã€Pythonã€memcached](https://github.com/lzjun567/note)
+* [å›¾çµå¼€æ”¾ä¹¦ç¿»è¯‘è®¡åˆ’--C++ã€Pythonã€Javaç­‰](http://www.ituring.com.cn/activity/details/2004)
+* [è’‚å§†Â·å¥¥è±åˆ©éšç¬”](http://g.yeeyan.org/books/2095) ï¼ˆç”±è¯‘è¨€ç½‘ç¿»è¯‘ï¼Œç”µå­ç‰ˆå…è´¹ï¼‰
+* [SICP è§£é¢˜é›†](http://sicp.readthedocs.org/en/latest/)
+* [ç²¾å½©åšå®¢é›†åˆ](https://github.com/hacke2/hacke2.github.io/issues/2)
+* [ä¸­æ–‡æ–‡æ¡ˆæ’ç‰ˆæŒ‡åŒ—](https://github.com/sparanoid/chinese-copywriting-guidelines)
+* [Standard C è¯­è¨€æ ‡å‡†å‡½æ•°åº“é€ŸæŸ¥ (Cheat Sheet)](http://ganquan.info/standard-c/)
 * [Git Cheatsheet Chs](http://gh.amio.us/git-cheatsheet-chs/)
-* [GitBook¼òÃ÷½Ì³Ì](http://www.chengweiyang.cn/gitbook/index.html)
-* [JavaScriptÓïÑÔ¾«´â](https://github.com/qibaoguang/Study-Step-by-Step/blob/master/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/javascript_the_good_parts.md)
-* [ÖÆÔì¿ªÔ´Èí¼ş](http://producingoss.com/zh/)
-* [ÌáÎÊµÄÖÇ»Û](http://www.dianbo.org/9238/stone/tiwendezhihui.htm)
-* [Markdown ÈëÃÅ²Î¿¼](https://github.com/LearnShare/Learning-Markdown)
-* [AsciiDoc¼òÃ÷Ö¸ÄÏ](https://github.com/stanzgy/wiki/blob/master/markup/asciidoc-guide.asciidoc)
-* [±³°üÎÊÌâ¾Å½²](http://love-oriented.com/pack/)
-* [ÀÏÆëµÄ¼¼Êõ×ÊÁÏ](https://github.com/qiwsir/ITArticles)
-* [Ç°¶Ë¼¼ÄÜ»ã×Ü](https://github.com/JacksonTian/fks)
-* [½èÖú¿ªÔ´ÏîÄ¿£¬Ñ§Ï°Èí¼ş¿ª·¢](https://github.com/zhuangbiaowei/learn-with-open-source)
-* [Ç°¶Ë¹¤×÷ÃæÊÔÎÊÌâ](https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Chinese)
-* [leetcode/lintcodeÌâ½â/Ëã·¨Ñ§Ï°±Ê¼Ç](https://www.gitbook.com/book/yuanbin/algorithm/details)
-* [Ç°¶Ë¿ª·¢±Ê¼Ç±¾](https://github.com/li-xinyang/FEND_Note)
+* [GitBookç®€æ˜æ•™ç¨‹](http://www.chengweiyang.cn/gitbook/index.html)
+* [JavaScriptè¯­è¨€ç²¾ç²¹](https://github.com/qibaoguang/Study-Step-by-Step/blob/master/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/javascript_the_good_parts.md)
+* [åˆ¶é€ å¼€æºè½¯ä»¶](http://producingoss.com/zh/)
+* [æé—®çš„æ™ºæ…§](http://www.dianbo.org/9238/stone/tiwendezhihui.htm)
+* [Markdown å…¥é—¨å‚è€ƒ](https://github.com/LearnShare/Learning-Markdown)
+* [AsciiDocç®€æ˜æŒ‡å—](https://github.com/stanzgy/wiki/blob/master/markup/asciidoc-guide.asciidoc)
+* [èƒŒåŒ…é—®é¢˜ä¹è®²](http://love-oriented.com/pack/)
+* [è€é½çš„æŠ€æœ¯èµ„æ–™](https://github.com/qiwsir/ITArticles)
+* [å‰ç«¯æŠ€èƒ½æ±‡æ€»](https://github.com/JacksonTian/fks)
+* [å€ŸåŠ©å¼€æºé¡¹ç›®ï¼Œå­¦ä¹ è½¯ä»¶å¼€å‘](https://github.com/zhuangbiaowei/learn-with-open-source)
+* [å‰ç«¯å·¥ä½œé¢è¯•é—®é¢˜](https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Chinese)
+* [leetcode/lintcodeé¢˜è§£/ç®—æ³•å­¦ä¹ ç¬”è®°](https://www.gitbook.com/book/yuanbin/algorithm/details)
+* [å‰ç«¯å¼€å‘ç¬”è®°æœ¬](https://github.com/li-xinyang/FEND_Note)
 
-### ²âÊÔÏà¹Ø
+### æµ‹è¯•ç›¸å…³
 
-* [ÒÆ¶¯APP×Ô¶¯»¯²âÊÔÓÅĞã¿ò¼ÜAppium API Reference V1.2.0 CN](http://appium.io/slate/cn/v1.2.0/)
+* [ç§»åŠ¨APPè‡ªåŠ¨åŒ–æµ‹è¯•ä¼˜ç§€æ¡†æ¶Appium API Reference V1.2.0 CN](http://appium.io/slate/cn/v1.2.0/)
