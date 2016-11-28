@@ -50,9 +50,12 @@ ___
 
 \[\!\[name]](http\://www.scscms.com/   \[name]:http\://www.scscms.com/scs_img/logo.png "欢迎访问"
 如果不嫌麻烦直接上html代码即可
+
+```html
 <a href="http://www.scscms.com/" target="_blank">
     <img src="http://www.scscms.com/scs_img/logo.png" alt="欢迎访问" />
 </a>
+```
 
 >特殊字符处理
 
