@@ -128,3 +128,43 @@ Content Cell  | Content Cell
 | col 3 is      | some wordy text | $1600 |
 | col 2 is      | centered        |   $12 |
 | zebra stripes | are neat        |    $1 |
+
+## EmoJi 表情
+
+[EmoJi 表情](https://gitmoji.carloscuesta.me/)
+- :art:         改进结构和代码格式
+- :zap: 	    优化性能
+- :fire:        移除代码或文件
+- :bug:	        修复 bug
+- :ambulance:   关键的修复
+- :sparkles:    引入新功能
+- :memo:	    写文档
+- :rocket:	    部署新功能
+- :lipstick:    升级 UI 和样式文件
+- :sada:        初次提交
+- :white_check_mark:	添加测试用例
+- :lock:        修复安全问题
+- :apple:	    修复 MacOS 下的问题
+- :penguin:     修复 Linux 下的问题
+- :checkered_flag:  修复 Windows 下的问题
+- :bookmark:    发版/版本标签
+- :rotating_light:  移除 linter 的警告
+- :construction:    工作在进行中
+- :green_heart: 修复 CI 构建问题
+- :arrow_down:  降级依赖库
+- :arrow_up:    升级依赖库
+- :construction_worker: 添加 CI 构建系统
+- :chart_with_upwards_trend:    添加分析或跟踪代码
+- :hammer:      大重构
+- :heavy_minus_sign:    删除依赖
+- :whale:       Work about Docker
+- :heavy_plus_sign:添加依赖
+- :wrench:      改变配置文件
+- :globe_with_meridians:    国际化和本地化
+- :pencil2:     修复拼写错误
+- :hankey:      糟糕代码,需要改善
+- :rewind:      恢复修改
+- :twisted_rightwards_arrows:   合并分支
+- :package:     更新包
+- :alien:       因外部API变化而修改了代码
+- :truck:       移动或重命名文件
