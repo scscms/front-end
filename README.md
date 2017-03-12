@@ -12,3 +12,5 @@
 * [git标签语言学习](gitHub_README.md)
 * [webStorm快捷键](webStorm.md)
 * [图片懒加载原理](lazyload.md)
+* [URLSearchParams搜索参数接口](URLSearchParams.md) 让你快速获取参数和管理参数
+* [CSS.escape和CSS.supports()静态方法](CSS.md) 处理css特殊器字符和判断浏览器是否支持某个css特性

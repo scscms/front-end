@@ -1,7 +1,6 @@
 # 图片懒加载原理<sup>shine</sup>
 
-```javascript
-
+```
 //<img src="loading图片" alt="" data-src='真实图片地址' />
 function lazyload(){
 	var nodes = document.querySelectorAll('img[data-src]');
