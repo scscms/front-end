@@ -10,6 +10,7 @@
 * [免费的编程中文书籍索引](books.md)
 * [编程资源书籍索引](books2.md)
 * [git标签语言学习](gitHub_README.md)
+* [git命令学习](git.md)
 * [webStorm快捷键](webStorm.md)
 * [图片懒加载原理](lazyload.md)
 * [URLSearchParams搜索参数接口](URLSearchParams.md) 让你快速获取参数和管理参数
