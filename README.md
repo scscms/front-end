@@ -19,3 +19,4 @@
 * [HTML head标签详解](Head.md)（转摘）
 * [ECMAScript2017新特性](ECMAScript2017.md)
 * [ESLint语法检查学习](ESLint.md)
+* [JS函数收藏](function.md)

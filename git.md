@@ -145,6 +145,7 @@ $ git branch --no-merged #查看未合并的分支
 $ git branch -d [branch-name] #删除本地分支
 $ git branch -track [branch-name] [remote-branch] #新建一个分支，与指定的远程分支建立关系
 $ git branch --set-upstream [branch-name] [remote-branch] #本地与远程分支之间建立追踪关系
+$ git push --set-upstream [branch-name] [remote-branch] #关联远程分支并推送到远程
 $ git push origin --delete [branch-name] #删除远程分支
 $ git push origin --dr [remote/branch] #删除远程分支
 $ git push origin [remote-branch] #同步远程分支
