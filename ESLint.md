@@ -37,8 +37,8 @@ $ node_modules\.bin\eslint --init
 ```
 "scripts": {
     ...
-    "lint": "eslint --ext .js --ext .vue src/",
-    "lint-fix": "eslint --fix --ext .js --ext .vue src/"
+    "lint": "eslint --ext .js src/",
+    "lint-fix": "eslint --fix --ext .js src/"
 }
 ```
 ```
@@ -53,7 +53,7 @@ $ npm run lint-fix #语法检查并尝试修正
 - 安装依赖包
 
 ```
-$ npm install babel-eslint eslint-loader --save-dev
+$ npm install babel-eslint eslint-loader eslint-plugin-html eslint-friendly-formatter --save-dev
 ```
 
 - 修改`.eslintrc.js`文件
@@ -70,6 +70,14 @@ module.exports = {
   }
 };
 ```
+- 修改package.json文件：
+```
+"scripts": {
+    ...
+    "lint": "eslint --ext .js --ext .vue src/",
+    "lint-fix": "eslint --fix --ext .js --ext .vue src/"
+}
+```
 
 - 添加预处理功能
 在`build/webpack.base.conf.js`里添加，目的是让`webpack`自动执行语法检查。
@@ -79,6 +87,9 @@ module.exports = {
     test: /\.(vue|js|jsx)$/,
     loader: 'eslint-loader',
     include:[path.resolve(__dirname, '../src')],
+    options: {
+      formatter: require('eslint-friendly-formatter')
+    },
     enforce: 'pre'
 }
 ```
@@ -168,3 +179,16 @@ alert('foo');
 ### 验证规则
 
 请查阅[官网验证规则](http://eslint.cn/docs/rules/)
+
+
+### 后记
+
+建议开发中关闭语法检查，因为反复检查语法比较耗时。`eslint-friendly-formatter`格式化插件可不使用，显示信息比较全，但占地方。
+
+开发过程中我比较适应`webStorm`的缩进4个空格，同时可以使用`console.log`，所以`.eslintrc.js`添加上：
+```
+  "rules": {
+    "no-console": "off",
+    "indent": ["error", 4], //4个空格缩进
+  }
+```

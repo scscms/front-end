@@ -24,9 +24,6 @@ $ git <verb> --help
 ```
 $ git init #在现有目录中初始化仓库
 $ git clone https://github.com/scscms/front-end #克隆项目
-$ git add *.c
-$ git add LICENSE
-$ git commit -m 'initial project version'
 ```
 
 - 添加到索引库
@@ -59,7 +56,7 @@ $ git commit -m '更新记录'
 - 跳过使用暂存区域提交
 
 ```
-$ git commit -a -m '更新记录' #省略add步骤直接提交【推荐】
+$ git commit -a -m 'message' #省略add步骤直接提交【推荐】（注意：不追踪新添加的文件！）
 ```
 
 - 移除文件
