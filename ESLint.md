@@ -37,8 +37,8 @@ $ node_modules\.bin\eslint --init
 ```
 "scripts": {
     ...
-    "lint": "eslint --ext .js --ext .vue src/",
-    "lint-fix": "eslint --fix --ext .js --ext .vue src/"
+    "lint": "eslint --ext .js src/",
+    "lint-fix": "eslint --fix --ext .js src/"
 }
 ```
 ```
@@ -53,7 +53,7 @@ $ npm run lint-fix #语法检查并尝试修正
 - 安装依赖包
 
 ```
-$ npm install babel-eslint eslint-loader --save-dev
+$ npm install babel-eslint eslint-loader eslint-plugin-html --save-dev
 ```
 
 - 修改`.eslintrc.js`文件
@@ -69,6 +69,14 @@ module.exports = {
     "no-console": "off",
   }
 };
+```
+- 修改package.json文件：
+```
+"scripts": {
+    ...
+    "lint": "eslint --ext .js --ext .vue src/",
+    "lint-fix": "eslint --fix --ext .js --ext .vue src/"
+}
 ```
 
 - 添加预处理功能
