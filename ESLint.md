@@ -53,7 +53,11 @@ $ npm run lint-fix #语法检查并尝试修正
 - 安装依赖包
 
 ```
+<<<<<<< HEAD
 $ npm install babel-eslint eslint-loader eslint-plugin-html eslint-friendly-formatter --save-dev
+=======
+$ npm install babel-eslint eslint-loader eslint-plugin-html --save-dev
+>>>>>>> 2538fb998d04dc9d79474b60dd62eec19225426f
 ```
 
 - 修改`.eslintrc.js`文件
