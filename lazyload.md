@@ -1,4 +1,6 @@
-# 图片懒加载原理<sup>shine</sup>
+# 图片（懒|预）加载原理<sup>shine</sup>
+
+### 懒加载
 
 ```
 //<img src="loading图片" alt="" data-src='真实图片地址' />
@@ -44,4 +46,32 @@ function throttle(fun, delay, time) {
 	};
 }
 
+```
+
+### 预加载
+
+```
+    /**
+     * 图片预加载
+     * @param  {Array|String} array - 图片地址数组或字符串
+     * @param  {Function} callBack - 回调函数
+     * @example ImagePreLoader(['1.jpg','2.jpg'],arr=>{
+        console.log(arr.length ? arr:"全部加载完")
+        })
+     */
+    function ImagePreLoader(array,callBack){
+        if (!Array.isArray(array)) {
+            array = [array];
+        }
+        let err = [];//加载失败的图片
+        Promise.all(array.map(path => new Promise(resolve=>{
+            let image = new Image();
+            image.onload = resolve;
+            image.onerror = ()=>{
+                err.push(path);
+                resolve();
+            };
+            image.src = path;
+        }))).then(()=>callBack(err));
+    }
 ```
