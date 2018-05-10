@@ -20,3 +20,4 @@
 * [ECMAScript2017新特性](ECMAScript2017.md)
 * [ESLint语法检查学习](ESLint.md)
 * [JS函数收藏](function.md)
+* [fullscreen浏览器全屏API](fullscreen.md)转摘
