@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Virtual rolling</title>
+    <style>
+        #wrap {
+            width: 100%;
+            border: 1px solid #ccc;
+            overflow: auto;
+        }
+        #wrap #cnt {
+            overflow: hidden;
+        }
+        #wrap #box ul {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap #box li {
+            line-height: 40px;
+            list-style: none;
+            border-bottom: 1px dashed #ccc;
+            height: 39px;
+            overflow: hidden;
+        }
+        .selectone, li.unable .selectone {
+            background: none;
+            width: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>虚拟滚动，处理大数据展示</h1>
+<div id="wrap" data-title="可视范围">
+    <div id="cnt" data-title="真实高度，促使滚动条">
+        <div id="box">
+            <ul id="list" class="musiclist"></ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    let wrap = document.getElementById("wrap"), //可视范围
+        cnt = document.getElementById("cnt"), //真实高度，促使滚动条
+        box = document.getElementById("box"), //辅助div，促使视觉滚动
+        list = document.getElementById("list"), //内容列表
+        arrData = [], //虚拟数据
+        lineHeight = 40, //每行高度
+        lines = 9, //可视行数
+        block = 2 * lines,
+        total = 9999, //总共多少条数据
+        step = block - lines,
+        curIndex = 0;
+    wrap.style["height"] = lines * lineHeight + "px";
+    cnt.style["height"] = total * lineHeight + "px";
+    box.style["height"] = lines * lineHeight + "px";
+    for (let i = 0; i < total; i++) {
+        arrData[i] = {
+            index: i + 1,
+            name: "测试数据" + i
+        };
+    }
+    document.getElementById("wrap").onscroll = function () {
+        box.style.marginTop = this.scrollTop + "px";
+        let index = Math.floor(this.scrollTop / lineHeight),
+            group = Math.floor(index / step);
+        if (group !== curIndex) {
+            bindList(group);
+            curIndex = group;
+        }
+        list.style.marginTop = -1 * (this.scrollTop - group * (lineHeight * step)) + "px";
+    };
+
+    function bindList(page) {
+        page = page * step;
+        let str = "",endIndex = Math.min(total,page + block);
+		for(let i = page;i<endIndex;i++){
+            str += "<li> <span class=\"selectbox selectone\">" + arrData[i].index + "</span>前端</li>";
+		}
+        list.innerHTML = str;
+    }
+    bindList(0);
+</script>
+</body>
+</html>
