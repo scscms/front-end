@@ -22,3 +22,5 @@
 * [JS函数收藏](function.md)
 * [fullscreen浏览器全屏API](fullscreen.md) 转摘
 * [虚拟DOM滚动](virtualRolling.html) 解决大数据展示
+* [performance API](performance.md) 网页性能检查API
+* [谈谈一些有趣的 CSS 话题 ](https://github.com/chokcoco/iCSS) 外链
