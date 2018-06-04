@@ -1,8 +1,8 @@
 # JS函数收藏<sup>shine</sup>
 
-- [全排列](#permutation)
+### [全排列](#permutation)
 
-### permutation
+#### permutation
 ```
 /**
  * 全排列
@@ -32,5 +32,39 @@ function permutation(arr, size) {
   };
   Array.isArray(arr) && Number.isInteger(size) && group(arr, size, []);
   return allResult;
+}
+```
+
+### 节流函数
+#### throttle
+
+```
+/**
+ * 节流函数
+ * @param method 事件触发的操作
+ * @param mustRunDelay 间隔多少毫秒需要触发一次事件
+ */
+function throttle(method, mustRunDelay) {
+    let timer,
+        args = arguments,
+        start;
+    return function loop() {
+        let self = this;
+        let now = Date.now();
+        if(!start){
+            start = now;
+        }
+        if(timer){
+            clearTimeout(timer);
+        }
+        if(now - start >= mustRunDelay){
+            method.apply(self, args);
+            start = now;
+        }else {
+            timer = setTimeout(function () {
+                loop.apply(self, args);
+            }, 50);
+        }
+    }
 }
 ```

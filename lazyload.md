@@ -1,6 +1,6 @@
 # 图片（懒|预）加载原理<sup>shine</sup>
 
-### 懒加载
+### 懒加载1
 
 ```
 //<img src="loading图片" alt="" data-src='真实图片地址' />
@@ -46,6 +46,30 @@ function throttle(fun, delay, time) {
 	};
 }
 
+```
+
+### 懒加载2
+```
+//<img src="loading图片" alt="" data-src='真实图片地址' />
+
+let observer = new IntersectionObserver(
+  entry => {
+      entry.forEach(item => {
+          let target = item.target;
+          if (item.intersectionRatio > 0) {
+              let img = new Image();
+              img.onload = () => {
+                  target.src = img.src;
+              };
+              img.src = target.dataset.src;
+              observer.unobserve(target);
+          }
+      });
+  }
+);
+Array.from(document.querySelectorAll('img[data-src]')).forEach(item => {
+    observer.observe(item);
+})
 ```
 
 ### 预加载
