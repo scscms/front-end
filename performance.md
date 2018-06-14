@@ -55,10 +55,10 @@ setTimeout(()=>{
       `request请求耗时: ${timing.responseEnd - timing.requestStart}`,
       `请求完毕至DOM加载: ${timing.domInteractive - timing.responseEnd}`,
       `解释dom树耗时: ${timing.domComplete - timing.domInteractive}`, //过早获取时,domComplete有时会是0
-      `白屏时间: ${timing.responseStart - timing.navigationStart}`,
-      `domready时间: ${timing.domContentLoadedEventEnd - timing.navigationStart}`, //用户可操作时间节点
+      `白屏时间: ${timing.domLoading - timing.fetchStart}`,
+      `domready时间: ${timing.domContentLoadedEventEnd - timing.domainLookupStart}`, //用户可操作时间节点
       `load事件耗时: ${timing.loadEventEnd - timing.loadEventStart}`,
-      `onload总耗时: ${timing.loadEventEnd - timing.navigationStart}`, //过早获取时,loadEventEnd有时会是0
+      `onload总耗时: ${timing.domComplete - timing.domainLookupStart}`, //过早获取时,loadEventEnd有时会是0
     ].join('\n'));
 },1000);
 ```
@@ -121,7 +121,7 @@ window.addEventListener('load',()=>{
             'url': per.name,
             'entryType': per.entryType,
             'type': per.initiatorType,
-            'duration(ms)': per.duration - per.startTime
+            'duration(ms)': per.duration
         });
     });
     console.table(result);
@@ -174,3 +174,21 @@ setTimeout(()=>{
 ### now()
 
 - performance.now()是当前时间与performance.timing.navigationStart的时间差，以微秒（百万分之一秒）为单位的时间，与 Date.now()-performance.timing.navigationStart的区别是不受系统程序执行阻塞的影响，因此更加精准。
+
+
+---
+
+```
+document.addEventListener('visibilitychange', function(event){if(document.hidden){// Page currently hidden.}else{// Page currently visible.}});
+```
+其它部分API功能简介
+
+    Resource Timing（资源计时）——对单个资源（如图片）的计时，可以对细粒度的用户体验进行检测。
+    Performance Timeline（性能时间线）——以一个统一的接口获取由Navigation Timing、Resourcing Timing和User Timing所收集的性能数据。
+    Battery Status（电池状态）——能够检测当前设备的电池状态，例如是否正在充电、电量等级等等。可以根据当前电量决定是否显示某些内容（例如视频、动画等等），对于移动设备来说非常实用。
+    User Timing（用户计时）——可以对某段代码、函数进行自定义计时，以了解这段代码的具体运行时间，类似于stop watch的作用。
+    Beacon（灯塔）——可以将分析结果或诊断代码发送给服务器，它采用了异步执行的方式，因此不会影响页面中其它代码的运行。对于收集测试结果并进行统计分析来说是一种十分便利的工具。
+    Animation Timing（动画计时） - 通过requestAnimationFrame函数让浏览器精通地控制动画的帧数，能够有效地配合显示器的刷新率，提供更平滑的动画效果，减少对CPU和电池的消耗。
+    Resource Hits（资源提示） - 通过html属性指定资源的预加载，例如在浏览相册时能够预先加载下一张图片，加快翻页的显示速度。
+    Frame Timing（帧计时）——通过一个接口获取与帧相关的性能数据，例如每秒帧数和TTF。该标准目前尚未被支持。
+    Navigation Error Logging（导航错误日志记录）——通过一个接口存储及获取与某个文档的导航相关的错误记录。该标准目前尚未被支持。

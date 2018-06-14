@@ -11,6 +11,8 @@
 * [mobileTech](mobileTech.md) 移动端开发（转摘jtyjty99999/mobileTech）
 * [git标签语言学习](gitHub_README.md)
 * [git命令学习](git.md)
+* [ECMA-262，第 5 版](https://www.ibm.com/developerworks/cn/web/wa-ecma262/index.html) 外链（即ES5）
+* [ECMAScript5.1中文版](http://yanhaijing.com/es5/#about) 外链（很详细教程）
 
 ###　应用
 
