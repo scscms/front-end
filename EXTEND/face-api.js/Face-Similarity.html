@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>face-Detection</title>
+</head>
+<body>
+<div style="position: relative">
+    <img src="" alt="" id="face1" />
+    <img src="" alt="" id="face2" />
+    <input value="" id="distance" type="text">
+</div>
+
+<script src="dist/face-api.js"></script>
+
+<script type="text/javascript">
+    async function onSelectionChanged(which, uri) {
+        const imgBuf = await (await fetch(uri)).blob()
+        const input = await faceapi.bufferToImage(imgBuf)
+        const imgEl = document.getElementById(`face${which}`)
+        imgEl.src = input.src
+        descriptors[`desc${which}`] = await faceapi.computeFaceDescriptor(input)
+    }
+    function getPic(){
+        const classes = ['amy', 'bernadette', 'howard', 'leonard', 'penny', 'raj', 'sheldon', 'stuart']
+        let name = classes[~~(Math.random()*classes.length)]
+        return `images/${name}/${name}${~~(Math.random()*5)+1}.png`
+    }
+
+    const threshold = 0.6
+    let descriptors = { desc1: null, desc2: null }
+    async function run(){
+        let p1 = getPic()
+        let p2 = getPic()
+        await onSelectionChanged(1,p1)
+        await onSelectionChanged(2,p2)
+        const distance = faceapi.round(
+          faceapi.euclideanDistance(descriptors.desc1, descriptors.desc2)
+        )
+        document.getElementById('distance').value = distance>threshold?'no match':'match good'
+        setTimeout(run,2000)
+    }
+    !async function(){
+        //加载模型数据
+        await faceapi.loadFaceRecognitionModel('./weights')
+        await run()
+    }()
+</script>
+</body>
+</html>

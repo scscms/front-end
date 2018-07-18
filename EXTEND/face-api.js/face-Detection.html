@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>face-Detection</title>
+</head>
+<body>
+<div style="position: relative">
+    <img src="images/bbt1.jpg" alt="" id="myImg" />
+    <canvas id="overlay" style="position: absolute;top:0;left:0"></canvas>
+</div>
+
+<script src="dist/face-api.js"></script>
+
+<script type="text/javascript">
+    !async function(){
+        //加载模型数据
+        await faceapi.loadFaceDetectionModel('./weights')
+        //const net = new faceapi.FaceDetectionNet()
+        //await net.load('./weights/face_detection_model-weights_manifest.json')
+        //console.log(faceapi)
+
+        //可选参数配置
+        const minConfidence = 0.8
+        const maxResults = 10
+
+        // inputs can be html canvas, img or video element or their ids ...
+        const myImg = document.getElementById('myImg')
+        const detections = await faceapi.locateFaces(myImg, minConfidence, maxResults)
+        // resize the detected boxes in case your displayed image has a different size then the original
+        const detectionsForSize = detections.map(det => det.forSize(myImg.width, myImg.height))
+        const canvas = document.getElementById('overlay')
+        canvas.width = myImg.width
+        canvas.height = myImg.height
+        //将被检测到的脸画在画布上
+        faceapi.drawDetection(canvas, detectionsForSize, { withScore: true,color:'#ff0',lineWidth:3,fontSize:24})
+    }()
+</script>
+</body>
+</html>

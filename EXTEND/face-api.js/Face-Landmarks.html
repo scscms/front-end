@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face-Landmarks</title>
+</head>
+<body>
+<div style="position: relative">
+    <div id="overlay" style="position: absolute;top:0;left:0"></div>
+</div>
+
+<script src="dist/face-api.js"></script>
+
+<script type="text/javascript">
+    let drawLines = false //是否画线
+    let landmarks
+    let currentImg
+    !async function(){
+        //加载模型数据
+        await faceapi.loadFaceLandmarkModel('./weights')
+
+        let uri = 'examples/public/images/amy/amy3.png'
+        const imgBuf = await (await fetch(uri)).blob()
+        currentImg = await faceapi.bufferToImage(imgBuf)
+        landmarks = await faceapi.detectLandmarks(currentImg)
+        const canvas = faceapi.createCanvasFromMedia(currentImg)
+        document.getElementById('overlay').appendChild(canvas)
+        faceapi.drawLandmarks(canvas, landmarks, { lineWidth: drawLines ? 2 : 4, drawLines })
+    }()
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Recognition</title>
+</head>
+<body>
+<div style="position: relative">
+    <img id="face" src=""/>
+    <input disabled value="-" id="prediction" type="text" class="bold">
+</div>
+
+<script src="dist/face-api.js"></script>
+<script type="text/javascript">
+    async function fetchImage(uri) {
+        return (await fetch(uri)).blob()
+    }
+    async function initTrainDescriptorsByClass(net, numImagesForTraining = 1) {
+        const maxAvailableImagesPerClass = 5
+        numImagesForTraining = Math.min(numImagesForTraining, maxAvailableImagesPerClass)
+        return Promise.all(classes.map(
+          async className => {
+              const descriptors = []
+              for (let i = 1; i < (numImagesForTraining + 1); i++) {
+                  const img = await faceapi.bufferToImage(
+                    await fetchImage(getFaceImageUri(className, i))
+                  )
+                  descriptors.push(await net.computeFaceDescriptor(img))
+              }
+              return {
+                  descriptors,
+                  className
+              }
+          }
+        ))
+    }
+    function getBestMatch(descriptorsByClass, queryDescriptor) {
+        function computeMeanDistance(descriptorsOfClass) {
+            return faceapi.round(
+              descriptorsOfClass
+                .map(d => faceapi.euclideanDistance(d, queryDescriptor))
+                .reduce((d1, d2) => d1 + d2, 0)
+              / (descriptorsOfClass.length || 1)
+            )
+        }
+        return descriptorsByClass
+          .map(
+            ({ descriptors, className }) => ({
+                distance: computeMeanDistance(descriptors),
+                className
+            })
+          )
+          .reduce((best, curr) => best.distance < curr.distance ? best : curr)
+    }
+    function getFaceImageUri(className, idx) {
+        return `images/${className}/${className}${idx}.png`
+    }
+    let currImageIdx = 2, currClassIdx = 0
+    let to = null
+    const threshold = 0.6
+    let interval = 2000
+    const classes = ['amy', 'bernadette', 'howard', 'leonard', 'penny', 'raj', 'sheldon', 'stuart']
+    async function run(){
+        //加载模型数据
+        await faceapi.loadFaceRecognitionModel('./weights')
+        let trainDescriptorsByClass
+        try{
+            trainDescriptorsByClass = await initTrainDescriptorsByClass(faceapi.recognitionNet)
+        }catch (e){
+            console.error(e)
+        }
+        async function next() {
+            const imgEl = document.getElementById('face')
+            imgEl.src = getFaceImageUri(classes[currClassIdx], currImageIdx)
+            const descriptor = await faceapi.computeFaceDescriptor(imgEl)
+            const bestMatch = getBestMatch(trainDescriptorsByClass, descriptor)
+            document.getElementById('prediction').value = `${bestMatch.distance < threshold ? bestMatch.className : 'unkown'} (${bestMatch.distance})`
+            currImageIdx = currClassIdx === (classes.length - 1)
+              ? currImageIdx + 1
+              : currImageIdx
+            currClassIdx = (currClassIdx + 1) % classes.length
+
+            currImageIdx = (currImageIdx % 6) || 2
+            to = setTimeout(next, interval)
+        }
+        await next(0, 0)
+    }
+    window.onload=function(){
+        run()
+    }
+</script>
+</body>
+</html>
