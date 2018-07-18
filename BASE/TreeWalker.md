@@ -158,7 +158,7 @@ TreeWalker对象的本质是提供一种在文档中过滤节点的能力。在�
 
 不言自明，FILTER_ACCEPT就是表示接受这个节点，将其包含到返回的结果中。但是FILTER_REJECT和FILTER_SKIP的含义可能会有些不那么明显了。对于FILTER_REJECT，TreeWalker将拒绝当前节点以及其所有的后代节点，也就是说，当你的过滤器函数返回FILTER_REJECT的时候，TreeWalker将不再遍历该节点下的所有后代节点。如果你需要仅仅过滤掉当前节点，并且也希望TreeWalker继续遍历该节点下的所有后代节点，那么请使用NodeFilter.FILTER_SKIP。例如对于上面的例子中，如果把 FILTER_SKIP 改为 FILTER_REJECT：
 
-```javascript
+```js
     function myfilter(node){
         if (node.tagName==="DIV" || node.tagName==="IMG") //filter out DIV and IMG elements
             return NodeFilter.FILTER_ACCEPT;

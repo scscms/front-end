@@ -42,6 +42,7 @@
 * [LAVAS](https://lavas.baidu.com/)百度的基于Vue.js的PWA解决方案
 * [Python - 100天从新手到大师](https://github.com/jackfrued/Python-100-Days) 转摘
 * [face-api.js](EXTEND/face-api.js/README.md) 人脸识别的JavaScript API
+* [webDriver](https://github.com/scscms/scs-webdriver) 利用node驱动浏览器进行自动化测试
 
 
 ### 工具
