@@ -22,19 +22,22 @@ TreeWalker对象是DOM2中提供的一个强大的工具，可以用来过滤文
 
 对于NodeFilter参数可以有下列这些常量或其组合的取值：
 
-- 1、NodeFilter.SHOW_ALL：搜索所有节点；
-- 2、NodeFilter.SHOW_ELEMENT：搜索元素节点；
-- 3、NodeFilter.SHOW_ATRRIBUTE：搜索特性节点；
-- 4、NodeFilter.SHOW_TEXT：搜索文本节点；
-- 5、NodeFilter.SHOW_ENTITY_REFERENCE：搜索实体引用节点；
-- 6、NodeFilter.SHOW_ENTITY：搜索实体节点；
-- 7、NodeFilter.SHOW_PROCESSING_INSTRUCTION：搜索PI节；
-- 8、NodeFilter.SHOW_COMMENT：搜索注释节点；
-- 9、NodeFilter.SHOW_DOCUMENT：搜索文档节点；
-- 10、NodeFilter.SHOW_DOCUMENT_TYPE：搜索文档类型节点；
-- 11、NodeFilter.SHOW_DOCUMENT_FRAGMENT：搜索文档碎片节节；
-- 12、NodeFilter.SHOW_NOTATION：搜索记号节点；
-
+|NodeFilter|十六进制值|说明|
+|----------|:-----:|----|
+|NodeFilter.SHOW_ALL|0xFFFFFF|搜索所有节点|
+|NodeFilter.SHOW_ELEMENT|0x1|搜索元素节点|
+|NodeFilter.SHOW_ATTRIBUTE|0x2|搜索特性节点|
+|NodeFilter.SHOW_TEXT | 0x4|搜索文本节点|
+|NodeFilter.SHOW_CDATA_SECTION | 0x8|搜索CDATA数据|
+|NodeFilter.SHOW_ENTITY_REFERENCE | 0x10|搜索实体引用节点|
+|NodeFilter.SHOW_ENTITY | 0x20; |搜索实体节点|
+|NodeFilter.SHOW_PROCESSING_INSTRUCTION | 0x40|搜索PI节|
+|NodeFilter.SHOW_COMMENT | 0x80|搜索注释节点|
+|NodeFilter.SHOW_DOCUMENT | 0x100|搜索文档节点|
+|NodeFilter.SHOW_DOCUMENT_TYPE | 0x200|搜索文档类型节点|
+|NodeFilter.SHOW_DOCUMENT_FRAGMENT | 0x400|搜索文档碎片节点|
+|NodeFilter.SHOW_NOTATION | 0x800|搜索记号节点|
+ 
 虽然有如此多的常量可以用来限制TreeWalker返回的节点，但是在实际应用中，可能常用的也就是其中的少数几个常量。
 
 我们先从一个最基本的示例开始：
@@ -48,6 +51,7 @@ TreeWalker对象是DOM2中提供的一个强大的工具，可以用来过滤文
 ```js
     var rootnode = document.getElementById("contentarea");
     var walker = document.createTreeWalker(rootnode, NodeFilter.SHOW_ELEMENT, null, false);
+    //var walker = document.createTreeWalker(rootnode, 1, null, false);
 ```
 在这个示例中，createTreeWalker方法的root参数为ID是contentarea的元素，让TreeWalker对象以这个节点为根开始进行遍历。第二个参数限制TreeWalker只遍历根节点下的“元素”节点（例如忽略文本节点和注释节点）。第三个参数设置为null表示不需要引入自定义的过滤器。第四个参数，用来控制实体引用是否被展开，这里我们设置为false。这段代码执行完毕之后，walker对象指向了包含DIV自己在内的以及DIV下的所有子元素节点（P, SPAN, B）。
 
@@ -72,15 +76,15 @@ currentNode:返回TreeWalker对象的当前位置或者当前节点。这是一�
 还是使用上面的示例代码，这次，我们加入一些代码来遍历TreeWalker返回的节点列表：
 ```js
     //接上面的代码
-    alert(walker.currentNode.tagName); //alerts DIV (with id=contentarea)
+    console.log(walker.currentNode.tagName); //alerts DIV (with id=contentarea)
 
     //遍历，显示所有的子节点
     while (walker.nextNode())
-        alert(walker.currentNode.tagName); // P, SPAN, B.
+        console.log(walker.currentNode.tagName); // P, SPAN, B.
 
     //重置TreeWalker的指向，让它指向根节点
     walker.currentNode = rootnode
-    alert(walker.firstChild().tagName); // P
+    console.log(walker.firstChild().tagName); // P
 ```
 
 当你使用TreeWalker的遍历方法时，TreeWalker不仅依次返回过滤后的节点，同时它还移动了当前指向节点的指针，所以，在使用while (walker.nextNode())完成遍历之后，还要使用`walker.currentNode=rootnode`重置它的当前节点指向根节点，以便获取到第一个子元素。
@@ -101,7 +105,7 @@ currentNode:返回TreeWalker对象的当前位置或者当前节点。这是一�
         paratext += walker.currentNode.nodeValue;
     }
 
-    alert(paratext); // "George loves JavaScript!"
+    console.log(paratext); // "George loves JavaScript!"
 ```
 
 在这个示例中，我们遍历了根节点下所有的文本节点以获取它完整的文本字符串。
@@ -119,11 +123,11 @@ currentNode:返回TreeWalker对象的当前位置或者当前节点。这是一�
     var rootnode = document.getElementById("mylist");
     var walker = document.createTreeWalker(rootnode, NodeFilter.SHOW_ELEMENT, null, false);
 
-    alert(walker.currentNode.childNodes.length); //alerts 7 (includes text nodes)
-    alert(walker.currentNode.getElementsByTagName("*").length); //alerts 3
+    console.log(walker.currentNode.childNodes.length); //alerts 7 (includes text nodes)
+    console.log(walker.currentNode.getElementsByTagName("*").length); //alerts 3
 ```
 
-这个示例中，使用TreeWalker查找UL节点下的所有元素。你可能会误以为alert(walker.currentNode.childNodes.length)会返回3，因为UL只有3个LI子元素。但是实际上计算上文本节点的话，UL元素就包含7个子元素了，这就是为什么上面的代码会返回7。
+这个示例中，使用TreeWalker查找UL节点下的所有元素。你可能会误以为walker.currentNode.childNodes.length会返回3，因为UL只有3个LI子元素。但是实际上计算上文本节点的话，UL元素就包含7个子元素了，这就是为什么上面的代码会返回7。
 
 了解了如何遍历TreeWalker的返回节点列表之后，下面将介绍如何自定义过滤器。还记得document.createTreeWalker()函数的第三个参数吗？我们将这个参数指向一个自定义的函数来完成自定义过滤器的功能。
 在document.createTreeWalker()中使用过滤器
@@ -146,9 +150,11 @@ TreeWalker对象的本质是提供一种在文档中过滤节点的能力。在�
 ```
 在上面的示例代码中，我们定义了一个叫做myfilter的函数，这个函数将仅保留DIV和IMG元素，而把其他的元素排除在外。作为过滤器的函数只接收一个参数，就是TreeWalker在遍历整个文档时当前所指向的节点。在过滤器函数中，你可以使用不同的返回值来实现接受、拒绝还是跳过当前的节点：
 
-    NodeFilter.FILTER_ACCEPT
-    NodeFilter.FILTER_REJECT
-    NodeFilter.FILTER_SKIP
+|NodeFilter|十进制值|说明|
+|----------|:-----:|----|
+|NodeFilter.FILTER_ACCEPT|1|接受|
+|NodeFilter.FILTER_REJECT|2|拒绝包括子元素|
+|NodeFilter.FILTER_SKIP|3|拒绝不包括子元素|
 
 不言自明，FILTER_ACCEPT就是表示接受这个节点，将其包含到返回的结果中。但是FILTER_REJECT和FILTER_SKIP的含义可能会有些不那么明显了。对于FILTER_REJECT，TreeWalker将拒绝当前节点以及其所有的后代节点，也就是说，当你的过滤器函数返回FILTER_REJECT的时候，TreeWalker将不再遍历该节点下的所有后代节点。如果你需要仅仅过滤掉当前节点，并且也希望TreeWalker继续遍历该节点下的所有后代节点，那么请使用NodeFilter.FILTER_SKIP。例如对于上面的例子中，如果把 FILTER_SKIP 改为 FILTER_REJECT：
 
@@ -167,9 +173,9 @@ TreeWalker对象的本质是提供一种在文档中过滤节点的能力。在�
 
 在前面的内容中我们已经了解到NodeFilter提供了很多常量来让我们获取某种类型的节点，这些常量也可以组合使用，例如：
 
-    OR 操作：NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT
-    AND 操作：NodeFilter.SHOW_TEXT + NodeFilter.SHOW_COMMENT
-    NOT 操作：~NodeFilter.SHOW_COMMENT (获取所有的非注释节点)
+    OR 操作：NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT　等价于 5
+    AND 操作：NodeFilter.SHOW_TEXT + NodeFilter.SHOW_COMMENT 等价于 132
+    NOT 操作：~NodeFilter.SHOW_COMMENT (获取所有的非注释节点) 等价于 -129
 
 只遍历所有的元素节点和文本节点：
 ```js
