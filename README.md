@@ -33,6 +33,7 @@
 * [CSS 专业技巧](https://github.com/AllThingsSmitty/css-protips/tree/master/translations/zh-CN) 外链
 * [对象深克隆方法](APPLY/deepClone.md)
 * [JavaScript 算法与数据结构](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md) 转摘
+* [js拼音汉字互转](https://github.com/sxei/pinyinjs) 转摘
 
 ### 扩展
 
