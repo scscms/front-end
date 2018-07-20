@@ -6,8 +6,12 @@
 
 ### 基础
 
-* [Javascript系统学习笔记](BASE/javascript/javascript_01.md) 亲自整理，新增ES6说明。
+* [HTML DOM文档对象参考手册](BASE/HTML DOM.md)(基础)
+* [HTML Audio/Video DOM 参考手册](BASE/HTML Audio.md)(基础)
+* [Window Object对象](BASE/Window Object.md)(基础)
+* [HTML EVENTS事件对象](BASE/HTML EVENTS.md)(基础)
 * [HTML head标签详解](BASE/Head.md)（转摘）
+* [Javascript系统学习笔记](BASE/javascript/javascript_01.md) 亲自整理，新增ES6说明。
 * [DOM2的TreeWalker对象](BASE/TreeWalker.md)你不知道的节点选择器
 * [mobileTech](BASE/mobileTech.md) 移动端开发（转摘jtyjty99999/mobileTech）
 * [git标签语言学习](BASE/gitHub_README.md)

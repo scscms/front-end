@@ -181,4 +181,20 @@ TreeWalker对象的本质是提供一种在文档中过滤节点的能力。在�
 ```js
     document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT, null, entityExpandBol);
 ```
-这就是DOM2中提供的TreeWalker对象。请记住，并不是所有的浏览器都支持此对象。
+这就是DOM2中提供的TreeWalker对象。请记住，并不是所有的浏览器都支持此对象，可用以下代码检查是否支持DOM2:
+
+```js
+if(document.implementation.hasFeature('HTML','2.0')){
+    console.log('支持DOM2')
+}
+```
+
+### 扩展阅读
+```js
+document.createNodeIterator(root, whatToShow, filter);
+```
+createNodeIterator也是类似的元素（节点）筛选方法。大家都是采用深度优先算法，递归回调自己的函数。
+
+####　区别：
+- treeWalker是从根目录开始筛选，即包括根目录。NodeIterator是从子节点开始筛选，不包括根目录。
+- treeWalker扩展了更灵活的跳转方法parentNode()，firstChild()，nextSibling()...

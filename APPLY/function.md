@@ -1,7 +1,6 @@
 # JS函数收藏<sup>shine</sup>
 
 ### [全排列](#permutation)
-
 #### permutation
 ```js
 /**
@@ -37,7 +36,7 @@ function permutation(arr, size) {
 
 ### 节流函数
 #### throttle
-
+ 应用场景：用于类似滚动条频繁事件中节流
 ```js
 /**
  * 节流函数
@@ -87,4 +86,23 @@ function getFirstLetter(str){
     }
     return result.join('')
 }
+```
+
+### 获取当前正在运行的script
+#### getCurrentScript
+  应用场景：可在script标签中使用属性来传参数
+
+```js
+    function getCurrentScript() {
+        if (document.currentScript) {
+            return document.currentScript
+        }
+        var els = document.scripts
+        for (var i = 0, l = els.length; i < l; i++) {
+            if (els[i].readyState === 'interactive') {
+                return els[i]
+            }
+        }
+        return null
+    }
 ```
