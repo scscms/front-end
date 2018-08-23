@@ -106,3 +106,15 @@ function getFirstLetter(str){
         return null
     }
 ```
+
+### 在光标处插入图片
+#### cursorInsertion
+  应用场景：可编辑器里使用
+
+```js
+    function cursorInsertion(url) {
+        const range = window.getSelection().getRangeAt(0)
+        const fragment = range.createContextualFragment('<img src="'+url+'"/>')
+        range.insertNode(fragment.lastChild)
+    }
+```

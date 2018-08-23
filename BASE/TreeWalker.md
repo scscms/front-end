@@ -49,9 +49,9 @@ TreeWalker对象是DOM2中提供的一个强大的工具，可以用来过滤文
     </div>
 ```
 ```js
-    var rootnode = document.getElementById("contentarea");
-    var walker = document.createTreeWalker(rootnode, NodeFilter.SHOW_ELEMENT, null, false);
-    //var walker = document.createTreeWalker(rootnode, 1, null, false);
+    const rootnode = document.getElementById("contentarea");
+    const walker = document.createTreeWalker(rootnode, NodeFilter.SHOW_ELEMENT, null, false);
+    //const walker = document.createTreeWalker(rootnode, 1, null, false);
 ```
 在这个示例中，createTreeWalker方法的root参数为ID是contentarea的元素，让TreeWalker对象以这个节点为根开始进行遍历。第二个参数限制TreeWalker只遍历根节点下的“元素”节点（例如忽略文本节点和注释节点）。第三个参数设置为null表示不需要引入自定义的过滤器。第四个参数，用来控制实体引用是否被展开，这里我们设置为false。这段代码执行完毕之后，walker对象指向了包含DIV自己在内的以及DIV下的所有子元素节点（P, SPAN, B）。
 
@@ -95,11 +95,11 @@ currentNode:返回TreeWalker对象的当前位置或者当前节点。这是一�
     <p id="essay">George<span> loves </span> <b>JavaScript!</b></p>
 ```
 ```js
-    var rootnode = document.getElementById("essay");
-    var walker = document.createTreeWalker(rootnode, NodeFilter.SHOW_TEXT, null, false);
+    const rootnode = document.getElementById("essay");
+    const walker = document.createTreeWalker(rootnode, NodeFilter.SHOW_TEXT, null, false);
 
     walker.firstChild(); //Walk to first child node (the text "George")
-    var paratext = walker.currentNode.nodeValue;
+    const paratext = walker.currentNode.nodeValue;
 
     while (walker.nextSibling()){ //Step through each sibling of "George"
         paratext += walker.currentNode.nodeValue;
@@ -120,8 +120,8 @@ currentNode:返回TreeWalker对象的当前位置或者当前节点。这是一�
     </ul>
 ```
 ```js
-    var rootnode = document.getElementById("mylist");
-    var walker = document.createTreeWalker(rootnode, NodeFilter.SHOW_ELEMENT, null, false);
+    const rootnode = document.getElementById("mylist");
+    const walker = document.createTreeWalker(rootnode, NodeFilter.SHOW_ELEMENT, null, false);
 
     console.log(walker.currentNode.childNodes.length); //alerts 7 (includes text nodes)
     console.log(walker.currentNode.getElementsByTagName("*").length); //alerts 3
@@ -144,7 +144,7 @@ TreeWalker对象的本质是提供一种在文档中过滤节点的能力。在�
         else
             return NodeFilter.FILTER_SKIP;
     }
-    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT, myfilter, false);
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT, myfilter, false);
     while (walker.nextNode())
         walker.currentNode.style.display = "none"; //隐藏页面中所有的DIV和IMG元素
 ```
