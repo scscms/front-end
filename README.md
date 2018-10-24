@@ -22,6 +22,7 @@
 * [图解ES6](BASE/ES6/README.md)
 * [ECMA-262，第 5 版](https://www.ibm.com/developerworks/cn/web/wa-ecma262/index.html) 外链（即ES5）
 * [ECMAScript5.1中文版](http://yanhaijing.com/es5/#about) 外链（很详细教程）
+* [前端技能汇总](https://github.com/JacksonTian/fks) 外链（朴灵git）
 
 ### 应用
 
@@ -30,6 +31,7 @@
 * [CSS.escape和CSS.supports()静态方法](APPLY/CSS.md) 处理css特殊器字符和判断浏览器是否支持某个css特性
 * [文章](https://mp.weixin.qq.com/s/HIEBGIXeJsxrwkCRpYlbtA) [FileSaver.js库](https://github.com/eligrey/FileSaver.js)JS弹出下载对话框以及实现常见文件类型的下载
 * [ECMAScript2017新特性](APPLY/ECMAScript2017.md)
+* [ECMAScript2018新特性](APPLY/ECMAScript2018.md)
 * [JS函数收藏](APPLY/function.md)
 * [fullscreen浏览器全屏API](APPLY/fullscreen.md) 转摘
 * [虚拟DOM滚动](APPLY/virtualRolling.html) 解决大数据展示
