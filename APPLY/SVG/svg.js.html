@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>svg.js</title>
+    <script type="text/javascript" src="svg.js"></script>
+</head>
+<body>
+<div>
+    <svg id="canvas"></svg>
+</div>
+<script>
+    var draw = SVG('#canvas').size(300, 300)
+    var rect = draw.rect(100, 100).attr({ fill: '#f06' })
+    var ellipse = draw.ellipse(200, 100)
+    var circle = draw.circle(100).fill('red').move(50,50)
+    var line = draw.line(0, 0, 100, 150).stroke({ width: 1,})
+    var image = draw.image('img/1.jpg').move(100, 100)
+    var text = draw.text("Lorem ipsum dolor sit amet consectetur.\nCras sodales imperdiet auctor.")
+</script>
+
+</body>
+</html>

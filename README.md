@@ -23,7 +23,7 @@
 * [ECMA-262，第 5 版](https://www.ibm.com/developerworks/cn/web/wa-ecma262/index.html) 外链（即ES5）
 * [ECMAScript5.1中文版](http://yanhaijing.com/es5/#about) 外链（很详细教程）
 * [前端技能汇总](https://github.com/JacksonTian/fks) 外链（朴灵git）
-
+* 在线预览word文档`https://view.officeapps.live.com/op/view.aspx?src=newteach.pbworks.com%2Ff%2Fele%2Bnewsletter.docx`
 ### 应用
 
 * [图片（懒|预）加载原理](APPLY/lazyload.md)
@@ -41,6 +41,8 @@
 * [对象深克隆方法](APPLY/deepClone.md)
 * [JavaScript 算法与数据结构](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md) 转摘
 * [js拼音汉字互转](https://github.com/sxei/pinyinjs) 转摘
+* [创建全屏滚动网站](https://github.com/alvarotrigo/fullPage.js/tree/master/lang/chinese#fullpagejs) 外链
+* [canvas画布学习](APPLY/CANVAS/README.md)
 
 ### 扩展
 

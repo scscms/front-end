@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Annual ring</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0
+        }
+        canvas {
+            background: #000;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<canvas width="1000" height="700"></canvas>
+<script>
+    //https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
+    //http://canvas.migong.org/page/5
+
+    let canvas = document.querySelector("canvas");
+    let ctx = canvas.getContext('2d');
+    let w = canvas.width
+    let h = canvas.height
+    let particles = []
+    function resizeCanvas() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+    }
+    window.addEventListener("resize", resizeCanvas, false);
+    resizeCanvas()
+    //颗粒函数
+    function Particle(x,y,a) {
+        this.sx = x
+        this.sy = y
+        this.x = 20;
+        this.y = 20;
+        this.i = 0;
+        this.CircleAngle = Math.PI * a / 18
+        this.length = 20 //长度
+        this.angle = 1
+        this.color = 'rgb(' + [0, 0, 0].map(() => ~~(Math.random() * 200 + 55)).join(',') + ')'
+    }
+    Particle.prototype = {
+        move: function () {
+            this.i++
+            this.length += Math.random() * 10 //长度
+            return this.x < w && this.y < h
+        },
+        draw: function () {    //渲染烟花颗粒
+            ctx.save()
+            ctx.beginPath();
+            ctx.lineWidth = 1; //线条宽度
+            ctx.translate(this.sx, this.sy);  //移动源点中心为圆心
+            ctx.rotate(this.CircleAngle)
+            ctx.strokeStyle = this.color
+            ctx.fillStyle = this.color;
+            if(this.i % 2){
+                //画线
+                ctx.moveTo(this.x,this.y)
+                this.y = Math.tan(this.angle) * this.length
+                this.x = this.length
+                console.log(this.x, this.y)
+                ctx.lineTo(this.x,this.y) // 画线
+                ctx.stroke(); // 绘制已定义的路径
+            }else{
+                //画弧
+                let angle = Math.random() * Math.PI / 9
+                angle = this.angle + (Math.random() > 0.5 ? 1 : -1) * angle
+                angle = Math.min(0,angle)
+                angle = Math.max(Math.random() * Math.PI / 6,angle)
+                ctx.moveTo(this.x,this.y)
+                ctx.arc(0,0,this.length,this.angle,angle,this.angle > angle);//创建弧/曲线（用于创建圆形或部分圆）
+                this.angle = angle
+                this.x = Math.cos(this.angle) * this.length
+                this.y = Math.sin(this.angle) * this.length
+                ctx.stroke(); // 绘制已定义的路径
+            }
+            ctx.closePath();
+            ctx.restore()
+        }
+    }
+    function addFire(){
+        let x = w / 2
+        let y = h / 2
+        for (let i = 36; i--;) {
+            particles.push(new Particle(x, y, i));
+        }
+    }
+    canvas.onclick = function(){
+        ctx.fillRect(0, 0, w, h); //绘画黑色天空
+        addFire()
+    }
+    addFire()
+    function drawCircle() {
+        //ctx.globalCompositeOperation = 'lighter';//烟花与天空叠加反光
+        particles = particles.filter(obj=>obj.move())
+        particles.forEach(obj=>obj.draw(ctx))
+        window.requestAnimationFrame(drawCircle)
+    }
+    drawCircle()
+</script>
+</body>
+</html>

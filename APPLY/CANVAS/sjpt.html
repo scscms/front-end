@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            height:90vh;
+            text-align: center;
+        }
+        div{
+            width:400px;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <canvas width="400" height="400"></canvas>
+</div>
+
+<script>
+    const config = {
+        width: 400,
+        height: 400,
+        radius:22,
+        count:0,
+        ctx:null
+    }
+    function merge(obj){
+        return Object.assign({
+            x:0,
+            y:0,
+            angle:0,
+            arcX: config.width / 2,
+            arcY: config.height / 2,
+            lineCap : 'butt', // butt round square
+            lineWidth : 10,  // 圆环边的宽度
+            strokeStyle : '#e6f1f5',  //填充色
+            start: 0, //　开始角度(百分比[1,0])
+            end : 0, // 当前角度(百分比[1,0])
+            max : 1, // 结束角度(百分比[1,0])
+        }, obj)
+    }
+    function drawCircle(obj) {
+        obj.end = Math.min(obj.max, obj.end + 0.01)
+        if(obj.end < obj.start) return
+        config.ctx.beginPath();
+        config.ctx.arc(obj.arcX, obj.arcY, obj.radius, 2 * Math.PI * (obj.start - 0.25), 2 * Math.PI * (obj.end - 0.25),
+            false);
+        config.ctx.lineWidth = obj.lineWidth;
+        config.ctx.strokeStyle = obj.strokeStyle;
+        config.ctx.lineCap = obj.lineCap;
+        config.ctx.stroke();
+        if(obj.end === obj.max){
+            obj.angle = Math.PI * (obj.end + obj.start - 0.5)
+            obj.X = Math.cos(obj.angle) * obj.radius + obj.arcX
+            obj.Y = Math.sin(obj.angle) * obj.radius + obj.arcY
+        }
+    }
+
+    config.ctx = document.querySelector('canvas').getContext('2d');
+    const array = [
+        merge({text:'未送达比例率',radius: config.radius, strokeStyle: '#c9c9c9', max: 1, start: 0.8}),
+        merge({text:'120小时以上',radius: config.radius, strokeStyle: '#e00000', max: 0.8, start: 0.6}),
+        merge({text:'120小时送达率',radius: config.radius, strokeStyle: '#ff4600', max: 0.6}),
+        merge({text:'96小时送达率',radius: config.radius * 2, strokeStyle: '#ff7434', max: Math.random()}),
+        merge({text:'72小时送达率',radius: config.radius * 3, strokeStyle: '#ffc82e', max: Math.random()}),
+        merge({text:'48小时送达率',radius: config.radius * 4, strokeStyle: '#ffe82b', max: Math.random()}),
+    ]
+
+    const arr = array.map((n, i) => merge({radius: config.radius * Math.max(1, i - 1), end: 1}))
+    const lines = [
+        {x:config.width/2 + 95,y:config.height/2 - 95.5},
+        {x:config.width/2 + 95 + 18,y:config.height/2 + 0.5},
+        {x:config.width/2 + 95,y:config.height/2 + 95.5},
+        {x:config.width/2 - 95,y:config.height/2 + 95.5},
+        {x:config.width/2 - 95 - 18,y:config.height/2 - 0.5},
+        {x:config.width/2 - 95,y:config.height/2 - 95.5},
+    ];
+
+    (function(){
+        if(++ config.count <= 100){
+            config.ctx.clearRect(0, 0, config.width, config.height) // 清空画布
+            arr.concat(array).forEach(obj=>{
+                drawCircle(obj)
+            })
+            setTimeout(arguments.callee,50)
+        } else {
+            array.sort((a, b) => a.angle > b.angle ? 1 : -1)
+            array.forEach((obj, index)=>{
+                config.ctx.beginPath();
+                config.ctx.lineWidth = 1;
+                config.ctx.strokeStyle = '#a4a4a4';
+                config.ctx.moveTo(obj.X,obj.Y);
+                let p = lines[index]
+                config.ctx.lineTo(p.x,p.y);
+                let x = index > 2 ? p.x - 80 : p.x + 80
+                config.ctx.lineTo(x, p.y);
+                config.ctx.stroke();
+                x = index > 2 ? x : p.x
+                config.ctx.fillStyle = obj.strokeStyle;
+                config.ctx.fillRect(x, p.y - 15, 8, 8);
+                config.ctx.font = '14px Arial';
+                config.ctx.fillStyle = '#262626';
+                config.ctx.fillText(((obj.max - obj.start) * 10).toFixed(2).replace('.00','') + '%', x + 15, p.y - 6);
+                config.ctx.font = '12px Arial';
+                config.ctx.fillStyle = '#8e8e8e'
+                config.ctx.fillText(obj.text, x, p.y + 15);
+                if(obj.text === '120小时以上'){
+                    config.ctx.fillText('送达率', x, p.y + 30);
+                }
+            })
+        }
+    }())
+</script>
+</body>
+</html>

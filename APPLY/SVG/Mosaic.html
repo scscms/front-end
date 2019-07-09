@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>马赛克效果</title>
+</head>
+<body>
+<svg width="400" height="300" viewBox="0 0 400 300">
+    <filter id="pixels" x="-20%" y="-20%" width="140%" height="140%">
+        <feFlood flood-color="green" flood-opacity="1" x="0" y="0" width="1" height="1" result="flood"/>
+        <feComposite id="composite" in2="flood" operator="in" x="0" y="0" width="6" height="6" result="composite"/>
+        <feTile x="0" y="0" width="1000" height="1000" in="composite" result="tile1"/>
+        <feComposite in="SourceGraphic" in2="tile1" operator="in" result="composite1"/>
+        <feMorphology id="morphology" operator="dilate" radius="2" in="composite1" result="morphology"/>
+        <feColorMatrix id="colormatrix" type="saturate" values="1" x="0%" y="0%" width="100%" height="100%" in="morphology" result="colormatrix"/>
+    </filter>
+    <image id="image" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"
+           xlink:href="img/1.jpg" filter="url(#pixels)"></image>
+</svg>
+<script type="text/javascript">
+    const obj = {
+        composite : document.querySelector('#composite'),
+        morphology : document.querySelector('#morphology'),
+        image : document.querySelector('#image'),
+        colorMatrix : document.querySelector('#colormatrix'),
+        min : 2,
+        max : 20,
+        counter : 2,
+        step : 4,
+        direction : 'forward',
+        imagesCounter : 0,
+        pause : 3,// 暂停秒数
+        images : [
+            'img/1.jpg',
+            'img/2.jpg',
+            'img/3.jpg',
+            'img/4.jpg',
+        ]
+    }
+    function changeSeed() {
+        if (obj.direction === 'forward') {
+            obj.counter += obj.step;
+            if (obj.counter >= obj.max) {
+                obj.direction = 'backward';
+                obj.imagesCounter = ++obj.imagesCounter % obj.images.length
+                obj.image.setAttribute('xlink:href', obj.images[obj.imagesCounter]);
+            }
+        } else {
+            obj.counter -= obj.step;
+            if (obj.counter <= obj.min) {
+                obj.direction = 'forward';
+            }
+        }
+        obj.composite.setAttribute('width', obj.counter);
+        obj.composite.setAttribute('height', obj.counter);
+        obj.morphology.setAttribute('radius', Math.floor(obj.counter / 1.95).toString()); //[2-12]
+        obj.colorMatrix.setAttribute('values', (1.1 - obj.counter / obj.max).toFixed(1));//[0-0]
+        let time = 75;
+        if (obj.counter <= obj.min) {
+            time = obj.pause * 1000;
+            obj.image.setAttribute('filter', 'none');
+        }else{
+            obj.image.setAttribute('filter', 'url(#pixels)');
+        }
+        setTimeout(changeSeed, time);
+    }
+    changeSeed()
+</script>
+</body>
+</html>

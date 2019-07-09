@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>烟花2</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0
+        }
+        canvas {
+            background: #000;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<canvas width="1000" height="700"></canvas>
+<script>
+    //https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
+    //http://canvas.migong.org/page/5
+
+    let canvas = document.querySelector("canvas");
+    let ctx = canvas.getContext('2d');
+    let w = canvas.width
+    let h = canvas.height
+    let particles = []
+    function resizeCanvas() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+    }
+    window.addEventListener("resize", resizeCanvas, false);
+    resizeCanvas()
+    //颗粒函数
+    function Particle(x,y,color) {
+        let mx = Math.abs(Math.random() - 0.5)
+        this.maxLen = mx * 300 + Math.random() * 100 // 最大长度
+        this.Len = mx * 50 // 最大长度
+        this.sx = x
+        this.sy = y
+        this.x = 0;
+        this.y = 0;
+        this.angle = Math.random() * 2 * Math.PI
+        this.alpha = 1 + mx;
+        this.color = color
+    }
+    Particle.prototype = {
+        move: function () {
+            this.x += (this.maxLen - this.x) / 50;
+            this.alpha -= 0.01;
+            return this.alpha > 0
+        },
+        draw: function () {    //渲染烟花颗粒
+            ctx.save()
+            ctx.beginPath();
+            ctx.lineWidth = 2; //线条宽度
+            ctx.translate(this.sx, this.sy);  //移动源点中心为圆心
+            ctx.rotate(this.angle)
+            let clg = ctx.createLinearGradient(0,0,0,this.Len);
+            clg.addColorStop(0,"black");
+            clg.addColorStop(1,this.color);
+            ctx.strokeStyle = clg;
+            ctx.globalAlpha = this.alpha;
+            ctx.moveTo(this.x - this.Len,this.y)
+            ctx.lineTo(this.x,this.y) // 画线
+            ctx.stroke(); // 绘制已定义的路径
+            ctx.arc(this.x,this.y, 1, 0, Math.PI * 2);
+            ctx.globalAlpha += this.alpha;
+            ctx.fillStyle = this.color;
+            ctx.fill();
+            ctx.restore()
+        }
+    }
+    function addFire(){
+        let x = Math.random() * w
+        let y = Math.random() * h
+        let color = 'rgb('+[0,0,0].map(()=>~~(Math.random() * 200 + 55)).join(',')+')'
+        for (let i = Math.floor(Math.random() * 100 + 200); i--;) {
+            let particle = new Particle(x, y, color);
+            let vy = Math.sqrt(25 - particle.vx * particle.vx);
+            if (Math.abs(particle.vy) > vy) {
+                particle.vy = particle.vy > 0 ? vy : -vy;
+            }
+            particles.push(particle);
+        }
+    }
+    function drawCircle() {
+        particles.length < 1000 && addFire()
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.fillStyle = "rgba(0,0,0,0.2)";
+        ctx.fillRect(0, 0, w, h); //绘画黑色天空
+        ctx.globalCompositeOperation = 'lighter';//烟花与天空叠加反光
+        particles = particles.filter(obj=>obj.move())
+        particles.forEach(obj=>obj.draw(ctx))
+        window.requestAnimationFrame(drawCircle)
+    }
+    drawCircle()
+</script>
+</body>
+</html>

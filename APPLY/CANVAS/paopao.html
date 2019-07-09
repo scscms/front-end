@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>小泡泡</title>
+    <style type="text/css">
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<canvas width="1000" height="700"></canvas>
+<script>
+    let canvas = document.querySelector("canvas");
+    let c = canvas.getContext('2d');
+    let cW = canvas.width
+    let cH = canvas.height
+    const mouse = {x: -100, y: -100}
+    canvas.onmousemove = function (e) {
+        mouse.x = e.offsetX
+        mouse.y = e.offsetY
+    }
+    function Circle(index) {
+        let t = this
+        t.i = 0
+        let rx = Math.random() //x随机数
+        t.x = rx * cW //x坐标
+        t.moveX = Math.random() > 0.5 ? -rx : rx //x坐标移动量
+        let ry = Math.random() //y随机数
+        t.y = ry * cH //y坐标
+        t.moveY = Math.random() > 0.5 ? -ry : ry //y坐标移动量
+        t.radius = Math.random() * 7 //圆备份半径
+        t.r = 0 //圆半径
+        t.color = ['rgb(107,205,255)', 'rgb(71,154,64)', 'rgb(255,205,118)', 'rgb(124,255,120)'][index % 4] //随机颜色
+        t.tail = [] //尾巴
+        t.update = function () {
+            t.i ++
+            if (t.i % 10 === 0) {
+                t.tail.unshift({x: t.x, y: t.y})
+                t.tail.length > 7 && t.tail.splice(6, 1)
+            }
+            t.x += t.moveX
+            t.y += t.moveY
+            if (t.x + t.radius > cW || t.x - t.radius < 0) {
+                t.moveX = -t.moveX
+            }
+            if (t.y + t.radius > cH || t.y - t.radius < 0) {
+                t.moveY = -t.moveY
+            }
+            //判断与鼠标距离
+            let _x = Math.abs(mouse.x - t.x)
+            let _y = Math.abs(mouse.y - t.y)
+            if(_x < 50 && _y < 50){
+                t.r = t.radius + (7 - Math.sqrt(_x * _x + _y * _y)/10) * 2
+            }else{
+                t.r = t.radius
+            }
+            //绘制气泡
+            c.beginPath();
+            c.arc(t.x, t.y, t.r, 0, Math.PI * 2)
+            c.fillStyle = t.color.replace(')',',1.0)');
+            c.fill();
+            //绘制尾巴
+            t.tail.forEach((obj, i) => {
+                let r = t.r - i - 1
+                if(r>0){
+                    c.beginPath();
+                    c.arc(obj.x, obj.y, r, 0, Math.PI * 2)
+                    c.fillStyle = t.color.replace(')', ','+(8 - i) * 0.1+')');
+                    c.fill();
+                }
+            })
+        }
+    }
+
+    const array = new Array(200).fill(0).map((a, index) => new Circle(index))
+
+    function drawCircle() {
+        c.clearRect(0, 0, canvas.width, canvas.height)
+        array.forEach(obj => {
+            obj.update()
+        })
+        window.requestAnimationFrame(drawCircle)
+    }
+
+    window.requestAnimationFrame(drawCircle)
+</script>
+</body>
+</html>

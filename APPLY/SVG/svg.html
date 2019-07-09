@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>基本动画</title>
+    <style type="text/css">
+        html,body{padding:0;margin:0;height: 100vh;background: #000}
+    </style>
+
+</head>
+<body>
+<svg width="55" height="80" viewBox="0 0 55 80" xmlns="http://www.w3.org/2000/svg" fill="#FFF">
+    <g transform="matrix(1 0 0 -1 0 80)">
+        <rect width="10" height="20" rx="3">
+            <animate attributeName="height"
+                     begin="0s" dur="2s"
+                     values="20;45;57;80;64;32;66;45;64;23;66" calcMode="linear"
+                     repeatCount="indefinite" />
+        </rect>
+        <rect x="15" width="10" height="80" rx="3">
+            <animate attributeName="height"
+                     begin="0s" dur="2s"
+                     values="80;55;33;5;75;23;73;33;12;14;60;80" calcMode="linear"
+                     repeatCount="indefinite" />
+        </rect>
+        <rect x="30" width="10" height="50" rx="3">
+            <animate attributeName="height"
+                     begin="0s" dur="1.4s"
+                     values="50;34;78;23;56;23;34;76;80;54;21;50" calcMode="linear"
+                     repeatCount="indefinite" />
+        </rect>
+        <rect x="45" width="10" height="30" rx="3">
+            <animate attributeName="height"
+                     begin="0s" dur="2s"
+                     values="30;45;13;80;56;72;45;76;34;23;67;30" calcMode="linear"
+                     repeatCount="indefinite" />
+        </rect>
+    </g>
+</svg>
+
+<svg width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
+    <g fill="none" fill-rule="evenodd" transform="translate(1 1)" stroke-width="2">
+        <circle cx="22" cy="22" r="0" stroke-width="2">
+            <animate attributeName="r"
+                     begin="0s" dur="1.5s"
+                     values="1;7"
+                     calcMode="linear"
+                     repeatCount="indefinite" />
+        </circle>
+        <circle cx="22" cy="22" r="0" stroke-width="2">
+            <animate attributeName="r"
+                     begin="1.5s" dur="1.5s"
+                     values="7;14"
+                     calcMode="linear"
+                     repeatCount="indefinite" />
+        </circle>
+        <circle cx="22" cy="22" r="0">
+            <animate attributeName="r"
+                     begin="3s" dur="1.5s"
+                     values="14;22"
+                     calcMode="linear"
+                     repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity"
+                     begin="3s" dur="1.5s"
+                     values="1;0" calcMode="linear"
+                     repeatCount="indefinite" />
+            <animate attributeName="stroke-width"
+                     begin="3s" dur="1.5s"
+                     values="2;0" calcMode="linear"
+                     repeatCount="indefinite" />
+        </circle>
+    </g>
+</svg>
+
+<svg width="105" height="105" viewBox="0 0 105 105" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+    <circle cx="12.5" cy="12.5" r="12.5">
+        <animate attributeName="fill-opacity"
+                 begin="0s" dur="1s"
+                 values="1;.2;1" calcMode="linear"
+                 repeatCount="indefinite" />
+    </circle>
+    <circle cx="12.5" cy="52.5" r="12.5" fill-opacity=".5">
+        <animate attributeName="fill-opacity"
+                 begin="100ms" dur="1s"
+                 values="1;.2;1" calcMode="linear"
+                 repeatCount="indefinite" />
+    </circle>
+    <circle cx="52.5" cy="12.5" r="12.5">
+        <animate attributeName="fill-opacity"
+                 begin="300ms" dur="1s"
+                 values="1;.2;1" calcMode="linear"
+                 repeatCount="indefinite" />
+    </circle>
+    <circle cx="52.5" cy="52.5" r="12.5">
+        <animate attributeName="fill-opacity"
+                 begin="600ms" dur="1s"
+                 values="1;.2;1" calcMode="linear"
+                 repeatCount="indefinite" />
+    </circle>
+    <circle cx="92.5" cy="12.5" r="12.5">
+        <animate attributeName="fill-opacity"
+                 begin="800ms" dur="1s"
+                 values="1;.2;1" calcMode="linear"
+                 repeatCount="indefinite" />
+    </circle>
+    <circle cx="92.5" cy="52.5" r="12.5">
+        <animate attributeName="fill-opacity"
+                 begin="400ms" dur="1s"
+                 values="1;.2;1" calcMode="linear"
+                 repeatCount="indefinite" />
+    </circle>
+    <circle cx="12.5" cy="92.5" r="12.5">
+        <animate attributeName="fill-opacity"
+                 begin="700ms" dur="1s"
+                 values="1;.2;1" calcMode="linear"
+                 repeatCount="indefinite" />
+    </circle>
+    <circle cx="52.5" cy="92.5" r="12.5">
+        <animate attributeName="fill-opacity"
+                 begin="500ms" dur="1s"
+                 values="1;.2;1" calcMode="linear"
+                 repeatCount="indefinite" />
+    </circle>
+    <circle cx="92.5" cy="92.5" r="12.5">
+        <animate attributeName="fill-opacity"
+                 begin="200ms" dur="1s"
+                 values="1;.2;1" calcMode="linear"
+                 repeatCount="indefinite" />
+    </circle>
+</svg>
+
+<svg width="140" height="64" viewBox="0 0 140 64" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+    <g id="hart">
+        <path d="M67.408 57.834l-23.01-24.98c-5.864-6.15-5.864-16.108 0-22.248 5.86-6.14 15.37-6.14 21.234 0L70 16.168l4.368-5.562c5.863-6.14 15.375-6.14 21.235 0 5.863 6.14 5.863 16.098 0 22.247l-23.007 24.98c-1.43 1.556-3.757 1.556-5.188 0z" />
+    </g>
+    <use transform="rotate(-15) scale(0.8 0.8)" x="-40" y="20" xlink:href="#hart">
+        <animate attributeName="fill-opacity"
+                 begin="0s" dur="1.5s"
+                 values="0.5;1;0.5"
+                 calcMode="linear"
+                 repeatCount="indefinite" />
+    </use>
+    <use transform="rotate(15) scale(0.8 0.8)" x="70" y="-25" xlink:href="#hart">
+        <animate attributeName="fill-opacity"
+                 begin="0s" dur="1.5s"
+                 values="0.5;1;0.5"
+                 calcMode="linear"
+                 repeatCount="indefinite" />
+    </use>
+</svg>
+
+<svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(1 1)" stroke-width="2">
+            <circle stroke-opacity=".5" cx="18" cy="18" r="18"/>
+            <path d="M36 18c0-9.94-8.06-18-18-18">
+                <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 18 18"
+                        to="360 18 18"
+                        dur="1s"
+                        repeatCount="indefinite"/>
+            </path>
+        </g>
+    </g>
+</svg>
+
+<svg width="57" height="57" viewBox="0 0 57 57" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
+    <circle cx="5" cy="50" r="5">
+        <animate attributeName="cx"
+                 begin="0s" dur="2.1s"
+                 values="5;27;49;5"
+                 calcMode="linear"
+                 repeatCount="indefinite" />
+        <animate attributeName="cy"
+                 begin="0s" dur="2.1s"
+                 values="50;5;50;50"
+                 calcMode="linear"
+                 repeatCount="indefinite" />
+    </circle>
+    <circle cx="27" cy="5" r="5" stroke="yellow">
+        <animate attributeName="cx"
+                 begin="0s" dur="2.1s"
+                 values="27;49;5;27"
+                 calcMode="linear"
+                 repeatCount="indefinite" />
+        <animate attributeName="cy"
+                 begin="0s" dur="2.1s"
+                 values="5;50;50;5"
+                 calcMode="linear"
+                 repeatCount="indefinite" />
+    </circle>
+    <circle cx="49" cy="50" r="5" stroke="red">
+        <animate attributeName="cx"
+                 begin="0s" dur="2.1s"
+                 values="49;5;27;49"
+                 calcMode="linear"
+                 repeatCount="indefinite" />
+        <animate attributeName="cy"
+                 begin="0s" dur="2.1s"
+                 values="50;50;5;50"
+                 calcMode="linear"
+                 repeatCount="indefinite" />
+    </circle>
+</svg>
+
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <linearGradient id="Gradient1">
+            <stop offset="5%" stop-color="white"/>
+            <stop offset="95%" stop-color="blue"/>
+        </linearGradient>
+        <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="5%" stop-color="red"/>
+            <stop offset="95%" stop-color="orange"/>
+        </linearGradient>
+
+        <pattern id="Pattern" x="0" y="0" width=".25" height=".25">
+            <rect x="0" y="0" width="50" height="50" fill="skyblue"/>
+            <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/>
+            <circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/>
+        </pattern>
+
+    </defs>
+
+    <rect fill="url(#Pattern)" stroke="black" x="0" y="0" width="200" height="200"/>
+</svg>
+
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <rect x="100" y="100" width="10" height="10" fill="red" transform="translate(100,100)" />
+</svg>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <rect x="10" y="10" width="50" height="50" fill="blue">
+        <animate attributeName="x"
+                 calcMode="spline"
+                 values="10;60;140;160"
+                 keyTimes="0;0.3;0.8;1"
+                 keySplines="0.42 0 1 1;
+                    0 0 0.59 1;
+                    0.42 0 1 1;"
+                 dur="10s"
+                 begin="click"/>
+    </rect>
+</svg>
+</body>
+</html>

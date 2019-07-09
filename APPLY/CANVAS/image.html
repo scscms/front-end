@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>放大镜效果</title>
+    <style type="text/css">
+        canvas {
+            display: block;
+            margin: 0 auto;
+            cursor: crosshair;
+        }
+    </style>
+</head>
+<body>
+<canvas width="500" height="500"></canvas>
+<script>
+    // 图片被放大区域的半径
+    let originalRadius = 100;
+    let canvas = document.querySelector("canvas");
+    let ctx = canvas.getContext('2d');
+    let img = document.createElement('img')
+    img.src = 'image.jpg'
+    canvas.onmousemove = function (e) {
+        ctx.restore()
+        ctx.drawImage(img, 0, 0,img.width,img.height);
+        ctx.save()
+        let x = e.offsetX
+        let y = e.offsetY
+        ctx.beginPath();
+        let gradient = ctx.createRadialGradient(
+            x, y, originalRadius - 5,
+            x, y, originalRadius);
+        gradient.addColorStop(0, 'rgba(0,0,0,0.2)');
+        gradient.addColorStop(0.80, 'silver');
+        gradient.addColorStop(0.90, 'silver');
+        gradient.addColorStop(1.0, 'rgba(150,150,150,0.9)');
+        ctx.strokeStyle = gradient;
+        ctx.lineWidth = 5;
+        ctx.arc(x, y, originalRadius, 0, Math.PI * 2, false);
+        ctx.stroke();
+        ctx.clip() //裁切
+        ctx.translate(-1 * x, -1 * y) //移动原点再绘图
+        ctx.drawImage(img, 0, 0, img.width * 2, img.height * 2);//放大图片
+    }
+</script>
+</body>
+</html>

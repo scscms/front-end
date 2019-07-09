@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+    svg {
+        margin: 100px;
+        width: 300px;
+        height: 300px;
+        border:1px solid red;
+    }
+</style>
+</head>
+<body>
+<!--
+A（a）rx ry x-axis-rotation large-arc-flag sweep-flag x y
+命令解析如下：
+（1）rx：规定圆弧在x轴方向的半径
+（2）ry：规定元素在y轴方向的半径，如果与rx相等则正圆圆弧，否则是椭圆圆弧
+（3）x-axis-rotation：规定圆弧的横轴与x轴的夹角，正数表示顺时针旋转，反之表示逆时针
+（4）large-arc-flag：1绘制大角度圆弧，0绘制小角度圆弧
+（5）sweep-flag：1表示顺时针绘制，0表示逆时针绘制
+（6）x：规定圆弧终点的x轴坐标
+（7）y：规定圆弧终点的y轴坐标
+-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <path d="M50,50 a1,1 0 0,1 100,100"
+          stroke="black"
+          fill="green"
+          stroke-width="2"
+          fill-opacity="0.5" />
+
+    <path d="M100,50 a50,50 0 1,0 -100,0"
+          fill="yellow" stroke="blue" stroke-width="2" />
+    <path d="M100,50 a50,50 0 1,1 -100,0"
+          fill="yellow" stroke="blue" stroke-width="2" />
+</svg>
+</body>
+</html>
