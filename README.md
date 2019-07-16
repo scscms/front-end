@@ -24,6 +24,8 @@
 * [ECMAScript5.1中文版](http://yanhaijing.com/es5/#about) 外链（很详细教程）
 * [前端技能汇总](https://github.com/JacksonTian/fks) 外链（朴灵git）
 * 在线预览word文档 `https://view.officeapps.live.com/op/view.aspx?src=newteach.pbworks.com%2Ff%2Fele%2Bnewsletter.docx`
+* [颜色互转](BASE/color.md)
+
 ### 应用
 
 * [图片（懒|预）加载原理](APPLY/lazyload.md)
