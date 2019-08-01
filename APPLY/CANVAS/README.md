@@ -143,8 +143,8 @@ encoderOptions   可选  在指定图片格式为 image/jpeg 或 image/webp的�
 
 [在线示例](http://www.w3school.com.cn/tiy/t.asp?f=html5_canvas_globalcompop_all)
 
-|:---:|---|
 |值|描述|
+|:---:|---|
 |source-over|默认。在目标图像上显示源图像。|
 |source-atop|在目标图像顶部显示源图像。源图像位于目标图像之外的部分是不可见的。|
 |source-in|	在目标图像中显示源图像。只有目标图像内的源图像部分会显示，目标图像是透明的。|

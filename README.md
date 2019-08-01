@@ -25,6 +25,7 @@
 * [前端技能汇总](https://github.com/JacksonTian/fks) 外链（朴灵git）
 * 在线预览word文档 `https://view.officeapps.live.com/op/view.aspx?src=newteach.pbworks.com%2Ff%2Fele%2Bnewsletter.docx`
 * [颜色互转](BASE/color.md)
+* [MIME 类型](BASE/MediaType.md)
 
 ### 应用
 
@@ -67,3 +68,6 @@
 * [快速搭建 Node.js / io.js 开发环境以及加速 npm](TOOL/install_nodejs.md) 同一系统下安装多个node版本介绍
 * [HTTP](TOOL/HTTP.md) 转摘
 * [emmet语法](TOOL/emmet.md) 让你飞快编码
+
+### 其他
+* [免费的计算机编程类中文书籍](OTHER/free-programming-books-zh_CN.md) 转摘
