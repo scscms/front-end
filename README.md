@@ -26,6 +26,9 @@
 * 在线预览word文档 `https://view.officeapps.live.com/op/view.aspx?src=newteach.pbworks.com%2Ff%2Fele%2Bnewsletter.docx`
 * [颜色互转](BASE/color.md)
 * [MIME 类型](BASE/MediaType.md)
+* [算法？？](BASE/Algorithm.md) ???
+* [async和defer区别](BASE/async-defer.md)
+* [js和css事件](BASE/script-link-events.html) 转摘
 
 ### 应用
 
@@ -47,6 +50,7 @@
 * [创建全屏滚动网站](https://github.com/alvarotrigo/fullPage.js/tree/master/lang/chinese#fullpagejs) 外链
 * [canvas画布学习](APPLY/CANVAS/README.md)
 * [SVG图形学习](APPLY/SVG/README.md)
+* [Lighthouse学习](APPLY/Lighthouse.md)
 
 ### 扩展
 

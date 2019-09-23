@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<title>Browser CSS/JS loading capabilities</title>
+<!-- https://pie.gd/test/script-link-events/ -->
+<h1>Browser CSS/JS loading capabilities</h1>
+<style>
+    html{background:#fff;color:#333;font:14px Helvetica,sans-serif;}table{border-collapse:collapse;}td,th{border:1px solid #efefef;padding:3px 6px;}td{color:#fff;text-align:center;}td.browser{color:#333;text-align:left;}td.N{background:#FF7770;}td.Y{background:#68DE70;}tbody tr:hover td{background:#f3f3f3;}tbody tr:hover td.N{background:red;}tbody tr:hover td.Y{background:green;}th{background:#efefef;border-color:#fff;}td:first-child,th:first-child{border-left-color:#dfdfdf;}td:last-child,th:last-child{border-right-color:#dfdfdf;}thead tr:first-child th{border-top-color:#dfdfdf;}tbody tr:last-child td{border-bottom-color:#dfdfdf;}
+</style>
+<p>
+    Just a little chart to help me remember what supports what, since this stuff is
+    a pain to feature-test.
+</p>
+
+<h2>Your Browser</h2>
+
+<p>
+    <span id="ua"></span>
+</p>
+
+<table>
+    <thead>
+    <tr>
+        <th></th>
+        <th>onload</th>
+        <th>onerror</th>
+        <th>load</th>
+        <th>error</th>
+        <th>onreadystatechange</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <th scope="row">CSS</th>
+        <td id="css-onload" class="N">No</td>
+        <td id="css-onerror" class="N">No</td>
+        <td id="css-load" class="N">No</td>
+        <td id="css-error" class="N">No</td>
+        <td id="css-onreadystatechange" class="N">No</td>
+    </tr>
+
+    <tr>
+        <th scope="row">JS</th>
+        <td id="js-onload" class="N">No</td>
+        <td id="js-onerror" class="N">No</td>
+        <td id="js-load" class="N">No</td>
+        <td id="js-error" class="N">No</td>
+        <td id="js-onreadystatechange" class="N">No</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Other Browsers</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th rowspan="2">Browser</th>
+        <th colspan="5">&lt;script&gt;</th>
+        <th colspan="5">&lt;link&gt;</th>
+    </tr>
+
+    <tr>
+        <th title="DOM level 0 onload event">onload</th>
+        <th title="DOM level 0 onerror event">onerror</th>
+        <th title="DOM level 1 load event">load</th>
+        <th title="DOM level 1 error event">error</th>
+        <th title="DOM level 0 onreadystatechange event">onreadystatechange</th>
+
+        <th title="DOM level 0 onload event">onload</th>
+        <th title="DOM level 0 onerror event">onerror</th>
+        <th title="DOM level 1 load event">load</th>
+        <th title="DOM level 1 error event">error</th>
+        <th title="DOM level 0 onreadystatechange event">onreadystatechange</th>
+    </tr>
+    </thead>
+
+    <tbody id="results-body">
+    </tbody>
+</table>
+
+<p>
+    Got feedback or more data? I'm <a href="https://twitter.com/yaypie">@yaypie</a>
+    on Twitter. Or email <a href="mailto:ryan@wonko.com">ryan@wonko.com</a>.
+</p>
+
+<script id="result-row" type="text/x-template">
+    <tr class="result-row">
+        <td class="browser">{browser}</td>
+        <td class="result {jsonload}">{jsonload}</td>
+        <td class="result {jsonerror}">{jsonerror}</td>
+        <td class="result {jsload}">{jsload}</td>
+        <td class="result {jserror}">{jserror}</td>
+        <td class="result {jsonreadystatechange}">{jsonreadystatechange}</td>
+
+        <td class="result {cssonload}">{cssonload}</td>
+        <td class="result {cssonerror}">{cssonerror}</td>
+        <td class="result {cssload}">{cssload}</td>
+        <td class="result {csserror}">{csserror}</td>
+        <td class="result {cssonreadystatechange}">{cssonreadystatechange}</td>
+    </tr>
+</script>
+
+<script>
+    var results={"Amazon Silk (WebKit 533.1)":{"css":{},"js":{"onload":true,"onerror":true,"load":true,"error":true}},"Android 2.3.4 (WebKit 533.1)":{"css":{},"js":{"onload":true,"onerror":true,"load":true,"error":true}},"Android 3.2.1 (WebKit 534.13)":{"css":{},"js":{"onload":true,"onerror":true,"load":true,"error":true}},"Android 4.1.1 (WebKit 534.30)":{"css":{},"js":{"onload":true,"onerror":true,"load":true,"error":true}},"Chrome 14":{"css":{},"js":{"onload":true,"onerror":true,"load":true,"error":true}},"Chrome 19+ (WebKit 535.24)":{"css":{"onload":true,"onerror":true,"load":true,"error":true},"js":{"onload":true,"onerror":true,"load":true,"error":true}},"Edge 20.10240.16384.0":{"css":{"onload":true,"load":true},"js":{"onload":true,"onerror":true,"load":true,"error":true}},"Firefox 8":{"css":{},"js":{"onload":true,"onerror":true,"load":true,"error":true}},"Firefox 9+":{"css":{"onload":true,"onerror":true,"load":true,"error":true},"js":{"onload":true,"onerror":true,"load":true,"error":true}},"IE6":{"css":{"onload":true,"onreadystatechange":true},"js":{"onreadystatechange":true}},"IE7":{"css":{"onload":true,"onreadystatechange":true},"js":{"onreadystatechange":true}},"IE8":{"css":{"onload":true,"onreadystatechange":true},"js":{"onreadystatechange":true}},"IE9":{"css":{"onload":true,"load":true,"onreadystatechange":true},"js":{"onload":true,"onerror":true,"load":true,"error":true,"onreadystatechange":true}},"IE10":{"css":{"onload":true,"load":true,"onreadystatechange":true},"js":{"onload":true,"onerror":true,"load":true,"error":true,"onreadystatechange":true}},"IE11":{"css":{"onload":true,"load":true},"js":{"onload":true,"onerror":true,"load":true,"error":true}},"iOS 5.0.1 (WebKit 534.46)":{"css":{},"js":{"onload":true,"onerror":true,"load":true,"error":true}},"iOS 6.0.0+ (WebKit 536.26+)":{"css":{"onload":true,"onerror":true,"load":true,"error":true},"js":{"onload":true,"onerror":true,"load":true,"error":true}},"Opera 9.27":{"css":{"onload":true,"load":true,"onreadystatechange":true},"js":{"onload":true,"load":true,"onreadystatechange":true}},"Opera 11.52":{"css":{"onload":true,"load":true,"onreadystatechange":true},"js":{"onload":true,"load":true,"onreadystatechange":true}},"Opera 11.60":{"css":{"onload":true,"load":true,"onreadystatechange":true},"js":{"onload":true,"onerror":true,"load":true,"error":true,"onreadystatechange":true}},"Opera 12.02":{"css":{"onload":true,"load":true},"js":{"onload":true,"onerror":true,"load":true,"error":true}},"Opera 32+":{"css":{"onload":true,"onerror":true,"load":true,"error":true},"js":{"onload":true,"onerror":true,"load":true,"error":true}},"Opera Mini 6.5 (aka 10.54)":{"css":{"onload":true,"load":true,"onreadystatechange":true},"js":{"onload":true,"load":true,"onreadystatechange":true}},"Safari 3.2.3 (WebKit 525.29)":{"css":{},"js":{"onload":true,"load":true}},"Safari 4.0.5 (WebKit 531.22.7)":{"css":{},"js":{"onload":true,"onerror":true,"load":true,"error":true}},"Safari 6.0.1+ (WebKit 536.26.14+)":{"css":{"onload":true,"onerror":true,"load":true,"error":true},"js":{"onload":true,"onerror":true,"load":true,"error":true}}};
+    (function(win,doc){var columns=['onload','onerror','load','error','onreadystatechange'];renderYourBrowser();renderOtherBrowsers();function renderOtherBrowsers(){var tableHTML=[];var template=document.querySelector('#result-row').innerHTML;for(var browser in results){if(!results.hasOwnProperty(browser)){continue}var browserResults={browser:browser};var data=results[browser];for(var i=0;i<columns.length;++i){var column=columns[i];browserResults['css'+column]=data.css[column]?'Y':'N';browserResults['js'+column]=data.js[column]?'Y':'N'}tableHTML.push(renderTemplate(template,browserResults))}document.querySelector('#results-body').innerHTML=tableHTML.join('\n')}function renderTemplate(template,data){for(var key in data){if(!data.hasOwnProperty(key)){continue}template=template.replace(new RegExp('\\{'+key+'\\}','g'),data[key])}return template}function renderYourBrowser(){var head=document.getElementsByTagName('head')[0];var linkFail=document.createElement('link');var linkSuccess=document.createElement('link');var scriptFail=document.createElement('script');var scriptSuccess=document.createElement('script');function result(id,status){var el=document.getElementById(id);if(status){el.innerHTML='Yes';el.className='Y'}}document.getElementById('ua').appendChild(document.createTextNode(navigator.userAgent));linkFail.setAttribute('rel','stylesheet');linkFail.setAttribute('type','text/css');linkFail.setAttribute('href','nosuchfile.css');linkFail.onerror=function(){result('css-onerror',true)};if(linkFail.addEventListener){linkFail.addEventListener('error',function(){result('css-error',true)},false)}linkSuccess.setAttribute('rel','stylesheet');linkSuccess.setAttribute('type','text/css');linkSuccess.setAttribute('href','test.css');linkSuccess.onload=function(){result('css-onload',true)};linkSuccess.onreadystatechange=function(){result('css-onreadystatechange',true)};if(linkSuccess.addEventListener){linkSuccess.addEventListener('load',function(){result('css-load',true)},false)}head.appendChild(linkFail);head.appendChild(linkSuccess);scriptFail.setAttribute('src','nosuchfile.js');scriptFail.onerror=function(){result('js-onerror',true)};if(scriptFail.addEventListener){scriptFail.addEventListener('error',function(){result('js-error',true)},false)}scriptSuccess.setAttribute('src','test.js');scriptSuccess.onload=function(){result('js-onload',true)};scriptSuccess.onreadystatechange=function(){result('js-onreadystatechange',true)};if(scriptSuccess.addEventListener){scriptSuccess.addEventListener('load',function(){result('js-load',true)},false)}head.appendChild(scriptFail);head.appendChild(scriptSuccess)}}());
+</script>

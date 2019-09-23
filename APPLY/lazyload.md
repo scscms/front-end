@@ -2,7 +2,7 @@
 
 ### 懒加载1
 
-```
+```javascript
 //<img src="loading图片" alt="" data-src='真实图片地址' />
 function lazyload(){
 	var nodes = document.querySelectorAll('img[data-src]');
@@ -49,7 +49,7 @@ function throttle(fun, delay, time) {
 ```
 
 ### 懒加载2
-```
+```javascript
 //<img src="loading图片" alt="" data-src='真实图片地址' />
 
 let observer = new IntersectionObserver(
@@ -57,12 +57,10 @@ let observer = new IntersectionObserver(
       entry.forEach(item => {
           let target = item.target;
           if (item.intersectionRatio > 0) {
-              let img = new Image();
-              img.onload = () => {
-                  target.src = img.src;
-              };
-              img.src = target.dataset.src;
-              observer.unobserve(target);
+              if(target.tagName === 'IMG'){
+                  target.src = target.dataset.src
+              }
+              observer.unobserve(target)
           }
       });
   }
@@ -74,7 +72,7 @@ Array.from(document.querySelectorAll('img[data-src]')).forEach(item => {
 
 ### 预加载
 
-```
+```javascript
     /**
      * 图片预加载
      * @param  {Array|String} array - 图片地址数组或字符串

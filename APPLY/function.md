@@ -39,30 +39,24 @@ function permutation(arr, size) {
  应用场景：用于类似滚动条频繁事件中节流
 ```js
 /**
- * 节流函数
- * @param method 事件触发的操作
+ * 节流防抖动函数
+ * @param fun 事件触发的操作
  * @param mustRunDelay 间隔多少毫秒需要触发一次事件
  */
-function throttle(method, mustRunDelay) {
-    let timer,
-        args = arguments,
-        start;
+function throttle(fun, mustRunDelay=200) {
+    let timer = null
+    let start
     return function loop() {
-        let self = this;
-        let now = Date.now();
+        let now = performance.now()
         if(!start){
-            start = now;
+            start = now
         }
-        if(timer){
-            clearTimeout(timer);
-        }
+        clearTimeout(timer)
         if(now - start >= mustRunDelay){
-            method.apply(self, args);
-            start = now;
+            fun()
+            start = now
         }else {
-            timer = setTimeout(function () {
-                loop.apply(self, args);
-            }, 50);
+            timer = setTimeout(fun, 50)
         }
     }
 }
@@ -116,5 +110,15 @@ function getFirstLetter(str){
         const range = window.getSelection().getRangeAt(0)
         const fragment = range.createContextualFragment('<img src="'+url+'"/>')
         range.insertNode(fragment.lastChild)
+    }
+```
+
+### chrome文本语音合成
+#### chromeSpeak
+  应用场景：选择文本朗读
+
+```js
+    function chromeSpeak(word) {
+        speechSynthesis.speak(new SpeechSynthesisUtterance(word))
     }
 ```
