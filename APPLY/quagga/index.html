@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./quagga.min.js"></script>
+  <title>Document</title>
+  <style type="text/css">
+    .viewport {
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+
+    .viewport canvas {
+      width: 100%;
+    }
+
+    .viewport canvas + canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+<input type="file" accept="image/*" capture="camera"/>
+
+<div id="interactive" class="viewport">
+  <canvas class="imgBuffer" width="800" height="600"></canvas>
+  <canvas class="drawingBuffer" width="800" height="600"></canvas>
+</div>
+
+<h3></h3>
+<script type="text/javascript">
+  //https://github.com/serratus/quaggaJS
+  //https://serratus.github.io/quaggaJS/examples/
+  function drawPath(ctx, arr, obj) {
+    if (Array.isArray(arr)) {
+      ctx.lineWidth = obj.lineWidth
+      ctx.strokeStyle = obj.color
+      ctx.beginPath()
+      arr.forEach((o, i) => {
+        ctx[i === 0 ? 'moveTo' : 'lineTo'](o[obj.x], o[obj.y])
+      })
+      ctx.closePath()
+      ctx.stroke()
+    }
+  }
+
+  window.onload = function () {
+    let input = document.querySelector('input')
+    let codeResult = document.querySelector('h3')
+    let canvas = document.querySelector('canvas.imgBuffer')
+    let imgCtx = canvas.getContext('2d')
+    let drawCtx = document.querySelector('canvas.drawingBuffer').getContext('2d')
+    input.addEventListener('change', function (e) {
+      let f = e.target.files[0]
+      if (f.type.startsWith('image/')) {
+        const img = new Image()
+        img.onload = function () {
+          let w = Math.min(800, this.width)
+          let h = w * this.height / this.width
+          imgCtx.fillStyle = '#fff'
+          imgCtx.fillRect(0, 0, 800, 600)//清空画布
+          drawCtx.clearRect(0, 0, 800, 600)//清空画布
+          imgCtx.drawImage(this, 0, 0, this.width, this.height, 0, 0, w, h)
+          Quagga.decodeSingle({
+            inputStream: {
+              size: 800
+            },
+            locator: {
+              patchSize: 'medium',
+              halfSample: false
+            },
+            numOfWorkers: 1,
+            decoder: {
+              readers: [{
+                format: 'code_128_reader',
+                config: {}
+              }]
+            },
+            locate: true,
+            src: canvas.toDataURL('image/jpeg')
+          }, function (result) {
+            let txt = '毫无头绪！'
+            if (result) {
+              result.boxes.forEach(function (box) {
+                drawPath(drawCtx, box, {x: 0, y: 1, color: (box === result.box ? '#00F' : 'green'), lineWidth: 2})
+              })
+              if (result.codeResult && result.codeResult.code) {
+                txt = result.codeResult.code
+                drawPath(drawCtx, result.line, {x: 'x', y: 'y', color: 'red', lineWidth: 3})
+              } else {
+                txt ='匹配失败！'
+              }
+            }
+            codeResult.innerText = txt
+          })
+        }
+        img.src = URL.createObjectURL(f)
+      } else {
+        console.error('只能选择图片类型')
+      }
+    }, false)
+  }
+</script>
+</body>
+</html>

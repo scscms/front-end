@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport"
+         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <script src="./jsQR.js"></script>
+   <style type="text/css">
+      .viewport {
+         position: relative;
+         width: 100%;
+         height: auto;
+         overflow: hidden;
+      }
+      .viewport canvas {
+         width: 100%;
+      }
+   </style>
+   <title>Document</title>
+</head>
+<body>
+<input type="file" accept="image/*" capture="camera"/>
+<div id="interactive" class="viewport">
+   <canvas class="imgBuffer" width="800" height="600"></canvas>
+</div>
+<h3></h3>
+<script type="text/javascript">
+   //https://github.com/cozmo/jsQR
+   //todo 自动判断PC还是移动端使用不同方法获取图片信息
+   function drawPath(ctx, arr, obj) {
+      if (Array.isArray(arr)) {
+         ctx.lineWidth = obj.lineWidth
+         ctx.strokeStyle = obj.color
+         ctx.beginPath()
+         arr.forEach((o, i) => {
+            ctx[i === 0 ? 'moveTo' : 'lineTo'](o[obj.x], o[obj.y])
+         })
+         ctx.closePath()
+         ctx.stroke()
+      }
+   }
+   window.onload = function () {
+      let input = document.querySelector('input')
+      let codeResult = document.querySelector('h3')
+      let canvas = document.querySelector('canvas.imgBuffer')
+      let imgCtx = canvas.getContext('2d')
+      input.addEventListener('change', function (e) {
+         let f = e.target.files[0]
+         if (f.type.startsWith('image/')) {
+            const img = new Image()
+            img.onload = function () {
+               let w = Math.min(800, this.width)
+               let h = w * this.height / this.width
+               imgCtx.fillStyle = '#fff'
+               imgCtx.fillRect(0, 0, 800, 600)//清空画布
+               imgCtx.drawImage(this, 0, 0, this.width, this.height, 0, 0, w, h)
+               let imageData = imgCtx.getImageData(0, 0, w,h).data;
+               const code = jsQR(imageData, w, h);
+               if (code) {
+                  drawPath(imgCtx, [
+                     code.location.topLeftCorner,
+                     code.location.topRightCorner,
+                     code.location.bottomRightCorner,
+                     code.location.bottomLeftCorner,
+                  ], {x: 'x', y: 'y', color: 'green', lineWidth: 2})
+                  drawPath(imgCtx, [
+                     code.location.topLeftFinderPattern,
+                     code.location.topRightFinderPattern,
+                     code.location.bottomLeftFinderPattern,
+                  ], {x: 'x', y: 'y', color: 'red', lineWidth: 3})
+                  codeResult.innerText = code.data
+                  console.log("Found QR code", code);
+               }
+            }
+            img.src = URL.createObjectURL(f)
+         } else {
+            console.error('只能选择图片类型')
+         }
+      }, false)
+   }
+</script>
+</body>
+</html>

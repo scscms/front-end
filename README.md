@@ -51,6 +51,8 @@
 * [canvas画布学习](APPLY/CANVAS/README.md)
 * [SVG图形学习](APPLY/SVG/README.md)
 * [Lighthouse学习](APPLY/Lighthouse.md)
+* [js扫描条形码](APPLY/quagga)
+* [js扫描二维码](APPLY/Lighthouse.md)
 
 ### 扩展
 
