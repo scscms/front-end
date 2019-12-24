@@ -52,7 +52,8 @@
 * [SVG图形学习](APPLY/SVG/README.md)
 * [Lighthouse学习](APPLY/Lighthouse.md)
 * [js扫描条形码](APPLY/quagga)
-* [js扫描二维码](APPLY/Lighthouse.md)
+* [js扫描二维码](APPLY/jsQR)
+* [中国地图vue组件](APPLY/ChinaMap)
 
 ### 扩展
 
