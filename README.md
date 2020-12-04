@@ -54,6 +54,7 @@
 * [js扫描条形码](APPLY/quagga)
 * [js扫描二维码](APPLY/jsQR)
 * [中国地图vue组件](APPLY/ChinaMap)
+* [JS复制到剪切板组件ClipboardJS](http://www.clipboardjs.cn/)
 
 ### 扩展
 
