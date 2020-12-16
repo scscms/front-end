@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .form-group {
+            --input-placeholder: #CBD1DC;
+            --text-color:#99A3BA;
+            --text-focus-color:#fff;
+            --border-color: #CDD9ED;
+            --focus-border-color: #275EFE;
+            --background-color: #EEF4FF;
+            --focus-background-color: #678EFE;
+            position: relative;
+            display: flex;
+            width: 400px;
+            margin-bottom: 20px;
+        }
+        .form-group input {
+            display: block;
+            width: 100%;
+            padding: 8px 16px;
+            line-height: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: inherit;
+            border-radius: 6px;
+            -webkit-appearance: none;
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            background-color: #fff;
+            transition: border .3s ease;
+        }
+        .form-group input::placeholder {
+            color: var(--input-placeholder);
+        }
+        .form-group > span,
+        .form-group input {
+            white-space: nowrap;
+            display: block;
+        }
+        .form-group > *:first-child {
+            border-radius: 4px 0 0 4px;
+        }
+        .form-group > *:last-child {
+            border-radius: 0 4px 4px 0;
+            margin-left: -1px;
+        }
+        .form-group > span {
+            text-align: center;
+            padding: 8px 20px;
+            font-size: 14px;
+            line-height: 25px;
+            color: var(--text-color);
+            background: var(--background-color);
+            border: 1px solid var(--border-color);
+            transition: background .3s ease, border .3s ease, color .3s ease;
+        }
+        .form-group:focus-within > span {
+            color: var(--text-focus-color);
+            background: var(--focus-background-color);
+            border-color: var(--focus-border-color);
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--focus-border-color);
+        }
+    </style>
+</head>
+<body>
+<div class="form-group">
+    <span>https://</span>
+    <input type="text" placeholder="www.baidu.com">
+</div>
+<div class="form-group">
+    <input type="text" placeholder="关键词">
+    <span>搜索</span>
+</div>
+<script>
+
+</script>
+</body>
+</html>

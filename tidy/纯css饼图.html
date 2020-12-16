@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>纯css饼图</title>
+  <style>
+      .out-pie{
+          --width:10px;
+          position: relative;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background-color: #b0b1b1;
+      }
+      .pie {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          border-radius: 50%;
+          clip: rect(0px, 200px, 200px, 100px);
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards;
+          animation-timing-function:linear;
+          animation-duration: 0.01s;
+          animation-delay: 3s;
+          animation-name: open-spin;
+      }
+      @keyframes open-spin {
+          to {
+              /*clip: rect(auto, auto, auto, auto);*/
+          }
+      }
+      .pie::before,.pie:after{
+          position: absolute;
+          border-radius: 50%;
+          content: "";
+          /*width:calc(100% - var(--width) * 2);
+          height:calc(100% - var(--width) * 2);*/
+          width:100%;
+          height:100%;
+          clip: rect(0, 100px, 200px, 0);
+          /*border: var(--width) solid red;*/
+          background-color: #0086F1;
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards;
+          animation-timing-function:linear;
+          animation-duration: 3s;
+          animation-name: half-spin;
+      }
+      @keyframes half-spin {
+          from {transform: rotate(0deg)}
+          to {transform: rotate(180deg)}
+      }
+      .pie:after{
+          animation-duration: 6s;
+          animation-name: all-spin;
+      }
+      @keyframes all-spin {
+          from {transform: rotate(0deg)}
+          to {transform: rotate(360deg)}
+      }
+
+      .out-pie[data-pre="1"]::before{animation-duration: 0.06s;animation-name: r1}
+      @keyframes r1 {from {transform: rotate(0deg)}to {transform: rotate(3.6deg)}}
+
+      .out-pie[data-pre="50"]::before{animation-duration: 3s;animation-name: r50}
+      @keyframes r1 {from {transform: rotate(0deg)}to {transform: rotate(180deg)}}
+
+  </style>
+</head>
+<body>
+    <div class="out-pie" data-pre="50">
+        <div class="pie"></div>
+    </div>
+</body>
+</html>

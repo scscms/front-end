@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html2canvas</title>
+</head>
+<body>
+<div>
+    <h1>html2canvas</h1>
+    <img src="http://www.scscms.com/scs_img/logo.png" alt="">
+</div>
+<script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script>
+    /**
+    官网：http://html2canvas.hertzen.com/
+    压缩：http://html2canvas.hertzen.com/dist/html2canvas.min.js
+    源码：http://html2canvas.hertzen.com/dist/html2canvas.js
+    * */
+    window.onload = function () {
+        new html2canvas(document.querySelector('div'), {
+            backgroundColor: 'transparent', //解决png背景透明问题
+            allowTaint: false,
+            useCORS: true,//允许加载跨域的图片
+            tainttest: true, //检测每张图片都已经加载完成
+            scale: 1, // 比例
+            logging: false, //日志开关，发布的时候记得改成false
+        }).then(canvas => {
+            document.querySelector('body').appendChild(canvas)
+            console.log(canvas.toDataURL())
+        })
+    }
+</script>
+</body>
+</html>

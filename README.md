@@ -23,12 +23,13 @@
 * [ECMA-262，第 5 版](https://www.ibm.com/developerworks/cn/web/wa-ecma262/index.html) 外链（即ES5）
 * [ECMAScript5.1中文版](http://yanhaijing.com/es5/#about) 外链（很详细教程）
 * [前端技能汇总](https://github.com/JacksonTian/fks) 外链（朴灵git）
-* 在线预览word文档 `https://view.officeapps.live.com/op/view.aspx?src=newteach.pbworks.com%2Ff%2Fele%2Bnewsletter.docx`
+* [在线预览word文档](https://view.officeapps.live.com/op/view.aspx?src=newteach.pbworks.com%2Ff%2Fele%2Bnewsletter.docx)
 * [颜色互转](BASE/color.md)
 * [MIME 类型](BASE/MediaType.md)
-* [算法？？](BASE/Algorithm.md) ???
+* [常用算法](BASE/Algorithm.md)
 * [async和defer区别](BASE/async-defer.md)
 * [js和css事件](BASE/script-link-events.html) 转摘
+* [clip-path css3属性](BASE/clip-path.md)
 
 ### 应用
 
@@ -55,6 +56,7 @@
 * [js扫描二维码](APPLY/jsQR)
 * [中国地图vue组件](APPLY/ChinaMap)
 * [JS复制到剪切板组件ClipboardJS](http://www.clipboardjs.cn/)
+* [纯CSS3统计饼图、圆环图](APPLY/pie.md)
 
 ### 扩展
 

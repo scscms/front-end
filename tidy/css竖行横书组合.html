@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS text-combine-upright 竖行横书组合</title>
+    <style>
+        /*https://drafts.csswg.org/css-writing-modes-4/#text-combine-upright*/
+        div{
+            writing-mode: vertical-rl;
+            letter-spacing: 2px;
+            user-select: none;
+        }
+        div b{
+            text-combine-upright: all;
+            text-transform: full-width;
+            margin: 5px 0;
+            font-size:14px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>清朝</h1>
+    <p>是中国历史上最后一个封建王朝，</p>
+    <p>共传十二帝，</p>
+    <p>统治者为满洲爱新觉罗氏。</p>
+    <p>从努尔哈赤建立后金起，</p>
+    <p>总计<b>296</b>年。</p>
+    <p>从皇太极改国号为清起，国祚<b>276</b>年。</p>
+    <p>建立全国性政权算起为<b>268</b>年。</p>
+    <p>—— DeathGhost</p>
+</div>
+</body>
+</html>
