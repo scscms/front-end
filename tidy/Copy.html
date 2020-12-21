@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>复制</title>
+</head>
+<body>
+<button type="button" class="but">复制1</button>
+<button type="button" class="fun">复制2</button>
+<script>
+    (function (global, factory) {
+        typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+            typeof define === 'function' && define.amd ? define(factory) :
+                (global = global || self, global.Copy = factory())
+    }(this, function () {
+        'use strict'
+        return function (element, options) {
+            const obj = {
+                dataType: 'text/plain',
+                type: 'copy',
+                action: 'click',
+                success: function () {
+                },
+                error: function () {
+                    console.error('复制失败！')
+                },
+                content: element.innerText
+            }
+            if (typeof options === 'object' && options !== null) {
+                for (var k in options) if (Object.prototype.hasOwnProperty.call(options, k)) obj[k] = options[k]
+            }
+            if (obj.type !== 'copy') {
+                var n = obj.target.tagName
+                if (n !== 'INPUT' && n !== 'TEXTAREA') {
+                    obj.type = 'copy'
+                    obj.target = null
+                } else {
+                    obj.type = 'cut'
+                }
+            }
+            function callBack(e) {
+                try {
+                    var t = obj.content
+                    if (obj.target) {
+                        t = obj.target.value
+                    } else if (typeof obj.fun === 'function') {
+                        t = obj.fun()
+                    }
+                    e.clipboardData.setData(obj.dataType, t)
+                    obj.success()
+                } catch (e) {
+                    obj.error()
+                }
+                e.preventDefault()
+            }
+
+            element.addEventListener(obj.action, function () {
+                document.addEventListener(obj.type, callBack, false)
+                if (obj.type === 'cut') {
+                    obj.target.select()
+                }
+                document.execCommand(obj.type)
+                document.removeEventListener(obj.type, callBack, false)
+            }, false)
+        };
+    }));
+    /**
+     * https://w3c.github.io/clipboard-apis/#widl-ClipboardEvent-clipboardData
+     *
+     text/plain
+     text/uri-list
+     text/csv
+     text/css
+     text/html
+     application/xhtml+xml
+     image/png
+     image/jpg, image/jpeg
+     image/gif
+     image/svg+xml
+     application/xml, text/xml
+     application/javascript
+     application/json
+     application/octet-stream
+     * **/
+</script>
+<script>
+    window.onload = function () {
+        new Copy(document.querySelector('.but'),{
+            content: '我就要复制这些东西'
+        })
+        new Copy(document.querySelector('.fun'),{
+            fun(){
+                return `console.log('ok')`
+            }
+        })
+    }
+</script>
+</body>
+</html>

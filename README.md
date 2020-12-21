@@ -36,7 +36,7 @@
 * [图片（懒|预）加载原理](APPLY/lazyload.md)
 * [URLSearchParams搜索参数接口](APPLY/URLSearchParams.md) 让你快速获取参数和管理参数
 * [CSS.escape和CSS.supports()静态方法](APPLY/CSS.md) 处理css特殊器字符和判断浏览器是否支持某个css特性
-* [文章](https://mp.weixin.qq.com/s/HIEBGIXeJsxrwkCRpYlbtA) [FileSaver.js库](https://github.com/eligrey/FileSaver.js)JS弹出下载对话框以及实现常见文件类型的下载
+* [文章](https://mp.weixin.qq.com/s/HIEBGIXeJsxrwkCRpYlbtA)
 * [ECMAScript2017新特性](APPLY/ECMAScript2017.md)
 * [ECMAScript2018新特性](APPLY/ECMAScript2018.md)
 * [JS函数收藏](APPLY/function.md)
@@ -78,6 +78,11 @@
 * [快速搭建 Node.js / io.js 开发环境以及加速 npm](TOOL/install_nodejs.md) 同一系统下安装多个node版本介绍
 * [HTTP](TOOL/HTTP.md) 转摘
 * [emmet语法](TOOL/emmet.md) 让你飞快编码
+
+### 前端库
+
+* [FileSaver.js库](https://github.com/eligrey/FileSaver.js) JS弹出下载对话框以及实现常见文件类型的下载
+* [西瓜视频播放器（HTML5）](https://v2.h5player.bytedance.com/)
 
 ### 其他
 * [免费的计算机编程类中文书籍](OTHER/free-programming-books-zh_CN.md) 转摘
