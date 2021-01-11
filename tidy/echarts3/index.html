@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>echarts3中国地图下钻至县级</title>
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <!-- Echarts3 -->
+    <script type="text/javascript" src="static/js/echarts.min5.js"></script>
+</head>
+<body>
+<div id="main" style="width:100vw;height:100vh;"></div>
+
+<script type="text/javascript">
+    // src="static/js/app.js"
+    //地图容器
+    var chart = echarts.init(document.getElementById('main'));
+    //位置大小
+    var layout = {
+        roam: true,
+        layoutCenter: ['50%', '30%'],
+        layoutSize: 500,
+    }
+    //初始化绘制全国地图配置
+    var option = {
+        backgroundColor: 'transparent',
+        title: {},
+        tooltip: {
+            trigger: 'item',
+            formatter: '{b}'
+        },
+        toolbox: {
+            show: false
+        },
+        geo: Object.assign({
+            show: true,
+            map: '湛江市',
+            label: {
+                normal: {
+                    show: false
+                },
+                emphasis: {
+                    show: false,
+                }
+            },
+            itemStyle: {
+                normal: {
+                    areaColor: '#093f9d',
+                    borderWidth: 1,//设置外层边框
+                    borderColor:'#2d5fba',
+                    shadowColor: '#2366e0',
+                    shadowBlur: 20
+                }
+            }
+        }, layout,{layoutCenter: ['51%', '31%']}),
+        animation: false
+    };
+    function changeGeoroam(){
+        var option = chart.getOption();//获得option对象
+        console.log(option)
+        var g = option.geo[0]
+        var s = option.series[0]
+        var arr = s.center
+        if(arr && arr.length){
+            g.zoom = s.zoom
+            g.center = [arr[0] - 0.01, arr[1] + 0.01]
+            chart.setOption(option)
+        }
+    }
+    function renderMap(map, data) {
+        console.log('data', data)
+        option.series = [
+            Object.assign({
+                name: map,
+                type: 'map',
+                mapType: map,
+                markPoint: {
+                    symbol(){
+                        return "roundRect"
+                    },// ,//'circle', 'rect', 'roundRect', 'triangle', 'diamond', 'pin', 'arrow'
+                    symbolSize: 20,
+                    symbolRotate: 28,
+                    itemStyle: {
+                        normal: {
+                            borderColor: '#87cefa',
+                            borderWidth: 1,
+                            label: {
+                                show: false
+                            }
+                        },
+                        emphasis: {
+                            borderColor: '#1e90ff',
+                            borderWidth: 1,
+                            label: {
+                                show: false
+                            }
+                        }
+                    },
+                    effect: {
+                        show: true,
+                        shadowBlur: 0
+                    },
+                    data: [
+                        {name: "海门", value: 9, coord: [110.632117, 20.922347]},
+                    ]
+                },
+                label: {
+                    normal: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 12
+                        }
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 12
+                        }
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        areaColor: '#1654be',
+                        borderWidth: 2,//设置外层边框
+                        borderColor:'#4a8eff',
+                        shadowColor: 'rgba(48,101,190,0.4)',
+                        shadowBlur: 20
+                    },
+                    emphasis: {
+                        areaColor: '#0e9ad8',
+                        borderWidth: 2,//设置外层边框
+                        borderColor:'#16faf0',
+                        shadowColor: 'rgba(48,101,190,0.9)',
+                        shadowBlur: 20
+                    }
+                },
+                data: data
+            }, layout),
+            {
+                type: 'effectScatter',
+                coordinateSystem: 'geo',
+                data: [
+                    {name: "海门", value: [110.632117, 20.922347,20]}
+                ],
+                symbolSize: function (val) {
+                    return val[2] / 10;
+                },
+                showEffectOn: 'render',
+                rippleEffect: {
+                    period: 2.5, //波纹秒数
+                    brushType: 'fill', //stroke(涟漪)和fill(扩散)，两种效果
+                    scale: 30 //波纹范围
+                },
+                hoverAnimation: true,
+                label: {
+                    normal: {
+                        show: false
+                    }
+                },
+                zlevel: 0
+            },
+        ];
+        //渲染地图
+        chart.setOption(option);
+        chart.on('georoam',changeGeoroam);
+    }
+    //显示县级地图
+    fetch('static/map/city/440800.json').then(r => r.json()).then(data => {
+        var city = '湛江市'
+        echarts.registerMap(city, data);
+        var json = [
+            {"name": "赤坎区", "value": 1},
+            {"name": "雷州市", "value": 10},
+            {"name": "廉江市", "value": 20},
+            {"name": "麻章区", "value": 30},
+            {"name": "坡头区", "value": 40},
+            {"name": "遂溪县", "value": 50},
+            {"name": "吴川市", "value": 60},
+            {"name": "霞山区", "value": 70},
+            {"name": "徐闻县", "value": 100}
+        ]
+        var max = Math.max.apply(this,json.map(o=>o.value)) + 1
+        console.log('total',max)
+        const colors = getItemColors (100).reverse()
+        renderMap(city, json.map(o => ({
+            name: o.name,
+            /*itemStyle: {
+                per:parseInt(o.value/max * 100),
+                normal: {
+                    areaColor: colors[parseInt(o.value/max * 100)],
+                    borderWidth: 0
+                },
+                emphasis: {
+                    areaColor: 'darkorange'
+                },
+            },*/
+        })))
+    })
+    //地图点击
+    chart.on('click', function (params) {
+        console.log(params)
+        chart.dispatchAction({
+            type: 'restore'
+        })
+    })
+
+    function getItemColors (colorLevel) {
+        var colors= [];
+        var red = 6,green = 35, blue = 69;
+        //最浅颜色是121,146,177 比如：最浅颜色的red是 239 则差值为239-134=105
+        var maxRed = 121 - red, maxGreen = 146 - green, maxBlue = 177 - blue;
+        var level = colorLevel;
+        while(level--) {
+            colors.push( 'rgb('+red +','+green+','+blue+')');
+            red += parseInt(maxRed/colorLevel);
+            green += parseInt(maxGreen/colorLevel);
+            blue += parseInt(maxBlue/colorLevel);
+        }
+        return colors;
+    }
+</script>
+</body>
+</html>

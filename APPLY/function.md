@@ -128,22 +128,22 @@ function getFirstLetter(str){
   应用场景：中文排序
 
 ```js
-    function changeCapitalize(integer){
-        if (!Number.isInteger(integer) || integer >= Math.pow(10, 15)) {
-            return integer
-        }
-        const obj = {
-            arr : '零一二三四五六七八九'.split(''),
-            pre : ['','十','百','千'],
-            pix : ['','万','亿','兆'],
-            str : ''
-        }
-        String(integer).match(/(\d{1,4})(?=(\d{4})*$)/g).reverse().forEach((v, index) => {
-            let s = v.split('').reverse().map((v, i) => obj.arr[v] + (v > 0 ? obj.pre[i] : '')).reverse().join('').replace(/零+/g, '零')
-            if (s !== '零') {
-                obj.str = s + obj.pix[index] + obj.str
-            }
-        })
-        return obj.str.replace(/零(?=[万亿兆])|零$/g, '').replace(/^一十/g, '十').replace(/十零([万亿兆])/g,'十$1')
+function changeCapitalize(integer){
+    if (!Number.isInteger(integer) || integer >= Math.pow(10, 20)) {
+        return integer
     }
+    const obj = {
+        arr : '零一二三四五六七八九'.split(''),
+        pre : ['','十','百','千'],
+        pix : ['','万','亿','兆','京','垓'],
+        str : ''
+    }
+    String(integer).match(/(\d{1,4})(?=(\d{4})*$)/g).reverse().forEach((v, index) => {
+        let s = v.split('').reverse().map((v, i) => obj.arr[v] + (v > 0 ? obj.pre[i] : '')).reverse().join('').replace(/零+/g, '零')
+        if (s !== '零') {
+            obj.str = s + obj.pix[index] + obj.str
+        }
+    })
+    return obj.str.replace(/零(?=[万亿兆京垓])|零$/g, '').replace(/^一十/g, '十').replace(/十零([万亿兆京垓])/g,'十$1')
+}
 ```
