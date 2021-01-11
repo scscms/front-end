@@ -3,110 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <title>FileSystem</title>
-    <style></style>
+    <style>
+        ul{
+            display: flex;
+            flex-wrap:wrap;
+            margin:0;
+            padding:0;
+        }
+        ul li{
+            list-style: none;
+            width:100px;
+            height:100px;
+            border:1px solid #ddd;
+            padding:10px;
+            margin:10px;
+        }
+        ul li img{
+            display: block;
+            width:100%;
+            height:100%;
+        }
+    </style>
 </head>
 <body>
-<button type="button" onclick="createFile()">创建文件</button>
-<button type="button" onclick="readFile()">读取文件</button>
-<button type="button" onclick="readAllFile()">读取所有文件</button>
-<div id="file"></div>
+<ul id="img"></ul>
 <script>
-    //读取所有文件
-    function readAllFile() {
-        new Promise(resolve => {
-            fileSystemObj.fs.root.getDirectory('/',{},function(dirEntry){
-                var dirReader = dirEntry.createReader();
-                dirReader.readEntries(function(results){
-                    resolve(results);
+    let time = performance.now()
+    let index = 0
+    function loadImg() {
+        if(++index === 17){
+            console.log('加载时间：', performance.now() - time)
+        }
+    }
+    const LIST = new Array(17).fill(0).map((v,i)=>i+1)
+    const LOSEIMG = []
+    function readerImg(n){
+        document.querySelector('#img').innerHTML = LIST.map(o=>`<li><img onload="loadImg()" src="${n?`picture/${o}.jpg`:o}" alt=""></li>`).join('')
+    }
+    window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
+    window.resolveLocalFileSystemURL = window.resolveLocalFileSystemURL || window.webkitResolveLocalFileSystemURL;
+    var fileSystemObj = {
+        fs          :   null,//文件系统对象
+        imgFolder   :   "/",//图片所在文件夹
+        size        :   524288000,//申请500M临时空间 500*1024*1024
+        rootFolder  :   "filesystem:" + location.origin + "/temporary",
+        initialize  :   function(){
+            window.requestFileSystem(TEMPORARY, this.size, function (fs) {
+                fileSystemObj.fs = fs;
+                window.resolveLocalFileSystemURL(fileSystemObj.rootFolder + fileSystemObj.imgFolder,function(fileEntry){
+                    var dirReader = fileEntry.createReader();
+                    dirReader.readEntries(function(results){
+                        LIST.forEach((f,i)=>{
+                            const obj = results.find(o => o.name === `${f}.jpg`)
+                            LIST[i] = obj ? obj.toURL() : `picture/${f}.jpg`
+                            !obj && LOSEIMG.push(f)
+                        })
+                        readerImg()
+                        LOSEIMG.forEach(f=>{
+                            fileSystemObj.downLoader(`picture/${f}.jpg`);
+                        })
+                    },fileSystemObj.errorHandler);
                 },fileSystemObj.errorHandler);
-            },function(e){
-                resolve([]);
-            })
-        }).then(arr=>{
-            let list = '<ol>'
-            for(var i = arr.length;i--;){
-                let file = arr[i];
-                if(file.isFile){
-                    list+=`<li>File:<a href="javascript:void(0)">${file.name}</a> fullPath:${file.fullPath}</li>`;
-                }else{
-                    list+=`<li>Folder:${arr[i].name} fullPath:${arr[i].fullPath}</li>`;
+            }, fileSystemObj.errorHandler);
+        },
+        createDir   :function(rootDir, folders) {
+            //生成文件夹
+            rootDir.getDirectory(folders[0], {create: true}, function(dirEntry) {
+                if (folders.length) {
+                    fileSystemObj.createDir(dirEntry, folders.slice(1));
                 }
-            }
-            document.querySelector('#file').innerHTML=arr.length===0?'暂无文件':list+'</ol>'
-        })
-    }
-    //读取文件
-    function readFile() {
-        fileSystemObj.fs.root.getFile('log.txt', {}, function(fileEntry) {
-            fileEntry.file(function(file) {
-                const reader = new FileReader();
-                reader.onloadend = function(e) {
-                    console.log(this.result)
-                };
-                reader.readAsText(file);
             }, fileSystemObj.errorHandler);
-        }, fileSystemObj.errorHandler);
-    }
-    //创建文件
-    function createFile() {
-        const content = prompt('文本内容')
-        fileSystemObj.fs.root.getFile('log.txt', {create: true, exclusive: true}, function (fileEntry) {
-            console.log(fileEntry);//留意它的几个属性
-            // 生成FileWriter对象
-            fileEntry.createWriter(function (fileWriter) {
-                fileWriter.onwriteend = function (e) {
-                    console.log('写入完成');
-                };
-                fileWriter.onerror = function (e) {
-                    console.log('写入失败: ' + e.toString());
-                };
-                //可以创建ArrayBuffer、Blob等对象写入文件，但不建议使用BlobBuilder弃用方法
-                fileWriter.write(new Blob([content], {type: "text/plain"}));
-            }, fileSystemObj.errorHandler);
-        }, fileSystemObj.errorHandler);
-    }
-
-    const File = window.requestFileSystem || window.webkitRequestFileSystem;
-    const fileSystemObj = {
-        fs: null,//文件系统对象
-        size: 52428800,//申请50M临时空间 50*1024*1024
-        errorHandler: function (e) {
-            //处理各种错误
+        },
+        errorHandler:function(e){
             switch (e.name) {
-                case 'QuotaExceededError':
+                case 'QUOTA_EXCEEDED_ERR'://超出空间
+                    fileSystemObj.fs.root.getDirectory(fileSystemObj.imgFolder,{}, function (dirEntry) {
+                        dirEntry.remove(function() {
+                            console.log('Directory:' + fileSystemObj.imgFolder + ' removed.');
+                        }, fileSystemObj.errorHandler);
+                    });
                     break;
-                case 'NotFoundError':
+                case 'NOT_FOUND_ERR':
                     break;
-                case 'SecurityError':
+                case 'SECURITY_ERR':
                     break;
-                case 'InvalidStateError':
+                case 'INVALID_MODIFICATION_ERR':
                     break;
-                case 'InvalidModificationError':
+                case 'INVALID_STATE_ERR':
                     break;
                 default:
             }
-            console.error(e.name)
+            console.error(e.name +":"+ e.message);//处理失败信息
         },
-        initialize: function () {
-            //初始化PERSISTENT(永久) or TEMPORARY(临时)
-            File(window.TEMPORARY, this.size, fs => {
-                this.fs = fs;
-                console.log('ok')
-            })
+        downLoader:function(url){
+            function regStr(str,reg){
+                var _t = str.toString().split(/\?|#/)[0].match(reg);
+                return _t ? _t[1].toLowerCase() : "";
+            }
+            var fileName = regStr(url,/([^\/]+)([?#].*)?$/),suffix = regStr(fileName,/([^.]+)$/),mineType,backups = url;
+            if(this.fs && /^(mp4|jpg|jpeg|png|gif)$/.test(suffix)) {
+                switch (suffix) {
+                    case "mp4":
+                        mineType = "video/mp4";
+                        break;
+                    case "jpg":
+                        mineType = "image/jpeg";
+                        break;
+                    case "jpeg":
+                    case "png":
+                    case "gif":
+                        mineType = "image/" + suffix;
+                        break;
+                }
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', url, true);
+                xhr.onreadystatechange = function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                        var content = this.response;
+                        fileSystemObj.fs.root.getFile(fileSystemObj.imgFolder + fileName, {create: true}, function (fileEntry) {
+                            fileEntry.createWriter(function (fileWriter) {
+                                fileWriter.onwriteend = function () {
+                                    console.info('下载成功：' + fileName);
+                                };
+                                fileWriter.onerror = function (e) {
+                                    console.error('保存失败：' + fileName, e.message);
+                                };
+                                fileWriter.write(new Blob([new Uint8Array(content)], {type: mineType}));
+                            });
+                        });
+                    }
+                };
+                xhr.onerror = function(e){
+                    //请求php下载图片
+                };
+                xhr.responseType = 'arraybuffer';
+                xhr.send();
+            }
         }
     };
-    if (File) {
+    if(window.requestFileSystem) {
         navigator.webkitTemporaryStorage.queryUsageAndQuota(function (usage, quota) {
-            //usage已经使用的空间，quota申请的总空间
             if (!quota) {
-                //还没有申请过空间
                 navigator.webkitTemporaryStorage.requestQuota(fileSystemObj.size, function (grantedBytes) {
-                    fileSystemObj.initialize();
+                    fileSystemObj.initialize(grantedBytes);
                 }, fileSystemObj.errorHandler);
-            } else {
+            }else{
                 fileSystemObj.initialize();
             }
         });
+    }else{
+        readerImg(true)
     }
 </script>
 </body>
