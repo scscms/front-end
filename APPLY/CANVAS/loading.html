@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>loading加载动画</title>
+    <style>
+        body{
+            height:90vh;
+            text-align: center;
+        }
+        #root div {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div id="root">
+    <div>
+        <canvas width="300" height="300"></canvas>
+    </div>
+</div>
+
+<script>
+    var PL = {
+        init: function () {
+            this.setT = 0;
+            this.canvas = document.querySelector('canvas');
+            this.ctx = this.canvas.getContext('2d');
+            this.width = 300;
+            this.height = 300;
+            this.canvas.width = this.width;
+            this.canvas.height = this.height;
+            this.canvas.style.width = this.width + 'px';
+            this.canvas.style.height = this.height + 'px';
+            this.min = this.width * 0.5; // 旋转半径
+            this.particles = [];
+            this.globalAngle = 0;
+            this.globalRotation = 0;
+            this.tick = 0;
+            this.PI = Math.PI;
+            this.TWO_PI = this.PI * 2;
+            this.ctx.globalCompositeOperation = 'lighter';
+            this.loop()
+        }, loop: function () {
+            this.setT = window.requestAnimationFrame(function () {
+                PL.loop()
+            });
+            this.step();
+            this.draw();
+            this.tick++
+        }, clear: function () {
+            window.cancelAnimationFrame(this.setT)
+        }, step: function () {
+            this.particles.push(new this.Particle({
+                x: this.width / 2 + Math.cos(this.tick / 20) * this.min / 2,
+                y: this.height / 2 + Math.sin(this.tick / 20) * this.min / 2,
+                angle: this.globalRotation + this.globalAngle,
+                speed: 0,
+                accel: 0.01
+            }));
+            this.particles.forEach(function (elem, index) {
+                elem.step(index)
+            });
+            this.globalRotation += this.PI / 6;
+            this.globalAngle += this.PI / 6
+        }, draw: function () {
+            this.ctx.clearRect(0, 0, this.width, this.height);
+            this.particles.forEach(function (elem, index) {
+                elem.draw(index)
+            })
+        }
+    };
+    PL.Particle = function (opt) {
+        this.radius = 7; // 圆半径
+        this.x = opt.x;
+        this.y = opt.y;
+        this.angle = opt.angle;
+        this.speed = opt.speed;
+        this.accel = opt.accel;
+        this.decay = 0.01;
+        this.life = 1
+    };
+    PL.Particle.prototype.step = function (i) {
+        this.speed += this.accel;
+        this.x += Math.cos(this.angle) * this.speed;
+        this.y += Math.sin(this.angle) * this.speed;
+        this.angle += PL.PI / 64;
+        this.accel *= 1.02;
+        this.life -= this.decay;
+        if (this.life <= 0) {
+            PL.particles.splice(i, 1)
+        }
+    };
+    PL.Particle.prototype.draw = function (i) {
+        PL.ctx.fillStyle = PL.ctx.strokeStyle = 'hsla(' + (PL.tick + (this.life * 120)) + ', 100%, 60%, ' + this.life + ')';
+        var item = PL.particles[i - 1];
+        if (item) {
+            PL.ctx.beginPath();
+            PL.ctx.moveTo(this.x, this.y);
+            PL.ctx.lineTo(item.x, item.y);
+            PL.ctx.stroke()
+        }
+        PL.ctx.beginPath();
+        PL.ctx.arc(this.x, this.y, Math.max(0.001, this.life * this.radius), 0, PL.TWO_PI);
+        PL.ctx.fill();
+        var size = Math.random() * 1.25;
+        PL.ctx.fillRect(~~(this.x + ((Math.random() - 0.5) * 35) * this.life), ~~(this.y + ((Math.random() - 0.5) * 35) * this.life), size, size)
+    };
+    PL.init();
+    new MutationObserver(function () {
+        PL.clear();
+        this.disconnect()
+    }).observe(document.getElementById('root'), {childList: true, subtree: true})
+</script>
+</body>
+</html>

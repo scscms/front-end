@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <title>FileSystem</title>
     <style>
-        ul{
+        ul#img{
             display: flex;
             flex-wrap:wrap;
             margin:0;
             padding:0;
         }
-        ul li{
+        ul#img li{
             list-style: none;
             width:100px;
             height:100px;
@@ -18,7 +18,7 @@
             padding:10px;
             margin:10px;
         }
-        ul li img{
+        ul#img li img{
             display: block;
             width:100%;
             height:100%;
@@ -33,12 +33,14 @@
     function loadImg() {
         if(++index === 17){
             console.log('加载时间：', performance.now() - time)
+        }else{
+            console.log('加载：',index)
         }
     }
     const LIST = new Array(17).fill(0).map((v,i)=>i+1)
     const LOSEIMG = []
     function readerImg(n){
-        document.querySelector('#img').innerHTML = LIST.map(o=>`<li><img onload="loadImg()" src="${n?`picture/${o}.jpg`:o}" alt=""></li>`).join('')
+        document.querySelector('#img').innerHTML = LIST.map(o=>`<li><img onload="loadImg()" src="${n?`/FUploadFile/images/watermelon/${o}.jpg`:o}" alt=""></li>`).join('')
     }
     window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
     window.resolveLocalFileSystemURL = window.resolveLocalFileSystemURL || window.webkitResolveLocalFileSystemURL;
@@ -55,12 +57,12 @@
                     dirReader.readEntries(function(results){
                         LIST.forEach((f,i)=>{
                             const obj = results.find(o => o.name === `${f}.jpg`)
-                            LIST[i] = obj ? obj.toURL() : `picture/${f}.jpg`
+                            LIST[i] = obj ? obj.toURL() : `/FUploadFile/images/watermelon/${f}.jpg`
                             !obj && LOSEIMG.push(f)
                         })
                         readerImg()
                         LOSEIMG.forEach(f=>{
-                            fileSystemObj.downLoader(`picture/${f}.jpg`);
+                            fileSystemObj.downLoader(`/FUploadFile/images/watermelon/${f}.jpg`);
                         })
                     },fileSystemObj.errorHandler);
                 },fileSystemObj.errorHandler);
