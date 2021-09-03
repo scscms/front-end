@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input {
+            position: relative;
+            width: 40px;
+            height: 20px;
+            background-color: #dadada;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            -webkit-appearance: none;
+            transition: all .2s ease;
+        }
+
+        input::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: all .2s ease;
+        }
+
+        input:checked {
+            background: #1da1f2;
+        }
+
+        input:checked::after {
+            left: 50%;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <label>
+        <input type="checkbox"/>
+    </label>
+</div>
+</body>
+</html>

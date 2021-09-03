@@ -30,6 +30,7 @@
 * [async和defer区别](BASE/async-defer.md)
 * [js和css事件](BASE/script-link-events.html) 转摘
 * [clip-path css3属性](BASE/clip-path.md)
+* [不常用但实用css](BASE/css.md)
 
 ### 应用
 
@@ -54,9 +55,12 @@
 * [Lighthouse学习](APPLY/Lighthouse.md)
 * [js扫描条形码](APPLY/quagga)
 * [js扫描二维码](APPLY/jsQR)
-* [中国地图vue组件](APPLY/ChinaMap)
+* [地图相关](APPLY/map/README.md)
 * [JS复制到剪切板组件ClipboardJS](http://www.clipboardjs.cn/)
 * [纯CSS3统计饼图、圆环图](APPLY/pie.md)
+* [检查真实文件类型](https://github.com/sindresorhus/file-type)
+* [谷歌翻译库](https://github.com/mashirozx/google-translate-cn-api)
+* [switchInput](APPLY/switchInput.html)
 
 ### 扩展
 
@@ -86,3 +90,8 @@
 
 ### 其他
 * [免费的计算机编程类中文书籍](OTHER/free-programming-books-zh_CN.md) 转摘
+
+前端监控：
+https://github.com/scscms/scs-monitor
+https://juejin.cn/post/6862559324632252430
+https://github.com/IndifferenceDoll/performanceKit
