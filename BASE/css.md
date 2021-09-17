@@ -40,3 +40,30 @@ semi-expanded, expanded, extra-expanded, ultra-expanded 大于默认字体
 - conic-gradient()  在渐变中我们知道
 - :out-of-range / :in-range
 - writing-mode
+
+- 黑白图像  这段代码会让你的彩色照片显示为黑白照片，是不是很酷？
+```css
+  img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  }
+```
+- 优化显示文本 有时，字体并不能在所有设备上都达到最佳的显示，所以可以让设备浏览器来帮助你：
+```css
+html {
+-moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+}
+```
+
+- 文本渐变   文本渐变效果很流行，使用 CSS3 能够很简单就实现：
+```css
+h2 {
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+}
+```
+- hue-rotate() 函数是一个内置函数，用于对图像应用滤镜以设置图像的色调旋转。https://codepen.io/jack-cool-the-lessful/pen/gOpbpaB

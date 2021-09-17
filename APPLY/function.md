@@ -171,3 +171,67 @@ function changeCapitalize(integer){
     return obj.str.replace(/零(?=[万亿兆京垓])|零$/g, '').replace(/^一十/g, '十').replace(/十零([万亿兆京垓])/g,'十$1')
 }
 ```
+### 文本复制功能
+#### copyTxt
+应用场景：页面内复制内容
+
+```js
+
+const copyTxt = function(text, fn) { // 复制功能
+  if (typeof document.execCommand !== 'function') {
+    console.log('复制失败，请长按复制')
+    return
+  }
+  var dom = document.createElement('textarea')
+  dom.value = text
+  dom.setAttribute('style', 'display: block;width: 1px;height: 1px;')
+  document.body.appendChild(dom)
+  dom.select()
+  var result = document.execCommand('copy')
+  document.body.removeChild(dom)
+  if (result) {
+    console.log('复制成功')
+    typeof fn === 'function' && fn()
+    return
+  }
+  if (typeof document.createRange !== 'function') {
+    console.log('复制失败，请长按复制')
+    return
+  }
+  var range = document.createRange()
+  var div = document.createElement('div')
+  div.innerhtml = text
+  div.setAttribute('style', 'height: 1px;fontSize: 1px;overflow: hidden;')
+  document.body.appendChild(div)
+  range.selectNode(div)
+  var selection = window.getSelection()
+  console.log(selection)
+  if (selection.rangeCount > 0) {
+    selection.removeAllRanges()
+  }
+  selection.addRange(range)
+  document.execCommand('copy')
+  typeof fn === 'function' && fn()
+  console.log('复制成功')
+}
+```
+### 判断是否为微信
+#### isWx
+
+```js
+const isWx = function() { // 判断是否为微信
+  var ua = window.navigator.userAgent.toLowerCase()
+  return ua.match(/MicroMessenger/i) === 'micromessenger'
+}
+```
+
+### 是否为移动端
+#### isMobile
+
+```js
+function isMobile() {
+    const userAgentInfo = navigator.userAgent
+    const Agents = ['Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod']
+    return !!Agents.find(v => userAgentInfo.includes(v))
+}
+```
