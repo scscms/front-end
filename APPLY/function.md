@@ -235,3 +235,62 @@ function isMobile() {
     return !!Agents.find(v => userAgentInfo.includes(v))
 }
 ```
+### CryptoJS加解密
+
+```js
+function Encrypt(value){
+    const key = 'rootcloud@!#1234';
+    return CryptoJS.AES.encrypt(value, CryptoJS.enc.Utf8.parse(key), {
+        mode: CryptoJS.mode.ECB,
+        padding: CryptoJS.pad.Pkcs7
+    }).toString();
+}
+function Decrypt(word) {
+    const key = 'rootcloud@!#1234';
+    return decrypt = CryptoJS.AES.decrypt(word, CryptoJS.enc.Utf8.parse(key), {
+        mode: CryptoJS.mode.ECB,
+        padding: CryptoJS.pad.Pkcs7
+    }).toString(CryptoJS.enc.Utf8)
+}
+```
+### IdleDetector 检测用户是否处于活动状态API
+
+```js
+(async () => {
+    try {
+        const state = await Notification.requestPermission();
+        if (state !== "granted") {
+            // Need to request permission first.
+            return console.log("Idle detection permission not granted.");
+        }
+
+        const controller = new AbortController();
+        const signal = controller.signal;
+
+        // 创建空闲检测器
+        const idleDetector = new IdleDetector();
+
+        // 设置一个事件侦听器，该侦听器在空闲状态更改时触发。
+        idleDetector.addEventListener("change", () => {
+            const uState = idleDetector.userState;  // 是否活动状态
+            const sState = idleDetector.screenState; // 是否锁屏
+            console.log(`Idle change: %s, %s.`, uState, sState);
+        });
+
+        // 启动空闲检测器。
+        await idleDetector.start({
+            threshold: 60000, // 最小值为60,000毫秒（1分钟）
+            signal,
+        });
+
+        // 中断检测
+        // controller.abort();
+    } catch (error) {
+        console.error("[IdleDetector] Error: %s", error.message);
+    }
+})()
+```
+### 点击下载跨域图片
+
+```js
+```

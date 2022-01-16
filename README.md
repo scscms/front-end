@@ -61,6 +61,7 @@
 * [检查真实文件类型](https://github.com/sindresorhus/file-type)
 * [谷歌翻译库](https://github.com/mashirozx/google-translate-cn-api)
 * [switchInput](APPLY/switchInput.html)
+* [web worker封装](APPLY/worker.md)
 
 ### 扩展
 

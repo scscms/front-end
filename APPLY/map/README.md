@@ -1,7 +1,7 @@
 # 地图相关<sup>shine</sup>
 
 * [中国地图vue组件](ChinaMap)
-
+* [Map示例](http://geocodezip.com/)
 ### 开放地图
 https://wiki.openstreetmap.org/wiki/Tiles#Servers
 
@@ -39,6 +39,30 @@ google.maps.event.addListener(map,"click",function(event){
     console.log('触发点击事件');
 });
 ```
+### Google Map 位置搜索
+https://developers.google.com/maps/documentation/javascript/reference/places-autocomplete-service
+```js
+//https://jsfiddle.net/api/post/library/pure/
+const geocoder = new google.maps.Geocoder();
+geocoder.geocode( { 'address': '广州市'}, function(results, status) {
+  if (status === google.maps.GeocoderStatus.OK) {
+    if (status !== google.maps.GeocoderStatus.ZERO_RESULTS) {
+      if (results && results.length > 0)
+        map.fitBounds(results[0].geometry.viewport);
+    } else {
+      alert("No results found");
+    }
+  } else {
+    alert("Geocode was not successful for the following reason: " + status);
+  }
+});
+```
+```
+mapTypeId: "roadmap" 路线图
+mapTypeId: "satellite" 卫星
+mapTypeId: "hybrid" 混合的
+```
+
 |事件|	说明|
 |  ----  | ----  |
 |bounds_changed	|地图边界改变时触发|
