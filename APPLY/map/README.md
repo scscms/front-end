@@ -15,7 +15,7 @@ https://wiki.openstreetmap.org/wiki/Tiles#Servers
 
   > 源代码：http://github.com/twain47/Nominatim
 #### google map 地理反查
-https://maps.google.com/maps/api/geocode/json?latlng=23.10459,113.36704&sensor=true_or_false&key=AIzaSyBCL50BhO_yhDQ4Xx_iKkZo38cuTxvQF-I
+https://maps.google.com/maps/api/geocode/json?latlng=23.10459,113.36704&sensor=true_or_false&key=开发key
 
 ### mapbox地图
 https://docs.mapbox.com/help/getting-started/web-apps/
